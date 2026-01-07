@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f628f317fb3ea7940ab848d705e7b73c, type: 3}
+  m_Name: ChickenCoop
+  m_EditorClassIdentifier: 
+  buildingName: ChickenCoop
+  buildingGroup: ChickenCoop
+  directionnalPrefabs:
+  - {fileID: 4249885366410300540, guid: e062cef49cf1bcb42b4e838c3a84593f, type: 3}
+  - {fileID: 4249885366410300540, guid: e1902d750f5a95e41ac8c7137ff05cd1, type: 3}
+  - {fileID: 4249885366410300540, guid: 47a04417f008a8442885bd6d8f81fe48, type: 3}
+  icon: {fileID: 21300000, guid: 037b2d58280f32e459042d7c4740d028, type: 3}
+  size: {x: 1, y: 1}
+  rotatable: 1
+  recipe:
+  - item: {fileID: 11400000, guid: 4d34d02a7c710254c90f3bac47421f8d, type: 2}
+    amount: 1
+  validColor: {r: 0.49411765, g: 1, b: 0.49411765, a: 0.6156863}
+  invalidColor: {r: 0.90588236, g: 0.3529412, b: 0.3529412, a: 0.6156863}
+  blockingLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  placementOffset: {x: 0, y: 0}
+  autoConnect: 1
+  connectionSprites: []

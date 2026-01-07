@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - UIPanel
+  - catHome
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Decore
+  - Player
+  - UIPanel
+  - NPC
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 1169253055
+    locked: 0
+  - name: Glass
+    uniqueID: 2421916783
+    locked: 0
+  - name: Decore
+    uniqueID: 2191443669
+    locked: 0
+  - name: Plants
+    uniqueID: 1573782587
+    locked: 0
+  - name: Animation
+    uniqueID: 1435803311
+    locked: 0
+  - name: Player
+    uniqueID: 3977269409
+    locked: 0

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0799006b35482c741b78cc9497308042, type: 3}
+  m_Name: Quest_CarrotHarvest
+  m_EditorClassIdentifier: 
+  questID: quest_carrot_01
+  questName: "Thu ho\u1EA1ch c\xE0 r\u1ED1t"
+  description: "B\xE1c n\xF4ng d\xE2n c\u1EA7n 5 c\u1EE7 c\xE0 r\u1ED1t \u0111\u1EC3
+    chu\u1EA9n b\u1ECB b\u1EEFa t\u1ED1i."
+  isManinQuest: 0
+  objectives:
+  - type: 3
+    targetID: carrot
+    requiredAmount: 5
+  goldReward: 52
+  itemRewards:
+  - {fileID: 11400000, guid: 3489351ca877adb4b9d3173b9926d790, type: 2}

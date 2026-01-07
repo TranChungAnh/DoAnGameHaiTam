@@ -1,0 +1,2340 @@
+fileFormatVersion: 2
+guid: 0bee746a415717c4a85f1f5fc522248e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: imageMeat_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1045
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0739928e7bed56246bd7de6e0e5343d5
+      internalID: -982694935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1045
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e06d9354876fd342b3174fc7be1e002
+      internalID: 1777344743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_2
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1045
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3b88417a02bf843a9ba04daf7dceb9
+      internalID: -1387156624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_3
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1045
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f40a91bd7db184eab9ef64a7016a26
+      internalID: 1958787501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_4
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1045
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da2a95702f0b294f9eec8c6ef79f056
+      internalID: -1190226619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_5
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1045
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0001238f9f166c1439937ebbf6eec0a5
+      internalID: 603506257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_6
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 1045
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c12c3f32bb1fb246aadf01d8ca10f94
+      internalID: -866751040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_7
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 1045
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ad12b50643601439a701cc709ca351
+      internalID: -880459914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_8
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 1045
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d84214188466ba4682389d3ff1a248d
+      internalID: 669644878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_9
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1045
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc4887598d716b4596ad2175af7a3cc
+      internalID: -399792173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_10
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 934
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b50a904d5dae8d488bb2abc50c24716
+      internalID: 743527949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 934
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caada7155e71f0e4e9afa3a6d521604a
+      internalID: -852925182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_12
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 934
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81459b7c07a01f4f891af13973e2deb
+      internalID: -1683489750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_13
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 934
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fed4807a6f6c7844bc3a5547cc76c3f
+      internalID: -171549164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_14
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 934
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f4843260098bd42be523a6126a46b7
+      internalID: 1403034208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_15
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 934
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931acaf77ddd65748a49419507c1ed79
+      internalID: -1600213174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_16
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 934
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92853407634048a41937af7a802e7259
+      internalID: -1553397930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_17
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 934
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501e21567aca68247b8c957aef7649ee
+      internalID: 1505580219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_18
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 934
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee799a3f8d91264aba9549cee975dac
+      internalID: 462913639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_19
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 934
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f997b003265bc439a315f3a53f7e92
+      internalID: 1914469993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_20
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 823
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c58365417f295c4eadb6cad1c20f0cc
+      internalID: -672456714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 823
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58694ad97867e147bc41e89feb8e055
+      internalID: -254141980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_22
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 823
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b3843a5bc154b46ba4facbd4f1a352
+      internalID: 561611292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_23
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 823
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e16e6720a612cd489f58006c48ebc10
+      internalID: 1281515161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_24
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 823
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea81cc2de893ee4492f2319b80c5456
+      internalID: -2138804358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_25
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 823
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d845b2149ab3da498e82b830d0eaa8c
+      internalID: -1944142042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_26
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 823
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf6ab2f228880949bb8bcc8b470e24b
+      internalID: 2004148507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_27
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 823
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d563004022eb5143b109eec710e8e13
+      internalID: 277543221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_28
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 823
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd09d62e3236a345befb6ae8805a9c5
+      internalID: 1022819749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_29
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 823
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9004e82ed9954374bbedee6705b19a34
+      internalID: -1608045433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_30
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 712
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c751759d94ac546820811dc928f50a
+      internalID: -542937037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_31
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 712
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3a977359bc21e24ba8bd9e957e8fdbb
+      internalID: 184983520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_32
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 712
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351f9d2796343e741a488bb8be69aeb4
+      internalID: -1339699504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_33
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 712
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4da1e510ce3da42a2b1c0ebedd774e
+      internalID: 849791924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_34
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 712
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709e6ca820a588f41a22fa34aacadf07
+      internalID: -293870978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_35
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 712
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f49ed04512d4149a3411f02f4ee1f3
+      internalID: -354181719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_36
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 712
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f4b0bf0cf4e744d9b6ec9ef82e0b84
+      internalID: 1956424840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_37
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 712
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db2bc60973b0fe4daa42910ffb7fcf0
+      internalID: 1595269088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_38
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 712
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50dfd32b47565aa479af8eb847c42098
+      internalID: 880332186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_39
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 712
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00eab3c353fa8a546ac6e495c960baab
+      internalID: 513101751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_40
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 601
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af9bc74f0d172c4a9c7c89bc45c5450
+      internalID: -1663677695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_41
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 601
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da58107f864bd8042934a1227906d14b
+      internalID: 1584490404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_42
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 601
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff3b18b8c781bb4fb8af5897f1f8273
+      internalID: 2009632418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_43
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 601
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c44f9f5af977d0c42b25b3bbc595c728
+      internalID: -84934771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_44
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 601
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96702291cf419ef41bee66c931536e87
+      internalID: -561062713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_45
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 601
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b221b31356ab5a4fb0696972306a88b
+      internalID: -1982134590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_46
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 601
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d42c015c8103c3418f68d54ce240f72
+      internalID: 558246339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_47
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 601
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7542d7b5fe15d4883030a38377e9b6
+      internalID: 1586422637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_48
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 601
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32bc753138e97047936d792f6089414
+      internalID: -833196030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_49
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 601
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b745ebd9eaa893144a96af34fe89dbd5
+      internalID: -703469110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_50
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 490
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d160f3744acb314d9ab89bc568aa38d
+      internalID: 1692173368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_51
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 490
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a11d80c71ea954fb2f5492ce5aa83e
+      internalID: -2104553416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_52
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 490
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5881963dfdafc684aab69fcb968d9211
+      internalID: 1216246997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_53
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 490
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782b49afe7ff33e439d58beb7e83d3db
+      internalID: -496123987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_54
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 490
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67aae613835ab8f49bef59f4cdd6cc23
+      internalID: -88569833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_55
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 490
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2f4c90a807a9c43a35fe76f01ca800
+      internalID: -901279003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_56
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 490
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e382bcfae2ca7f498c379faccc58a79
+      internalID: -104423787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_57
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 490
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a798ef0fb94db3046a26a171776fc1fb
+      internalID: -1650260512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_58
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 490
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef43bdd5e613c2d41b627a320f3396bf
+      internalID: 488042997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_59
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 490
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b55ebe0e9f3bc4c92b38fa1f54cf30
+      internalID: 536429262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_60
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 379
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec5315124bed3c4b874261b85f792b4
+      internalID: 246151682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_61
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 379
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97dc1fef7ecda06438c332f7117bd595
+      internalID: 351673748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_62
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 379
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbbb4041f2c3cd043a2a43359e7a7517
+      internalID: 1189635600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_63
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 379
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: badb07689592e6b4e8bfa43bb07388ac
+      internalID: 523232443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_64
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 379
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f029215d210ef34a96e74257b9b8c8a
+      internalID: -1891570790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_65
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 379
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2713e0b5dc82646bf1c38af1cc5f0e
+      internalID: -755794196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_66
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 379
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77170d3fe6dea5e4c909d18ac5e5be7d
+      internalID: 768567877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_67
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 379
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81faccefe11487644b681ae8959bec48
+      internalID: -1876370997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_68
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 379
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c6281bf784da24da138daec17827a5
+      internalID: 2041953646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_69
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 379
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34bd3e61425dd74aac112f383321925
+      internalID: -1804064476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_70
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 268
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceee1a1f7dabd4d4888e0a52e922cf1d
+      internalID: -674718235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_71
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 268
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd69ecaa0419cc4fb57875c2e416898
+      internalID: 844525287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_72
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 268
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f61aad298cfb843949cebb9abcc3cf
+      internalID: -813349125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_73
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 268
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7df5b6b676ab742a22d8f487e77a3e
+      internalID: -522854676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_74
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 268
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25cdd83ffd9c2704ba190d0ba545d293
+      internalID: -1406252088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_75
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 268
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb8414ee5e2f0848879112d9d0b4de0
+      internalID: -1400229570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_76
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 268
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e98b37520d4be45b247e74ec05e684
+      internalID: -900218617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_77
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 268
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3c34bd69520e748bd45558a314b436
+      internalID: 1349129941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_78
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 268
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7230d5b2adb2a404180bfdc09502a34c
+      internalID: -1981808283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_79
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 268
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84415c4bd101894a9d6e0ba073183a0
+      internalID: 2096889398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_80
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 157
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5694751d3e44b445aed11a3d46424a0
+      internalID: -1862227883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_81
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 157
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2554ff1b25ead9f4ca88c7f247547a85
+      internalID: 1694796368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_82
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 157
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ff7318e57c37041a4ccf155b73f6dc
+      internalID: -119263478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_83
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 157
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c67ae9089550e46b380681d3c31381
+      internalID: 1397344648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_84
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 157
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1067d819d5e06c34cad3e7f77635ba1b
+      internalID: -318413717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_85
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 157
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8564a685684bab4996b038991bf9375
+      internalID: -101263025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_86
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 157
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2431c5929bd66644c8d3102ca5791934
+      internalID: -367233067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_87
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 157
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da15d5b2e175a1542a38ed4d89e79f8f
+      internalID: 2087021229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_88
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 157
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b6bb8c582aea743b3a88e96847ca5e
+      internalID: 583667286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_89
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 157
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9247240fe74124485502aa6a259ba0
+      internalID: 1490344546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_90
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 46
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea2324745212ce47810c8caa51df748
+      internalID: 107934179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_91
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 46
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd9d76d9e79c3b439e24421bc8d6ce2
+      internalID: 1998826523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_92
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 46
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26229f202d95f014e9dc5571d00fcc92
+      internalID: -1421727853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_93
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 46
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb0a0420bfa6e547b6e96a3612f446c
+      internalID: 1914254774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_94
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 46
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ea036cd01e9ed4387d304de33d68fb
+      internalID: -904789144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_95
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 46
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8075a29e48040d46ac8797e5d0d2cd0
+      internalID: 1862393772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_96
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 46
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2d4a4d0c9202a4d84f0c4406043f29
+      internalID: -429563997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_97
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 46
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9b1e93ed776d84f91b21e9e9333839
+      internalID: 1407891777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_98
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 46
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9fde062bae4ac34d9d83d22d1f0ecbd
+      internalID: -45400871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imageMeat_99
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 46
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605d4b5baad769842a20d95614225aeb
+      internalID: -2019181569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      imageMeat_0: -982694935
+      imageMeat_1: 1777344743
+      imageMeat_10: 743527949
+      imageMeat_11: -852925182
+      imageMeat_12: -1683489750
+      imageMeat_13: -171549164
+      imageMeat_14: 1403034208
+      imageMeat_15: -1600213174
+      imageMeat_16: -1553397930
+      imageMeat_17: 1505580219
+      imageMeat_18: 462913639
+      imageMeat_19: 1914469993
+      imageMeat_2: -1387156624
+      imageMeat_20: -672456714
+      imageMeat_21: -254141980
+      imageMeat_22: 561611292
+      imageMeat_23: 1281515161
+      imageMeat_24: -2138804358
+      imageMeat_25: -1944142042
+      imageMeat_26: 2004148507
+      imageMeat_27: 277543221
+      imageMeat_28: 1022819749
+      imageMeat_29: -1608045433
+      imageMeat_3: 1958787501
+      imageMeat_30: -542937037
+      imageMeat_31: 184983520
+      imageMeat_32: -1339699504
+      imageMeat_33: 849791924
+      imageMeat_34: -293870978
+      imageMeat_35: -354181719
+      imageMeat_36: 1956424840
+      imageMeat_37: 1595269088
+      imageMeat_38: 880332186
+      imageMeat_39: 513101751
+      imageMeat_4: -1190226619
+      imageMeat_40: -1663677695
+      imageMeat_41: 1584490404
+      imageMeat_42: 2009632418
+      imageMeat_43: -84934771
+      imageMeat_44: -561062713
+      imageMeat_45: -1982134590
+      imageMeat_46: 558246339
+      imageMeat_47: 1586422637
+      imageMeat_48: -833196030
+      imageMeat_49: -703469110
+      imageMeat_5: 603506257
+      imageMeat_50: 1692173368
+      imageMeat_51: -2104553416
+      imageMeat_52: 1216246997
+      imageMeat_53: -496123987
+      imageMeat_54: -88569833
+      imageMeat_55: -901279003
+      imageMeat_56: -104423787
+      imageMeat_57: -1650260512
+      imageMeat_58: 488042997
+      imageMeat_59: 536429262
+      imageMeat_6: -866751040
+      imageMeat_60: 246151682
+      imageMeat_61: 351673748
+      imageMeat_62: 1189635600
+      imageMeat_63: 523232443
+      imageMeat_64: -1891570790
+      imageMeat_65: -755794196
+      imageMeat_66: 768567877
+      imageMeat_67: -1876370997
+      imageMeat_68: 2041953646
+      imageMeat_69: -1804064476
+      imageMeat_7: -880459914
+      imageMeat_70: -674718235
+      imageMeat_71: 844525287
+      imageMeat_72: -813349125
+      imageMeat_73: -522854676
+      imageMeat_74: -1406252088
+      imageMeat_75: -1400229570
+      imageMeat_76: -900218617
+      imageMeat_77: 1349129941
+      imageMeat_78: -1981808283
+      imageMeat_79: 2096889398
+      imageMeat_8: 669644878
+      imageMeat_80: -1862227883
+      imageMeat_81: 1694796368
+      imageMeat_82: -119263478
+      imageMeat_83: 1397344648
+      imageMeat_84: -318413717
+      imageMeat_85: -101263025
+      imageMeat_86: -367233067
+      imageMeat_87: 2087021229
+      imageMeat_88: 583667286
+      imageMeat_89: 1490344546
+      imageMeat_9: -399792173
+      imageMeat_90: 107934179
+      imageMeat_91: 1998826523
+      imageMeat_92: -1421727853
+      imageMeat_93: 1914254774
+      imageMeat_94: -904789144
+      imageMeat_95: 1862393772
+      imageMeat_96: -429563997
+      imageMeat_97: 1407891777
+      imageMeat_98: -45400871
+      imageMeat_99: -2019181569
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

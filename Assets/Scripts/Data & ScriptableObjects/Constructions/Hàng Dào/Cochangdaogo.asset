@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f628f317fb3ea7940ab848d705e7b73c, type: 3}
+  m_Name: Cochangdaogo
+  m_EditorClassIdentifier: 
+  buildingName: woodenfencepost
+  buildingGroup: Fence
+  directionnalPrefabs:
+  - {fileID: 5378846476810976589, guid: 156a767a0d156014b9657ba0f3adafed, type: 3}
+  - {fileID: 5378846476810976589, guid: 30441664e01b57a419da4ca6b368bbd1, type: 3}
+  - {fileID: 5378846476810976589, guid: 97d18cbfdb153264587f3ef7d0b58366, type: 3}
+  - {fileID: 5378846476810976589, guid: 14f672fcabb4378488246d20998c45c3, type: 3}
+  icon: {fileID: 531980161, guid: 2a6490abac5339b4a988bc2859ee25bd, type: 3}
+  size: {x: 1, y: 1}
+  rotatable: 1
+  recipe:
+  - item: {fileID: 11400000, guid: d36120158662e5e4bbfcbee24d05eda8, type: 2}
+    amount: 1
+  validColor: {r: 0.495283, g: 1, b: 0.495283, a: 0.6156863}
+  invalidColor: {r: 0.9056604, g: 0.35457456, b: 0.35457456, a: 0.6156863}
+  blockingLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  placementOffset: {x: 0, y: 0}
+  autoConnect: 0
+  connectionSprites:
+  - {fileID: 1299567985, guid: 2a6490abac5339b4a988bc2859ee25bd, type: 3}
+  - {fileID: -2117464030, guid: 2a6490abac5339b4a988bc2859ee25bd, type: 3}
+  - {fileID: -1196663495, guid: 2a6490abac5339b4a988bc2859ee25bd, type: 3}
+  - {fileID: -2114077908, guid: 2a6490abac5339b4a988bc2859ee25bd, type: 3}
+  - {fileID: 531980161, guid: 2a6490abac5339b4a988bc2859ee25bd, type: 3}
+  - {fileID: -1146770985, guid: 2a6490abac5339b4a988bc2859ee25bd, type: 3}

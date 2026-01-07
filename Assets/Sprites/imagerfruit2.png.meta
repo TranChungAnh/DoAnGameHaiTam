@@ -1,0 +1,2340 @@
+fileFormatVersion: 2
+guid: 2d5f58c9b91345e42a59a52f4000d921
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: imagerfruit2_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1046
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee6d47192dce184e86772bebe28f30a
+      internalID: 982403051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 1046
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4e00c3bd0031a45adc21b6c84999ce
+      internalID: -424653847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_2
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1046
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086adea8e946899478b84cd4bbee5213
+      internalID: 1111907382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_3
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1046
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d653e059b588e419d378d1da23f5ed
+      internalID: 525507711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_4
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 1046
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc1e8d54051c844fa08b0c879f7e60c
+      internalID: -2017451609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_5
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 1046
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 330b9c1164297ed499e99e5a227e9438
+      internalID: 995203350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_6
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1046
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906de140828ebab4da295f9dbc624e3e
+      internalID: 2053268687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_7
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1046
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7cbbc34d77bdc44b392de90eb04087
+      internalID: 811128234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_8
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 1046
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0610681ca6e24d448b12d9c44c1c19e9
+      internalID: 1357199798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_9
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 1046
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead1bfc85193c964d94bb0e55aaaa78a
+      internalID: 1794375191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_10
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 935
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2397e32b4772f6441a3efe549d218acc
+      internalID: 1682358722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_11
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 935
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae282f0253e50014784c284b20b193f2
+      internalID: 1334269950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_12
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 935
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c81abb0543e7a44b88af89e595b0327
+      internalID: 690081295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_13
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 935
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e1615e9e8ca13742b10c15c1919b5f2
+      internalID: 1842483101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_14
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 935
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801a11a86cdd0504d8e62180374f9d3b
+      internalID: -255138708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_15
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 935
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe4c60607e4d0c4b96a364f5839286f
+      internalID: -125593207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_16
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 935
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b01829cebe6404fbcd2e9f007c17b3
+      internalID: -156267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_17
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 935
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fdc8558038f744ebd230153090d41b
+      internalID: 942858180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_18
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 935
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c7c4ea0a732c940a18a8bf9848a2f0
+      internalID: -745787449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_19
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 935
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397035f8531555949b485173ec423c26
+      internalID: 146852937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_20
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 824
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4ea9a5c1a439d4d84bcaa02ad79d84
+      internalID: 1792297180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_21
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 824
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8bd16ce2e0d184aa3a6340ccc99b82
+      internalID: 1716735403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_22
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 824
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9e0f10a1dc718439efe1a821aed9b0
+      internalID: -415360857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_23
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 824
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b3f12e66294a7748988d836d1198143
+      internalID: 1997571182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_24
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 824
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac7f4f136bc6b9747af0557b447b4365
+      internalID: -173907933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_25
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 824
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f820572b0f69647bfe698bf338e0d7
+      internalID: 221150166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_26
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 824
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd92f17fad28da4787043e21a8bb5bd
+      internalID: 2059902798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_27
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 824
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e40498931b7280f489956bcd0474013e
+      internalID: 647365735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_28
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 824
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e800fb61758f17442abd3a6dc53a561d
+      internalID: 2054495583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_29
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 824
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72073f1780f1cf4198ea94e0fdeb9d7
+      internalID: 2011316933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_30
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 713
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c3ac3d8581b0e4bad450e618b6db56
+      internalID: 260187458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_31
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 713
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148b0b14299f17143aef8f3bd5c379eb
+      internalID: 1388309101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_32
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 713
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e89c800762e8f044a9b72bd15aff310
+      internalID: 9284554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_33
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 713
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54463b2577312f4da00ea10dfdf151a
+      internalID: 2116948239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_34
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 713
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c0dce8e443c917409f44541a48fa031
+      internalID: -233108605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_35
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 713
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd15b81c44d0e7c40898a14195beb0f1
+      internalID: 1928618204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_36
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 713
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27330317e280c94e9974827c19c0a6b
+      internalID: -1433659596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_37
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 713
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46df50e26cc0144a9db8cd85a77e1fa
+      internalID: -756840914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_38
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 713
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9402ec44c9741446954a37c445c70b0
+      internalID: -78350713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_39
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 713
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40623579930d793479e1a4429c150ae7
+      internalID: -624822929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_40
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 602
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd7cd9066530a0498c39f49601304ef
+      internalID: 1261107007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_41
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 602
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db47e12f5c71274fa30920eac0d6de9
+      internalID: -1343125745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_42
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 602
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a509c0393177be4e927a800b5ed6ba3
+      internalID: -2027944406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_43
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 602
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b977e283c6aa443a0e0f49f125bcf8
+      internalID: 1151934785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_44
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 602
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d446f7633a8ef74387b2a16ff3a87c0
+      internalID: 755657201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_45
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 602
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2068186199fbbaf4babb7c3c3b38008a
+      internalID: 135227567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_46
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 602
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0dbd14d49f51514c9304120751cf510
+      internalID: 38865686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_47
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 602
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c316d7f629a23c4e845c06a5058dc77
+      internalID: -1894724899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_48
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 602
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66492b29308c8d644832a638c8a8961d
+      internalID: 2074223077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_49
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 602
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9092788e97bd9064b80b9cdc7ad91c3c
+      internalID: 867433868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_50
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 491
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2bd593ba83c5454383e99783b39eb0d
+      internalID: 349467600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_51
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 491
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b141458c9922b8740b2a99f8ad95d3a7
+      internalID: 631230716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_52
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 491
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a57220bc42cc44795b325b3476b6c2
+      internalID: 22660597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_53
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 491
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b4acc07f268a540b4b6b0b33d360d4
+      internalID: 910869845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_54
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 491
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750bd85e23dd063498dfaaae807dde7c
+      internalID: 1357544340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_55
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 491
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c43098d7c98e54c8ca762852a2e69d
+      internalID: 1189768010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_56
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 491
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0e288d42bdc1f47a0a6b617c6dd113
+      internalID: 486820879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_57
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 491
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74de8d4c7cf5b014db404f56f8e38e77
+      internalID: 623532882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_58
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 491
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9d49e6b3f3b33418764f0c49bf827d
+      internalID: 555805637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_59
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 491
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb75dbbbe650d5047bc2be783fa963b5
+      internalID: 279023642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_60
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 380
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cc87a0328060448aa3611de6cf937d
+      internalID: -1140959783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_61
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 380
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e843d562d8fc174daa6d70c290d4d29
+      internalID: -569329815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_62
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 380
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cecadb4ffe0aab24e83fbab662b590b7
+      internalID: 1543156739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_63
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 380
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4fcfbfbc9d69741962cfd93c8be981
+      internalID: 739701493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_64
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 380
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1568d768e846a57458043f03382ed00c
+      internalID: -879340087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_65
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 380
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4fe78d362bf6c489c8e2fff77cdcc5
+      internalID: 1050020208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_66
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 380
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668f562616893494a9d961be59d21d63
+      internalID: -879353264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_67
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 380
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ac6b3c5e708b645acae143e759a343
+      internalID: -119193256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_68
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 380
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43dc0b6cde892654a9bb3a5d5f24e4b1
+      internalID: -1958759786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_69
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 380
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82f83f6bd5e07345a3f45a0bc998a89
+      internalID: 1219129963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_70
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 269
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53fcf6e06ced0f94ebff6df3872c50e6
+      internalID: 1241520073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_71
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 269
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1352c260018e73c49b00dd644a304958
+      internalID: -1884204332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_72
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 269
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cae5dc2b3dae944081981ef1d40d26e
+      internalID: 1913980653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_73
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 269
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecae226e4f3bdf7419730a504e984295
+      internalID: -471544597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_74
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 269
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a09a9a127cb13a47a631d08cb897b64
+      internalID: -1957907691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_75
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 269
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9fb8e73b1a99e3469c3ece4a9425f75
+      internalID: -1460555524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_76
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 269
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268f6d9d14106c04e8e0c31312d64731
+      internalID: 1380792604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_77
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 269
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f8ee0c7c5da6b47a67dee2409f27dd
+      internalID: 135782366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_78
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 269
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a22d6564a9d8b9f4e94f48b4c56b225a
+      internalID: -1239232430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_79
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 269
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80a3f3a347076048badd0dd3f1cdbca
+      internalID: 2091709084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_80
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 158
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10257daa43a1a546bf12ce392c9312a
+      internalID: 1841788703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_81
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 158
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6f9b84ec9b9194db648d99a4a3222a
+      internalID: 1725006249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_82
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 158
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8a378c8b7842a4b9c4384b7bd9cca0
+      internalID: -1864049837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_83
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 158
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 569264924731bf84fabe7bdfab6b82f5
+      internalID: 690788956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_84
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 158
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe930e8538756d41a80bf40ed052e19
+      internalID: -1835434836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_85
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 158
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8778cfd683cf34147871219c91f6065c
+      internalID: 305231458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_86
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 158
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2356a7c63f9fb4a8db5db3254d475b
+      internalID: 1220302205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_87
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 158
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0a1dc74deb9c342a4359e1fd94b392
+      internalID: 866937078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_88
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 158
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9613893762549409d38e5601f55918
+      internalID: -2144909331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_89
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 158
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c1669a12cb1cc54b858cdefffa4e7bb
+      internalID: -762700643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_90
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 47
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c5f186288ca6042bbe1911da217acb
+      internalID: 1473859547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_91
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 47
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba07fde63c4ea147ab686da91976a41
+      internalID: 267533265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_92
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 47
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141f31d522c6b0e4ca562033c20e6b4a
+      internalID: 1498176879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_93
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 47
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc16d9dabacfda04bad385c31f6acc9e
+      internalID: -324662346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_94
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 47
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6adcf4ca8765804cb1110b3e2d2a268
+      internalID: -1928337193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_95
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 47
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca397ca83fa51b443b253cebda091b77
+      internalID: 482445789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_96
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 47
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c4558a71cbde24693f26d8e61e4321
+      internalID: 1961729153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_97
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 47
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42fab840c1efe3647b449f45ee28bb8e
+      internalID: 1772891773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_98
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 47
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d736400b93c5823478f1784200294218
+      internalID: -272812997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: imagerfruit2_99
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 47
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204fd018f196ed64faa0eb5fc79566cc
+      internalID: -783667990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      imagerfruit2_0: 982403051
+      imagerfruit2_1: -424653847
+      imagerfruit2_10: 1682358722
+      imagerfruit2_11: 1334269950
+      imagerfruit2_12: 690081295
+      imagerfruit2_13: 1842483101
+      imagerfruit2_14: -255138708
+      imagerfruit2_15: -125593207
+      imagerfruit2_16: -156267
+      imagerfruit2_17: 942858180
+      imagerfruit2_18: -745787449
+      imagerfruit2_19: 146852937
+      imagerfruit2_2: 1111907382
+      imagerfruit2_20: 1792297180
+      imagerfruit2_21: 1716735403
+      imagerfruit2_22: -415360857
+      imagerfruit2_23: 1997571182
+      imagerfruit2_24: -173907933
+      imagerfruit2_25: 221150166
+      imagerfruit2_26: 2059902798
+      imagerfruit2_27: 647365735
+      imagerfruit2_28: 2054495583
+      imagerfruit2_29: 2011316933
+      imagerfruit2_3: 525507711
+      imagerfruit2_30: 260187458
+      imagerfruit2_31: 1388309101
+      imagerfruit2_32: 9284554
+      imagerfruit2_33: 2116948239
+      imagerfruit2_34: -233108605
+      imagerfruit2_35: 1928618204
+      imagerfruit2_36: -1433659596
+      imagerfruit2_37: -756840914
+      imagerfruit2_38: -78350713
+      imagerfruit2_39: -624822929
+      imagerfruit2_4: -2017451609
+      imagerfruit2_40: 1261107007
+      imagerfruit2_41: -1343125745
+      imagerfruit2_42: -2027944406
+      imagerfruit2_43: 1151934785
+      imagerfruit2_44: 755657201
+      imagerfruit2_45: 135227567
+      imagerfruit2_46: 38865686
+      imagerfruit2_47: -1894724899
+      imagerfruit2_48: 2074223077
+      imagerfruit2_49: 867433868
+      imagerfruit2_5: 995203350
+      imagerfruit2_50: 349467600
+      imagerfruit2_51: 631230716
+      imagerfruit2_52: 22660597
+      imagerfruit2_53: 910869845
+      imagerfruit2_54: 1357544340
+      imagerfruit2_55: 1189768010
+      imagerfruit2_56: 486820879
+      imagerfruit2_57: 623532882
+      imagerfruit2_58: 555805637
+      imagerfruit2_59: 279023642
+      imagerfruit2_6: 2053268687
+      imagerfruit2_60: -1140959783
+      imagerfruit2_61: -569329815
+      imagerfruit2_62: 1543156739
+      imagerfruit2_63: 739701493
+      imagerfruit2_64: -879340087
+      imagerfruit2_65: 1050020208
+      imagerfruit2_66: -879353264
+      imagerfruit2_67: -119193256
+      imagerfruit2_68: -1958759786
+      imagerfruit2_69: 1219129963
+      imagerfruit2_7: 811128234
+      imagerfruit2_70: 1241520073
+      imagerfruit2_71: -1884204332
+      imagerfruit2_72: 1913980653
+      imagerfruit2_73: -471544597
+      imagerfruit2_74: -1957907691
+      imagerfruit2_75: -1460555524
+      imagerfruit2_76: 1380792604
+      imagerfruit2_77: 135782366
+      imagerfruit2_78: -1239232430
+      imagerfruit2_79: 2091709084
+      imagerfruit2_8: 1357199798
+      imagerfruit2_80: 1841788703
+      imagerfruit2_81: 1725006249
+      imagerfruit2_82: -1864049837
+      imagerfruit2_83: 690788956
+      imagerfruit2_84: -1835434836
+      imagerfruit2_85: 305231458
+      imagerfruit2_86: 1220302205
+      imagerfruit2_87: 866937078
+      imagerfruit2_88: -2144909331
+      imagerfruit2_89: -762700643
+      imagerfruit2_9: 1794375191
+      imagerfruit2_90: 1473859547
+      imagerfruit2_91: 267533265
+      imagerfruit2_92: 1498176879
+      imagerfruit2_93: -324662346
+      imagerfruit2_94: -1928337193
+      imagerfruit2_95: 482445789
+      imagerfruit2_96: 1961729153
+      imagerfruit2_97: 1772891773
+      imagerfruit2_98: -272812997
+      imagerfruit2_99: -783667990
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

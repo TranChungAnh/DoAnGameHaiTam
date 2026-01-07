@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0368062c9fbf18b409b4a054f14312e9, type: 3}
+  m_Name: catData
+  m_EditorClassIdentifier: 
+  moveSpeed: 1.5
+  animalName: Cat
+  minScale: 0.25
+  maxScale: 0.5
+  growDuration: 30
+  lifeDuration: 300
+  homeTag: catHome
+  states:
+  - stateType: 0
+    rate: 30
+    minRate: 60
+    maxRate: 120
+    cureItemName: "L\xFAa"
+    iconPrefab: {fileID: 2346307977021498732, guid: 621be75bd879df64581cbce1936c13bd, type: 3}
+    surviveDuration: 60
+  - stateType: 1
+    rate: 20
+    minRate: 90
+    maxRate: 150
+    cureItemName: water
+    iconPrefab: {fileID: 6642892104639338488, guid: b54f36cef21389a4390f161e37523b1a, type: 3}
+    surviveDuration: 30
+  - stateType: 3
+    rate: 20
+    minRate: 120
+    maxRate: 240
+    cureItemName: water
+    iconPrefab: {fileID: 6642892104639338488, guid: b54f36cef21389a4390f161e37523b1a, type: 3}
+    surviveDuration: 30
+  - stateType: 2
+    rate: 20
+    minRate: 600
+    maxRate: 900
+    cureItemName: CatMedicine
+    iconPrefab: {fileID: 2346307977021498732, guid: 94876a06920c30b45907d82c4e123b87, type: 3}
+    surviveDuration: 30
+  - stateType: 3
+    rate: 20
+    minRate: 600
+    maxRate: 900
+    cureItemName: Brush
+    iconPrefab: {fileID: 2346307977021498732, guid: 08bcf7141bf3cf447b75f626def5124e, type: 3}
+    surviveDuration: 30
+  animatorController: {fileID: 9100000, guid: 18fc21accb8e1bc4ead336c64578372f, type: 2}
+  produces:
+  - type: 0
+    produceName: Milk
+    producePrefab: {fileID: 3388738870262129886, guid: 43e18fdc63369174e84364f6efd93da1, type: 3}
+    produceItem: {fileID: 11400000, guid: 3489351ca877adb4b9d3173b9926d790, type: 2}
+    cooldown: 30
+    minCooldown: 900
+    maxCooldown: 1800
+    requiredTool: Bucket
