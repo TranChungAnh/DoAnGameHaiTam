@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: khoai
   icon: {fileID: 21300164, guid: 2700e06d970d112489ff23cfb58c3f78, type: 3}
-  description: 
+  description: "M\u1ED9t trong 7 m\u1EA3nh c\u1ED5 v\u1EADt ch\u1EE9a \u0111\u1EF1ng
+    k\xFD \u1EE9c th\u1EADt b\u1ECB che gi\u1EA5u. Khi thu th\u1EADp \u0111\u1EE7
+    v\xE0 \u0111\u1EB7t t\u1EA1i \u0110\u1EC1n H\u1EA3i T\xE2m, s\u1EF1 th\u1EADt
+    v\u1EC1 30 ng\xE0y tr\xEAn \u0111\u1EA3o s\u1EBD \u0111\u01B0\u1EE3c h\xE9 l\u1ED9."
   itemType: 0
   toolType: 0
   worldPrefab: {fileID: 6642892104639338488, guid: b54f36cef21389a4390f161e37523b1a, type: 3}

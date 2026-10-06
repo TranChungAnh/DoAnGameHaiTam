@@ -49,7 +49,7 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""2bd60403-0923-469e-a3a4-7338b04f6bbc"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -98,6 +98,15 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PrimaryAttack"",
+                    ""type"": ""Button"",
+                    ""id"": ""529085ea-ad18-406c-a795-280cca8f2db1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -309,6 +318,28 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""10563ebf-55db-48f7-8e67-ddcb98e44577"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""PrimaryAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6d179fc1-cf3b-4041-a23a-93354ae2152b"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""PrimaryAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -353,6 +384,7 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
         m_Gameplay_Water = m_Gameplay.FindAction("Water", throwIfNotFound: true);
         m_Gameplay_Point = m_Gameplay.FindAction("Point", throwIfNotFound: true);
         m_Gameplay_MousePosition = m_Gameplay.FindAction("MousePosition", throwIfNotFound: true);
+        m_Gameplay_PrimaryAttack = m_Gameplay.FindAction("PrimaryAttack", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -422,6 +454,7 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Water;
     private readonly InputAction m_Gameplay_Point;
     private readonly InputAction m_Gameplay_MousePosition;
+    private readonly InputAction m_Gameplay_PrimaryAttack;
     public struct GameplayActions
     {
         private @PlayerInputAction m_Wrapper;
@@ -434,6 +467,7 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
         public InputAction @Water => m_Wrapper.m_Gameplay_Water;
         public InputAction @Point => m_Wrapper.m_Gameplay_Point;
         public InputAction @MousePosition => m_Wrapper.m_Gameplay_MousePosition;
+        public InputAction @PrimaryAttack => m_Wrapper.m_Gameplay_PrimaryAttack;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -467,6 +501,9 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
             @MousePosition.started += instance.OnMousePosition;
             @MousePosition.performed += instance.OnMousePosition;
             @MousePosition.canceled += instance.OnMousePosition;
+            @PrimaryAttack.started += instance.OnPrimaryAttack;
+            @PrimaryAttack.performed += instance.OnPrimaryAttack;
+            @PrimaryAttack.canceled += instance.OnPrimaryAttack;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -495,6 +532,9 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
             @MousePosition.started -= instance.OnMousePosition;
             @MousePosition.performed -= instance.OnMousePosition;
             @MousePosition.canceled -= instance.OnMousePosition;
+            @PrimaryAttack.started -= instance.OnPrimaryAttack;
+            @PrimaryAttack.performed -= instance.OnPrimaryAttack;
+            @PrimaryAttack.canceled -= instance.OnPrimaryAttack;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -540,5 +580,6 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
         void OnWater(InputAction.CallbackContext context);
         void OnPoint(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
+        void OnPrimaryAttack(InputAction.CallbackContext context);
     }
 }

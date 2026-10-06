@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Bucket
   icon: {fileID: 525507711, guid: 2d5f58c9b91345e42a59a52f4000d921, type: 3}
+  description: "Chi\u1EBFc x\xF4 s\u1EAFt \u0111\xE3 hoen g\u1EC9 theo th\u1EDDi
+    gian. D\xF9ng \u0111\u1EC3 m\xFAc n\u01B0\u1EDBc ho\u1EB7c \u0111\u1EF1ng c\xE1c
+    dung d\u1ECBch th\u1EED nghi\u1EC7m b\u1ECB b\u1ECF l\u1EA1i tr\xEAn \u0111\u1EA3o."
   itemType: 1
   toolType: 0
   worldPrefab: {fileID: 6209494962747856610, guid: 85076ead3503ca0449ecef54a0f9c8bc, type: 3}

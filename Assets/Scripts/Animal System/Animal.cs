@@ -52,12 +52,10 @@ public class Animal : MonoBehaviour, IProduce
             }
         }
 
-        // Random cho produce
         for (int i = 0; i < data.produces.Count; i++)
         {
             var p = data.produces[i];
 
-            // Nếu produce gắn với 1 state -> cooldown = rate của state đó
             if (System.Enum.TryParse(p.produceName, true, out AnimalStateType stateType))
             {
                 var state = data.states.Find(st => st.stateType == stateType);
@@ -66,7 +64,6 @@ public class Animal : MonoBehaviour, IProduce
             }
             else
             {
-                // Nếu không gắn state -> random trong khoảng minCooldown–maxCooldown
                 float randomCooldown = Random.Range(p.minCooldown, p.maxCooldown);
                 data.produces[i].cooldown = randomCooldown;
             }
@@ -96,7 +93,7 @@ public class Animal : MonoBehaviour, IProduce
     }
 
     // =========================================================
-    // 🔹 Age & Growth
+    //  Age & Growth
     // =========================================================
     private void UpdateAgeAndGrowth()
     {
@@ -120,7 +117,7 @@ public class Animal : MonoBehaviour, IProduce
     }
 
     // =========================================================
-    // 🔹 State Handling (Hunger, Thirst, Sickness…)
+    // State Handling (Hunger, Thirst, Sickness…)
     // =========================================================
     private void UpdateStates()
     {
@@ -169,7 +166,7 @@ public class Animal : MonoBehaviour, IProduce
         stateActives.ContainsKey(type) && stateActives[type];
 
     // =========================================================
-    // 🔹 Death
+    //  Death
     // =========================================================
     private void Die(AnimalStateType cause)
     {
@@ -184,7 +181,7 @@ public class Animal : MonoBehaviour, IProduce
     }
 
     // =========================================================
-    // 🔹 Production
+    //  Production
     // =========================================================
     private void UpdateProduction()
     {
@@ -217,10 +214,8 @@ public class Animal : MonoBehaviour, IProduce
 
         foreach (var p in data.produces)
         {
-            // Nếu sản phẩm là kiểu Harvest (như Milk, Lông cừu...)
             if (p.type == ProduceType.Harvest)
             {
-                // Thay vì add vào Storage ngay, ta bật trạng thái tương ứng
                 if (System.Enum.TryParse(p.produceName, out AnimalStateType stateType))
                 {
                     if (!IsStateActive(stateType))
@@ -229,7 +224,7 @@ public class Animal : MonoBehaviour, IProduce
             }
             else
             {
-                HarvestProduce(p); // Reproduce vẫn xử lý bình thường
+                HarvestProduce(p); 
             }
         }
     }
@@ -238,14 +233,12 @@ public class Animal : MonoBehaviour, IProduce
     {
         var storage = InventoryManager.Instance.playerInventory;
 
-        // 1. Kiểm tra tool
         if (!string.IsNullOrEmpty(produce.requiredTool) && !storage.HasItem(produce.requiredTool))
         {
-            Debug.Log($"⚠ Cần {produce.requiredTool} để thu hoạch {produce.produceName}!");
+            Debug.Log($" Cần {produce.requiredTool} để thu hoạch {produce.produceName}!");
             return;
         }
 
-        // 2. Xử lý sản phẩm
         switch (produce.type)
         {
             case ProduceType.Harvest:
@@ -253,7 +246,6 @@ public class Animal : MonoBehaviour, IProduce
                 {
                     Debug.Log($"{data.animalName} đã cho {produce.produceName}!");
 
-                    // Nếu sản phẩm gắn với trạng thái thì tắt sau khi thu
                     if (System.Enum.TryParse(produce.produceName, out AnimalStateType stateType))
                     {
                         CureState(stateType);
@@ -261,7 +253,7 @@ public class Animal : MonoBehaviour, IProduce
                 }
                 else
                 {
-                    Debug.Log("⚠ Kho đã đầy, không thể thu hoạch!");
+                    Debug.Log(" Kho đã đầy, không thể thu hoạch!");
                 }
                 break;
 
@@ -279,7 +271,7 @@ public class Animal : MonoBehaviour, IProduce
                 }
                 else
                 {
-                    Debug.LogWarning($"⚠ {data.animalName} có ProduceType.Reproduce nhưng thiếu prefab!");
+                    Debug.LogWarning($" {data.animalName} có ProduceType.Reproduce nhưng thiếu prefab!");
                 }
                 break;
         }

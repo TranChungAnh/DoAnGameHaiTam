@@ -6,6 +6,9 @@ TagManager:
   tags:
   - UIPanel
   - catHome
+  - ParticleContaine
+  - ParticleContainer
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -14,17 +17,17 @@ TagManager:
   - Water
   - UI
   - Decore
-  - Player
+  - 
   - UIPanel
+  - Enemy
+  - Ground
+  - Wall
+  - Damageable
+  - ParticleContainer
+  - Dead
+  - Player
   - NPC
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - VFX
   - 
   - 
   - 
@@ -58,6 +61,18 @@ TagManager:
   - name: Animation
     uniqueID: 1435803311
     locked: 0
+  - name: Artifact
+    uniqueID: 106978925
+    locked: 0
+  - name: PoisonZone
+    uniqueID: 3985491761
+    locked: 0
   - name: Player
     uniqueID: 3977269409
+    locked: 0
+  - name: Stone
+    uniqueID: 2621931201
+    locked: 0
+  - name: Enemy
+    uniqueID: 99215303
     locked: 0

@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1.2692032, y: 0}
+  m_SizeDelta: {x: 11, y: 11.6204}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6189692616733873976
 CanvasRenderer:
@@ -204,8 +204,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.2261, y: 0.6778}
-  m_SizeDelta: {x: 104.0094, y: 106.7209}
+  m_AnchoredPosition: {x: 1.7583, y: 1.3638}
+  m_SizeDelta: {x: 92.483, y: 96.4698}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9121108014057260022
 CanvasRenderer:
@@ -281,8 +281,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1389, y: -642}
-  m_SizeDelta: {x: 118, y: 122}
+  m_AnchoredPosition: {x: -1389.3228, y: -642.32275}
+  m_SizeDelta: {x: 96, y: 99.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &-2436985130108193243
 MonoBehaviour:
@@ -298,6 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 6766072273401009889}
   quantityText: {fileID: 2431471314800549736}
+  itemInfoPanel: {fileID: 0}
   boundSlot:
     item: {fileID: 0}
     quantity: 0

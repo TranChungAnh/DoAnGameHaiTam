@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: BucketMilk
   icon: {fileID: 21300252, guid: 2700e06d970d112489ff23cfb58c3f78, type: 3}
+  description: "Ch\u1EE9a m\u1ED9t lo\u1EA1i ch\u1EA5t l\u1ECFng m\xE0u tr\u1EAFng
+    \u0111\u1EE5c c\xF3 m\xF9i l\u1EA1. C\xF3 v\u1EBB nh\u01B0 \u0111\xE2y kh\xF4ng
+    ph\u1EA3i s\u1EEFa th\xF4ng th\u01B0\u1EDDng m\xE0 l\xE0 h\u1EE3p ch\u1EA5t b\u1ECB
+    b\xF3p m\xE9o do t\xE1c \u0111\u1ED9ng c\u1EE7a B\u1ED9t M\u1ED9ng Th\u1EF1c."
   itemType: 0
   toolType: 0
   worldPrefab: {fileID: 6365992207625884162, guid: af2a56bd4aad5034d80022058440b9a9, type: 3}
