@@ -37,7 +37,6 @@ public class ResourceSpawner : MonoBehaviour
         if(isSpawning) return;
         isSpawning = true;
         SpawnBatch(normalResources, activeNormal, maxNormalCount);
-        Debug.Log("🌍 ResourceSpawner: Đã kiểm tra spawn resource hàng ngày.");
         if (WeatherManager.Instance != null && WeatherManager.Instance.IsRaining())
             SpawnBatch(rainyBonus, activeRainy, maxRainyBonusCount);
     }

@@ -31,7 +31,7 @@ public class ResourceBehaviour : MonoBehaviour
     private void Harvest()
     {
         DropItems();
-        ResourceSpawner.Instance?.OnResourceDestroyed(this.gameObject, data);
+        //ResourceSpawner.Instance?.OnResourceDestroyed(this.gameObject, data);
         Destroy(gameObject);
     }
 

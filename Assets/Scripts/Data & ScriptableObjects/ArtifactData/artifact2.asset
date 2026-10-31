@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cb9addb98f6f242938027e5ee12ce8, type: 3}
+  m_Name: artifact2
+  m_EditorClassIdentifier: 
+  itemID: 2
+  itemName: 'artifact '
+  icon: {fileID: -2075018319, guid: e79fab1f8b65b1e47bc6fb9b3ab685e9, type: 3}
+  description: "\u0111sddddddddddssssssdsdsdsdsds"
+  itemType: 0
+  toolType: 0
+  worldPrefab: {fileID: 0}
+  cropData: {fileID: 0}
