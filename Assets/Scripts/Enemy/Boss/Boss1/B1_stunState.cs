@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class B1_stunState : StunState
 {
-    private Boss1  boss1;
-    public B1_stunState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_StunState stundata, Boss1 boss1) : base(entity, stateMachine, animBoolName, stundata)
+    private Boss1  enemy;
+    public B1_stunState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_StunState stundata, Boss1  enemy) : base(entity, stateMachine, animBoolName, stundata)
     {
-        this.boss1 = boss1;
+        this.enemy = enemy;
     }
 
     public override void DoChecks()
@@ -34,15 +34,14 @@ public class B1_stunState : StunState
         {
             if (isPlayerInMinArgoRange)
             {
-                stateMachine.ChangeState(boss1.playerDetectedState);
+                stateMachine.ChangeState(enemy.playerDetectedState);
             }
             else
             {
-                stateMachine.ChangeState(boss1.lookForPlayerState);
+                stateMachine.ChangeState(enemy.lookForPlayerState);
             }
         }
     }
-
 
     public override void PhysicsUpdate()
     {

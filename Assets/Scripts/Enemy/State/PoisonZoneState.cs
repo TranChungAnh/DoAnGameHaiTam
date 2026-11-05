@@ -162,6 +162,7 @@ public class PoisonZoneState : State
                 }
                 else
                 {
+                    Debug.LogError("States.Instance is null!");
                 }
             }
         }

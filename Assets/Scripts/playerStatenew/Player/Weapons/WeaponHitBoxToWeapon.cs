@@ -13,6 +13,7 @@ public class WeaponHitBoxToWeapon : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         weapon.AddToDetected(collision);
+        Debug.Log("Hitbox da va cham voi: " + collision.gameObject.name);
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

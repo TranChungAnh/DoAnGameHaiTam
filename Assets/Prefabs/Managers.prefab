@@ -89,6 +89,51 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   selectedIndex: -1
+--- !u!1 &866452148989698074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3449598265888100398}
+  - component: {fileID: 3214697322865367452}
+  m_Layer: 0
+  m_Name: ParticleManager
+  m_TagString: ParticleContainer
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3449598265888100398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866452148989698074}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.0494165, y: -1.6348457, z: 0.09056953}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6741645016171162207}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3214697322865367452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866452148989698074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae85d0b381195d14ba3f73317208da15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  core: {fileID: 0}
 --- !u!1 &998146008244123316
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683b8550f1586854db838ff6965f266f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  capacity: 44
+  capacity: 36
   slots:
   - item: {fileID: 11400000, guid: d36120158662e5e4bbfcbee24d05eda8, type: 2}
     quantity: 10
@@ -190,8 +235,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 1323570635411187795}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &1823501588670705327
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,9 +265,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3449598265888100398}
+  - {fileID: 5776749128763317654}
   m_Father: {fileID: 3622062090336083768}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!1 &2601575495774495805
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,8 +447,6 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: 6ebf5d4ac93aef34caa968e08a2f45c2, type: 2}
   dateText: {fileID: 0}
   timeText: {fileID: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &4067981357459636173
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,13 +496,7 @@ MonoBehaviour:
   dialogueText: {fileID: 0}
   characterImage: {fileID: 0}
   nextButton: {fileID: 0}
-  backgroundImage: {fileID: 0}
-  typewriterSpeed: 0.03
-  playerInput: {fileID: 0}
-  memoryGlitch: {fileID: 0}
   hidePortraitWhenEmpty: 1
-  hideBackgroundWhenEmpty: 1
-  playerRb: {fileID: 0}
 --- !u!1 &4937381780279702287
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,12 +530,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4937381780279702287}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.375359, y: 17.566566, z: -0.050670035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3622062090336083768}
+  m_Father: {fileID: 6741645016171162207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &3335863759143659160
 AudioSource:
@@ -1282,18 +1317,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0ab70f06591df41a2217a93a2e4e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkingSound: {fileID: 0}
+  jumpSound: {fileID: 0}
+  swordSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  BGSound: {fileID: 0}
+  glassSound: {fileID: 0}
+  ShieldSound: {fileID: 0}
   voiceSound: {fileID: 0}
-  diTrenCat: {fileID: 0}
-  buocChanTrenGo: {fileID: 0}
-  quai1Attack: {fileID: 0}
-  tiengQuaiBiDanhTrung: {fileID: 0}
-  nhatCoVat: {fileID: 0}
-  audioClipNhatTaiLieu: {fileID: 0}
-  audioClipTiengChiaKhoa: {fileID: 0}
-  audioClipNhieu: {fileID: 0}
-  anNutMoPhongThiNghiem: {fileID: 0}
-  bgSound: {fileID: 0}
->>>>>>> Stashed changes
+  bowSound: {fileID: 0}
 --- !u!1 &4949563062662404880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,12 +1759,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5776749128763317654}
   - {fileID: 8654974729183656013}
   - {fileID: 7947365379223608426}
   - {fileID: 8952386340496229163}
   - {fileID: 6728156419154733267}
   - {fileID: 3907767234861636379}
+  - {fileID: 6741645016171162207}
+  - {fileID: 3875203615684765380}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8085735110166598521
@@ -1790,7 +1823,7 @@ MonoBehaviour:
     m_Flags: 0
   tileSize: 1
   gridOrigin: {x: 0, y: 0}
-  previewMaterial: {fileID: 0}
+  previewMaterial: {fileID: 2100000, guid: d49a8dd5dc05ba74386948bb58ff8079, type: 2}
   previewSortingOrder: 100
 --- !u!1 &8190232511518987793
 GameObject:

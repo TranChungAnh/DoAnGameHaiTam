@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9d68f96c245d44bbeb3b0dd287c065, type: 3}
+  m_Name: Map3_14
+  m_EditorClassIdentifier: 
+  dialogueID: 14
+  lines:
+  - displayMode: 0
+    speakerName: 
+    dialogueText: "C\xF3 th\u1EE9 g\xEC \u0111\xF3 \u0111ang di chuy\u1EC3n ngo\xE0i
+      kia\u2026\n\u201CG\u1ECDi m\u1ECDi ng\u01B0\u1EDDi v\xE0o trong! Mau l\xEAn!\u201D"
+    characterPortrait: {fileID: -189674907, guid: f19ca5cf7c2cf2a4aa7e4a279bb8900e, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 6415d5151f7de12488a07ddca5981078, type: 3}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: "Nh\u1EEFng sinh v\u1EADt k\u1EF3 d\u1ECB tr\xE0n v\xE0o khu d\xE2n
+      c\u01B0. Nh\u1EEFng ng\u01B0\u1EDDi c\xF2n \u0111\u1EE9ng v\u1EEFng c\u1EA7m
+      v\u0169 kh\xED b\u1EA3o v\u1EC7 \u0111\u01B0\u1EDDng ch\u1EA1y cho ng\u01B0\u1EDDi
+      kh\xE1c.\u201D\n \u201C\u0110\u01B0a b\u1ECDn tr\u1EBB \u0111i tr\u01B0\u1EDBc!
+      Ch\xFAng t\xF4i s\u1EBD gi\u1EEF l\u1ED1i n\xE0y!\u201D\n"
+    characterPortrait: {fileID: 958862177, guid: 9291e4e87da89f2488cb842056be6a22, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: f192e9e9a819c504e8b5b18b0e7f601c, type: 3}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: "\u201C\u0110\u1EEBng \u0111\u1EE9ng m\u1ED9t m\xECnh! Gi\u1EEF
+      ch\xFAng \u1EDF ph\xEDa tr\u01B0\u1EDBc!\u201D\n\u201CT\xF4i v\u1EABn \u0111i
+      \u0111\u01B0\u1EE3c\u2026 \u0111\u1EEBng b\u1ECF t\xF4i l\u1EA1i!\u201D\n"
+    characterPortrait: {fileID: -189674907, guid: f19ca5cf7c2cf2a4aa7e4a279bb8900e, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: b56de7acd13072d4598ce6e0b5665083, type: 3}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: "\u201CR\xFAt v\u1EC1 c\xF4ng tr\xECnh \u0111\xE1! \u0110\u01B0a
+      ng\u01B0\u1EDDi b\u1ECB th\u01B0\u01A1ng v\xE0o trong!\u201D\n\u201CH\u1ECD
+      bu\u1ED9c ph\u1EA3i r\u1EDDi b\u1ECF n\u01A1i sinh s\u1ED1ng. Nh\u01B0ng ngay
+      c\u1EA3 khi \u0111\xE3 r\xFAt lui, m\u1ED1i \u0111e d\u1ECDa v\u1EABn ch\u01B0a
+      ch\u1EA5m d\u1EE9t.\u201D"
+    characterPortrait: {fileID: 958862177, guid: 9291e4e87da89f2488cb842056be6a22, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 5fd5da9ea344752459fa043719d2c5b0, type: 3}
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: "\u201CCon qu\xE1i v\u1EADt v\u1EEBa r\u1ED3i\u2026 gi\u1ED1ng
+      th\u1EE9 m\xECnh \u0111\xE3 g\u1EB7p trong R\u1EEBng V\u1ECDng.\u201D\n\u201CN\xF3
+      c\xF3 th\u1EADt trong c\xE2u chuy\u1EC7n n\xE0y, hay m\xECnh \u0111\xE3 t\u1EF1
+      nh\u1EDB \u0111\u1EBFn n\xF3?\u201D"
+    characterPortrait: {fileID: 958862177, guid: 9291e4e87da89f2488cb842056be6a22, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 713c3dc756af34c48a7de5dd394b211c, type: 3}

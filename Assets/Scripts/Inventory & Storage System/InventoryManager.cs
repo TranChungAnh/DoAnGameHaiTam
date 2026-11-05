@@ -7,15 +7,8 @@ public class InventoryManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
     public bool HasItem(string itemName, int amount = 1)
@@ -24,12 +17,6 @@ public class InventoryManager : MonoBehaviour
     public bool AddItem(ItemBase item, int amount = 1)
         => playerInventory.AddItem(item, amount);
 
-
     public bool RemoveItem(string itemName, int amount = 1)
         => playerInventory.RemoveItem(itemName, amount);
-    public int GetItemCount(ItemBase item)
-    {
-        if (playerInventory == null) return 0;
-        return playerInventory.GetItemCount(item);
-    }
 }

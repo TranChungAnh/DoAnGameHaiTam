@@ -196,7 +196,7 @@ Transform:
   m_GameObject: {fileID: 3056576361769499961}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9, y: 9, z: 9}
+  m_LocalPosition: {x: -31.34, y: 11.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -247,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3285017730401271229}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.499159, y: -0.90322495, z: 0.049771056}
   m_LocalScale: {x: 1.5, y: 1.49625, z: 1}
   m_ConstrainProportionsScale: 0
@@ -296,10 +296,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 99215303
-  m_SortingLayer: 10
+  m_SortingLayerID: -317697887
+  m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2047812101, guid: e2225fc263e63654aac5ff2167428f32, type: 3}
+  m_Sprite: {fileID: 222291097, guid: fcdbf26efbe1f0046a8440fc74e8d01a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -367,7 +367,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.1354187, y: 2.1333334}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -452,7 +452,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6175728956951411198}
-  - component: {fileID: 3899345500298253552}
   m_Layer: 13
   m_Name: TouchingDamageCheck
   m_TagString: Untagged
@@ -475,51 +474,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3231748162653139570}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &3899345500298253552
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3457637168997416973}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.011294872, y: -0.25235698}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1968613, y: 0.8576446}
-  m_EdgeRadius: 0
 --- !u!1 &3974754231344530799
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,7 +625,7 @@ Transform:
   m_GameObject: {fileID: 4581795385716760471}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.053, y: -0.118, z: 0}
+  m_LocalPosition: {x: 0.585, y: -0.143, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -726,7 +680,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   core: {fileID: 6359017048160316471}
   wallDistamce: 0.5
-  wallCheckRadius: 0.4
   whatIsWall:
     serializedVersion: 2
     m_Bits: 2048
@@ -777,8 +730,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   core: {fileID: 6359017048160316471}
   deathParticles:
-  - {fileID: 9102747573830011614, guid: 8f101f485f4a3894e98b34dc3bc5be0e, type: 3}
-  - {fileID: 9083911663641957384, guid: a6a1d15032a1fd74d98f2f89c21bcb36, type: 3}
+  - {fileID: 2247823279476504263, guid: 28034003ff0b107428c8e996c106de10, type: 3}
+  - {fileID: 6691590427822376879, guid: fc3596ad142c6d049b567948c3cb36d2, type: 3}
 --- !u!1 &7264362627474211053
 GameObject:
   m_ObjectHideFlags: 0

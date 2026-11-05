@@ -81,11 +81,13 @@ public class TimeManager : MonoBehaviour
             if (Hour == 22 && Minute == 0)
             {
                 isNight = true;
+                Debug.Log("🌙 Night started");
                 OnNightStarted?.Invoke();
             }
             if (Hour == 6 && isNight)
             {
                 isNight = false;
+                Debug.Log("☀️ Day started");
                 OnDayStarted?.Invoke(); // 🔹 Báo trời sáng
             }
             if (Hour >= 24)

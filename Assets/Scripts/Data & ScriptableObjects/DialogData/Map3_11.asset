@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9d68f96c245d44bbeb3b0dd287c065, type: 3}
+  m_Name: Map3_11
+  m_EditorClassIdentifier: 
+  dialogueID: 11
+  lines:
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: " \u201CL\u1EA1i l\xE0 c\u1EA3m gi\xE1c n\xE0y...\u201D"
+    characterPortrait: {fileID: -189674907, guid: f19ca5cf7c2cf2a4aa7e4a279bb8900e, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 6339158810dfb43428e24c66f0e4d3e0, type: 3}
+  - displayMode: 0
+    speakerName: "Nh\xE0 nghi\xEAn c\u1EE9u"
+    dialogueText: "\u201C\u0110\xFAng l\xE0 c\xF3 m\u1ED9t l\u1ED1i v\xE0o \u1EDF
+      \u0111\xE2y!\u201D / \u201CL\u1ED1i v\xE0o n\xE0y kh\xF4ng xu\u1EA5t hi\u1EC7n
+      trong b\u1EA3n kh\u1EA3o s\xE1t tr\u01B0\u1EDBc \u0111\xF3.\u201D"
+    characterPortrait: {fileID: 958862177, guid: 9291e4e87da89f2488cb842056be6a22, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 2d432f7a693e8d849bf209c5a6da4803, type: 3}
+  - displayMode: 0
+    speakerName: "Nh\xE0 nghi\xEAn c\u1EE9u"
+    dialogueText: "Nh\xE0 nghi\xEAn c\u1EE9u: \u201CCh\u1EDD \u0111\xE3... h\xECnh
+      nh\u01B0 c\xF3 th\u1EE9 g\xEC \u0111\xF3 \u1EDF b\xEAn trong.\u201D"
+    characterPortrait: {fileID: 958862177, guid: 9291e4e87da89f2488cb842056be6a22, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 2d432f7a693e8d849bf209c5a6da4803, type: 3}
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: " \u201CR\u1ED1t cu\u1ED9c, h\u1ECD \u0111\xE3 ph\xE1t hi\u1EC7n
+      ra \u0111i\u1EC1u g\xEC b\xEAn trong?\u201D"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: "H\xE3y nh\u1EB7t c\u1ED5 v\u1EADt 5"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}

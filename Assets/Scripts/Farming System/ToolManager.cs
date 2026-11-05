@@ -7,29 +7,25 @@ public class ToolManager : MonoBehaviour
     private Camera cam;
 
     [Header("Hạt giống mặc định khi trồng")]
-    [SerializeField] private CropData defaultSeed;   // Hạt giống mặc định
-    private CropData currentSeed;                     // Hạt giống đang chọn
+    [SerializeField] private CropData defaultSeed;   
+    private CropData currentSeed;                    
     private PlayerAnimation playerAnim;
     private void Awake()
     {
         cam = Camera.main;
-        currentSeed = defaultSeed; // Khởi tạo seed mặc định
+        currentSeed = defaultSeed; 
         playerAnim=FindObjectOfType<PlayerAnimation>();
     }
 
     // ---------------- SỰ KIỆN INPUT ----------------
 
-    public void OnUseTool(InputAction.CallbackContext context)
+    public void UseTool()
     {
         Debug.Log("Đang sử dụng công cụ...");
-        if (!context.performed) return;
 
         var selectedItem = HotbarManager.Instance.SselectedItem;
         if (selectedItem == null || selectedItem.itemType != ItemType.Tool)
-        {
-            Debug.Log("⛔ Không cầm công cụ nào");
             return;
-        }
 
         ToolType currentTool = selectedItem.toolType;
 
@@ -46,51 +42,25 @@ public class ToolManager : MonoBehaviour
         {
             UseToolOnResource(currentTool);
             playerAnim?.PlayerActionAnimation(currentTool.ToString());
-            Debug.Log($"Đang sử dụng công cụ: {currentTool}");
         }
     }
 
 
-    public void OnPlantSeed(InputAction.CallbackContext context)
+    public void PlantSeedPublic()
     {
-        if (context.performed)
-        {
-            PlantSeed();
-            Debug.Log("Đang trồng hạt giống...");
-            //playerAnim?.PlayerActionAnimation("Plant");
-        }
+        PlantSeed();
     }
 
-    public void OnWater(InputAction.CallbackContext context)
+    public void WaterPublic()
     {
-        if (context.performed)
-        {
-            Water();
-            //playerAnim?.PlayerActionAnimation("Water");
-
-        }
+        Water();
     }
+
+
+
    
-    public void OnPoint(InputAction.CallbackContext context)
-    {
-        Vector2 screenPos = context.ReadValue<Vector2>();
-    }
-
-    // ---------------- LOGIC DỤNG CỤ ----------------
-
-    //private void UseTool()
-    //{
-    //    var tile = GetTargetSoilTile();
-    //    if (tile != null)
-    //    {
-    //        tile.Till();
-    //    }
-    //}
-
     private void PlantSeed()
     {
-        //var tile = GetTargetSoilTile();
-        //if (tile == null || !tile.data.isTilled) return;
         var pos = GetFrontCellWrldPos();
         if (pos == null) return;
         Vector3Int cell = SoilManager.Instance.groundTilemap.WorldToCell(pos.Value);
@@ -102,7 +72,6 @@ public class ToolManager : MonoBehaviour
 
         var seedData = selectedItem.cropData;
 
-        // Ưu tiên hotbar
         var uiSlot = HotbarManager.Instance.hotbarSlots[HotbarManager.Instance.selectedIndex];
         var slot = uiSlot.boundSlot;
 
@@ -110,7 +79,6 @@ public class ToolManager : MonoBehaviour
         {
             if (slot.quantity > 0)
             {
-                // 👉 chỉ trừ khi trồng thành công
                 if (tile.PlantCrop(seedData))
                 {
                     slot.quantity--;
@@ -121,7 +89,6 @@ public class ToolManager : MonoBehaviour
             }
         }
 
-        // Check inventory
         var storage = InventoryManager.Instance.playerInventory;
         if (storage == null) return;
 
@@ -167,8 +134,7 @@ public class ToolManager : MonoBehaviour
         }
     }
     // ---------------- LẤY TILE THEO CHUỘT ----------------
-    private Vector2Int? lastGridPos; // Lưu vị trí lưới cuối cùng để debug
-
+    private Vector2Int? lastGridPos; 
     private SoilTile GetTargetSoilTile()
     {
         if (CropManager.Instance.playerTransform == null || SoilManager.Instance.groundTilemap == null)
@@ -198,7 +164,7 @@ public class ToolManager : MonoBehaviour
     }
     private Vector2Int GetLastGridPos()
     {
-        return lastGridPos ?? new Vector2Int(-1, -1); // Trả về (-1, -1) nếu chưa có
+        return lastGridPos ?? new Vector2Int(-1, -1); 
     }
 
     // Gán seed hiện tại từ hotbar/inventory

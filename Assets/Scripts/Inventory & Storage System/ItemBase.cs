@@ -13,7 +13,6 @@ public enum ItemType
 public class ItemBase : ScriptableObject
 {
     [Header("Thông tin chung")]
-    public string itemID;
     public string itemName;
     public Sprite icon;
     [TextArea(2, 4)] public string description;

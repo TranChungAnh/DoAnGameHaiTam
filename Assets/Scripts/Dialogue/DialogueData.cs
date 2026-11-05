@@ -38,6 +38,6 @@ public class DialogueLine
     [Tooltip("Ảnh nền (Background)")]
     public Sprite backgroundSprite;
 
-  
+
 
 }

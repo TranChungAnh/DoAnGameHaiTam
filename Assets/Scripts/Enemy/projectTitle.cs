@@ -8,24 +8,32 @@ public class projectTitle : MonoBehaviour
     private float travelDistance;
     private float xStartPos;
 
-    [SerializeField] private float gravity;
-    [SerializeField] private float damageRadius;
+    [SerializeField]
+    private float gravity;
+    [SerializeField]
+    private float damageRadius;
 
     private Rigidbody2D rb;
     private bool isGravityOn;
     private bool isScheduledToDestroy = false;
     public bool isFireball = false;
 
-    [SerializeField] private LayerMask whatIsPlayer;
-    [SerializeField] private Transform damagePosition;
+    [SerializeField]
+    private LayerMask whatIsPlayer;
+    [SerializeField]
+    private Transform damagePosition;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
         rb.gravityScale = 0.0f;
+
         isGravityOn = false;
+
         xStartPos = transform.position.x;
-        Destroy(gameObject, 2f);
+
+        Destroy(gameObject, 3f);
     }
 
     private void Update()
@@ -47,17 +55,24 @@ public class projectTitle : MonoBehaviour
             foreach (Collider2D collider in damageHit)
             {
                 IDamageable damageable = collider.GetComponent<IDamageable>();
+
                 if (damageable != null)
                 {
                     damageable.Damage(10f);
+                    Debug.Log("Damage dealt to: " + collider.name);
 
                     if (States.Instance != null)
                     {
                         float currentHealth = States.Instance.currentHealth;
                         if (currentHealth > 0)
                         {
+                            Debug.Log("Current Health: 2222222 " + currentHealth);
                             States.Instance.setHealth(currentHealth - 10f);
                         }
+                    }
+                    else
+                    {
+                        Debug.LogError("States.Instance is null.");
                     }
 
                     StartCoroutine(DelayedDestroy(0.1f));
@@ -74,7 +89,7 @@ public class projectTitle : MonoBehaviour
         }
     }
 
-    // 1. Hàm bắn đơn (Dùng cho Enemy thường hoặc Boss bắn thẳng hướng Player)
+    // Nhận thêm Vector2 direction để bắn thẳng về phía Player
     public void FireProjectile(float speed, float travelDistance, float damage, Vector2 direction)
     {
         this.speed = speed;
@@ -85,57 +100,23 @@ public class projectTitle : MonoBehaviour
 
         rb.velocity = direction.normalized * speed;
     }
-
-    // 2. Hàm tĩnh hỗ trợ bắn nhiều quả đạn tỏa ra nhiều hướng (Dành riêng cho Boss)
-    public static void FireMultiple(GameObject projectilePrefab, Transform firePoint, float speed, float travelDistance, float damage, int projectileCount)
-    {
-        float angleStep = 360f / projectileCount;
-
-        for (int i = 0; i < projectileCount; i++)
-        {
-            float angle = i * angleStep;
-            float rad = angle * Mathf.Deg2Rad;
-            Vector2 dir = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)).normalized;
-
-            Quaternion shootRotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            GameObject obj = Instantiate(projectilePrefab, firePoint.position, shootRotation);
-
-            projectTitle script = obj.GetComponent<projectTitle>();
-            if (script != null)
-            {
-                script.FireProjectile(speed, travelDistance, damage, dir);
-            }
-        }
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (isScheduledToDestroy) return;
 
-        int playerLayer = LayerMask.NameToLayer("Player");
-        int groundLayer = LayerMask.NameToLayer("Ground");
-
-        // Chạm Player: Không Destroy
-        if (collision.gameObject.layer == playerLayer)
-            return;
-
-        // Chạm Ground: Giữ nguyên xử lý
-        if (collision.gameObject.layer == groundLayer)
+        if (collision.gameObject.CompareTag("Grounded"))
         {
             rb.velocity = Vector2.zero;
             rb.isKinematic = true;
             rb.gravityScale = 0f;
+
             transform.rotation = Quaternion.identity;
 
             StartCoroutine(DelayedDestroy(0.2f));
             isScheduledToDestroy = true;
-            return;
         }
-
-        // Chạm các Layer khác: Destroy ngay lập tức
-        isScheduledToDestroy = true;
-        Destroy(gameObject);
     }
+
     private IEnumerator DelayedDestroy(float delay)
     {
         yield return new WaitForSeconds(delay);

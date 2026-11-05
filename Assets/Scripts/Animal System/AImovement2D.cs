@@ -48,28 +48,28 @@ public class AImovement2D : MonoBehaviour
 
         SetState(State.Idle);
     }
-    //private void OnEnable()
-    //{
-    //    //TimeManager.OnNightStarted += GoHomeAtNight;
-    //    TimeManager.OnDayStarted += GoOutInMorning;
-    //}
-    //private void OnDisable()
-    //{
-    //    //TimeManager.OnNightStarted -= GoHomeAtNight;
-    //    TimeManager.OnDayStarted -= GoOutInMorning;
-    //}
-    //private void GoHomeAtNight()
-    //{
-    //    string tag = animal.data.homeTag; // 🔸 lấy tag từ AnimalData
-    //    Debug.Log($"{name} nghe sự kiện -> trời tối, đi về chuồng có tag {tag}");
-    //    GoHome(tag);
-    //}
+    private void OnEnable()
+    {
+        TimeManager.OnNightStarted += GoHomeAtNight;
+        TimeManager.OnDayStarted += GoOutInMorning;
+    }
+    private void OnDisable()
+    {
+        TimeManager.OnNightStarted -= GoHomeAtNight;
+        TimeManager.OnDayStarted -= GoOutInMorning;
+    }
+    private void GoHomeAtNight()
+    {
+        string tag = animal.data.homeTag; // 🔸 lấy tag từ AnimalData
+        Debug.Log($"{name} nghe sự kiện -> trời tối, đi về chuồng có tag {tag}");
+        GoHome(tag);
+    }
 
-    //private void GoOutInMorning()
-    //{
-    //    Debug.Log($"{name} nghe sự kiện -> trời sáng, bắt đầu đi dạo");
-    //    SetState(State.Walk);
-    //}
+    private void GoOutInMorning()
+    {
+        Debug.Log($"{name} nghe sự kiện -> trời sáng, bắt đầu đi dạo");
+        SetState(State.Walk);
+    }
     void Update()
     {
         if (isGoingHome) return;

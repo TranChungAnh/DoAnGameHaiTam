@@ -12,13 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be7152d301f2c940aed4cd50f2e184c, type: 3}
   m_Name: DayNightSettings
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
-  dayLengthInMinutes: 2
+  dayLengthInMinutes: 0.58
   startHour: 1
-=======
-  dayLengthInMinutes: 0.19
-  startHour: 18
->>>>>>> Stashed changes
   startMinute: 0
   dawnColor: {r: 1, g: 0.5, b: 0.3, a: 1}
   morningColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}

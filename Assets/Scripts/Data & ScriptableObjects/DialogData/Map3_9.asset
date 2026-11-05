@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9d68f96c245d44bbeb3b0dd287c065, type: 3}
+  m_Name: Map3_9
+  m_EditorClassIdentifier: 
+  dialogueID: 9
+  lines:
+  - displayMode: 0
+    speakerName: 
+    dialogueText: " \u201CB\u1ED1n c\u1ED5 v\u1EADt \u0111\xE3 t\xECm \u0111\u01B0\u1EE3c...
+      ch\u1EC9 c\xF2n ba c\xE1i n\u1EEFa.\u201D"
+    characterPortrait: {fileID: -189674907, guid: f19ca5cf7c2cf2a4aa7e4a279bb8900e, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 5af247693c1bec44ea9e52d33ec79e8d, type: 3}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: "\u201CTi\u1EBFp t\u1EE5c \u0111i qua Hang Th\u1EE7y Tri\u1EC1u.
+      Con \u0111\u01B0\u1EDDng \u0111\xF3 s\u1EBD d\u1EABn \u0111\u1EBFn \u0110\u1EC1n
+      H\u1EA3i T\xE2m.\u201D"
+    characterPortrait: {fileID: 958862177, guid: 9291e4e87da89f2488cb842056be6a22, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: 72210c717c5d3484491ab0ec43ac4af4, type: 3}
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: "\u201CL\u1EA1i bi\u1EBFn m\u1EA5t r\u1ED3i...\u201D / \u201CHang
+      Th\u1EE7y Tri\u1EC1u... \u0110\u1EC1n H\u1EA3i T\xE2m... M\xECnh ph\u1EA3i
+      \u0111i ti\u1EBFp.\u201D"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 21300000, guid: 6b4f0feda6dbf3147bb4f89699e7f62d, type: 3}

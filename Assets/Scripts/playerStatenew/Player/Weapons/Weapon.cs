@@ -131,6 +131,7 @@ public class Weapon : MonoBehaviour
     public virtual void AnimationFinishedTrigger()
     {
         attackState.AnimationFinishedTrigger();
+        Debug.Log("AnimationFinishedTrigger đã được gọi!");
     }
 
     public virtual void AnimationStartMovementTrigger()

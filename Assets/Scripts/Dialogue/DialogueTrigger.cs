@@ -35,29 +35,31 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log($"DialogueTrigger nhận: {other.name}", this);
+
         if (!triggerOnEnter)
         {
+            Debug.Log("Bị chặn: chưa bật Trigger On Enter", this);
             return;
         }
 
-        // Kiểm tra Layer
         if (!IsPlayerLayer(other.gameObject))
         {
+            Debug.Log($"Bị chặn: sai Layer của {other.name}", this);
             return;
         }
 
-        // Đã kích hoạt rồi
         if (triggerOnce && hasTriggered)
         {
+            Debug.Log("Bị chặn: đã kích hoạt một lần", this);
             return;
         }
 
+        Debug.Log("Đang gọi StartDialogue", this);
         StartDialogue();
 
         if (triggerOnce)
-        {
             hasTriggered = true;
-        }
     }
 
     private bool IsPlayerLayer(GameObject target)

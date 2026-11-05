@@ -65,28 +65,28 @@ public class Enemy2 : Entity
     {
         stateMachine.Initialize(moveState);
     }
-    //public override void Damage(float amount)
-    //{
-    //    //base.Damage(amount); // Chạy hàm tính trừ máu ở Entity base
+    public override void Damage(float amount)
+    {
+        base.Damage(amount); // Chạy hàm tính trừ máu ở Entity base
 
-    //    //if (isDead)
-    //    //{
-    //    //    stateMachine.ChangeState(deadState); // Ngay lập tức chuyển sang trạng thái chết
-    //    //}
-    //    //else if (isStunned && stateMachine.currentState != stunState)
-    //    //{
-    //    //    stateMachine.ChangeState(stunState);
-    //    //}
-    //    //else if (!CheckPlayerInMinAgroRange())
-    //    //{
-    //    //    lookForPlayerState.SetTurnImmediately(true);
-    //    //    stateMachine.ChangeState(lookForPlayerState);
-    //    //}
-    //    //else if (CheckPlayerInMinAgroRange())
-    //    //{
-    //    //    stateMachine.ChangeState(rangeState);
-    //    //}
-    //}
+        if (isDead)
+        {
+            stateMachine.ChangeState(deadState); // Ngay lập tức chuyển sang trạng thái chết
+        }
+        else if (isStunned && stateMachine.currentState != stunState)
+        {
+            stateMachine.ChangeState(stunState);
+        }
+        else if (!CheckPlayerInMinAgroRange())
+        {
+            lookForPlayerState.SetTurnImmediately(true);
+            stateMachine.ChangeState(lookForPlayerState);
+        }
+        else if (CheckPlayerInMinAgroRange())
+        {
+            stateMachine.ChangeState(rangeState);
+        }
+    }
    
     public override void OnDrawGizmos()
     {

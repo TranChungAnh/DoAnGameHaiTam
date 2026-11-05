@@ -8,28 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Map01.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
-    path: Assets/Scenes/Map2_RungVong_TramNghienCuu.unity
-    guid: 697face79de105c4c990586c32c4433e
-  - enabled: 1
-    path: Assets/Scenes/Map2_Tramnghiencuu.unity
-    guid: 5c09b6f3bf14840449684f49d99812e3
-  - enabled: 1
-    path: Assets/Scenes/Map2B_ResearchStation03.unity
-    guid: 781526c772d54e14a9c7d930bc19a51c
-  - enabled: 1
-    path: Assets/Scenes/Map3_boss.unity
-    guid: add5ab0366847a7468b22de4fd8ddc32
-  - enabled: 1
-    path: Assets/Scenes/Map3_DenHaiTam.unity
-    guid: b70fceb74ae5437498d6df752008939b
-  - enabled: 1
-    path: Assets/Scenes/Map3_HangThuyChieu.unity
-    guid: c84be2bf9537d434295c3c43f87d386c
-  - enabled: 1
-    path: Assets/Scenes/GameStart.unity
-    guid: 6acc7b21bcf6b084faad5ff321c01c4a
   m_configObjects: {}

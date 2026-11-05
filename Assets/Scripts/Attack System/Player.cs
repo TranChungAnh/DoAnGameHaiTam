@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public PlayerMoveState moveState { get; private set; }
     public PlayerInputHandler inputHandler { get; private set; }
 
+    public PlayerDashState dashState { get; private set; }
     public PlayerAttackState primaryAttackState { get; private set; }
     public PlayerAttackState secondaryAttackState { get; private set; }
     public PlayerInventory inventory { get; private set; }
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private PlayerData playerData;
+    public Transform dashDirectionIndicator;
     public float gameStartTime;
 
 
@@ -34,6 +36,7 @@ public class Player : MonoBehaviour
         // Chỉ khởi tạo các State dùng cho Top-down (Đứng yên, Di chuyển, Lướt, Tấn công)
         idleState = new PlayerIdleState(this, stateMachine, playerData, "idle");
         moveState = new PlayerMoveState(this, stateMachine, playerData, "move");
+        dashState = new PlayerDashState(this, stateMachine, playerData, "dash");
         primaryAttackState = new PlayerAttackState(this, stateMachine, playerData, "attack");
         secondaryAttackState = new PlayerAttackState(this, stateMachine, playerData, "attack");
         gameStartTime = Time.time;
@@ -47,6 +50,7 @@ public class Player : MonoBehaviour
         inputHandler = GetComponent<PlayerInputHandler>();
         rb = GetComponent<Rigidbody2D>();
         movementCollider = GetComponent<BoxCollider2D>();
+        dashDirectionIndicator = transform.Find("DashDirectionIndicator");
 
         inventory = GetComponent<PlayerInventory>();
 

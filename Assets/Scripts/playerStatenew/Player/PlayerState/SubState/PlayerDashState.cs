@@ -31,6 +31,7 @@ public class PlayerDashState : PlayerAbilityState
         Time.timeScale = playerData.holdTimeScale;
         startTime = Time.unscaledTime;
 
+        player.dashDirectionIndicator.gameObject.SetActive(true);
 
     }
 
@@ -64,6 +65,7 @@ public class PlayerDashState : PlayerAbilityState
                 }
 
                 float angle = Vector2.SignedAngle(Vector2.right, dashDirection);
+                player.dashDirectionIndicator.rotation = Quaternion.Euler(0f, 0f, angle - 45f);
                 Debug.Log(dashInputStop);
                 if (dashInputStop || Time.unscaledTime >= startTime + playerData.maxHoldTime)
                 {
@@ -73,6 +75,7 @@ public class PlayerDashState : PlayerAbilityState
                     Movement?.CheckIfFlip(Mathf.RoundToInt(dashDirection.x));
                     player.rb.drag = playerData.drag;
                     Movement?.SetVelocity(playerData.dashVelocity, dashDirection);
+                    player.dashDirectionIndicator.gameObject.SetActive(false);
                     PlaceAfterImage();
                 }
             }

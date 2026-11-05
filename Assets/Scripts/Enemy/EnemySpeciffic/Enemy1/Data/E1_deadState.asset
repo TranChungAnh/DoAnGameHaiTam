@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29aa38590014a1c4dbba67c07e4c6470, type: 3}
   m_Name: E1_deadState
   m_EditorClassIdentifier: 
-  Atifact: {fileID: 9102747573830011614, guid: 8f101f485f4a3894e98b34dc3bc5be0e, type: 3}
-  deadBloodParticles: {fileID: 3485277946808828618, guid: ff008a3f4e4a84746ba81fb3826eeab1, type: 3}
+  deadChunkParticles: {fileID: 6691590427822376879, guid: fc3596ad142c6d049b567948c3cb36d2, type: 3}
+  deadBloodParticles: {fileID: 7242871928577843345, guid: c1aa8513a9ef55349b6e1550804f621c, type: 3}

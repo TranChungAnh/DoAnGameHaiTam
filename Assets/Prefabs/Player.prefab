@@ -43,12 +43,14 @@ GameObject:
   - component: {fileID: 2078158873973970474}
   - component: {fileID: 1733093455293657477}
   - component: {fileID: 1294179789777364923}
-  - component: {fileID: 301092330447335928}
   - component: {fileID: 2841731634432534068}
   - component: {fileID: 6961558175059322396}
   - component: {fileID: 5958253266124672990}
   - component: {fileID: 7313249615569809082}
   - component: {fileID: 2085226600210864180}
+  - component: {fileID: 754458947468520423}
+  - component: {fileID: 6644832067769242616}
+  - component: {fileID: 446086513504040096}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -112,7 +114,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -317697887
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 2
   m_Sprite: {fileID: -1619136706, guid: 8f4965cd47d6f3d4f9806cc0f73b74bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -197,124 +199,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9465904, y: 0.97184134}
   m_EdgeRadius: 0
---- !u!114 &301092330447335928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7475651676330088829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 7dead05c54ca85b4681351aafd8bd03a, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2841731634432534068}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 9d8fcbff-87d1-43ef-857e-931c84d5bd72
-    m_ActionName: Gameplay/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ddab72da-d325-4b4c-a484-abe4f6bdf113
-    m_ActionName: Gameplay/Look[/Mouse/delta]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2bd60403-0923-469e-a3a4-7338b04f6bbc
-    m_ActionName: Gameplay/Interact[/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7313249615569809082}
-        m_TargetAssemblyTypeName: ToolManager, Assembly-CSharp
-        m_MethodName: OnUseTool
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 6eb1cd30-21be-4be4-8ba7-27e719b79d04
-    m_ActionName: Gameplay/UseTool[/Mouse/leftButton,/Device Simulator Touchscreen/primaryTouch/tap]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7313249615569809082}
-        m_TargetAssemblyTypeName: ToolManager, Assembly-CSharp
-        m_MethodName: OnPlantSeed
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: d225f020-9ab6-4fb5-9c13-07c80161b42b
-    m_ActionName: Gameplay/PlantSeed[/Keyboard/1,/Device Simulator Touchscreen/primaryTouch/tap]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7313249615569809082}
-        m_TargetAssemblyTypeName: ToolManager, Assembly-CSharp
-        m_MethodName: OnWater
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 1f8a3993-fb3b-481a-9eb2-4b975d71e01d
-    m_ActionName: Gameplay/Water[/Keyboard/2,/Device Simulator Touchscreen/primaryTouch/tap]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7313249615569809082}
-        m_TargetAssemblyTypeName: ToolManager, Assembly-CSharp
-        m_MethodName: OnPoint
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: bb41c379-e7df-4e1f-b639-0aa18a7843a7
-    m_ActionName: Gameplay/Point[/Mouse/position,/Device Simulator Touchscreen/primaryTouch/position]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Gameplay
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &2841731634432534068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,7 +260,7 @@ MonoBehaviour:
   - {x: 0.8571434, y: -1.4285717, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1444
+  m_InstanceId: -3268
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.8571434, y: 1.4285717, z: 0}
@@ -406,6 +290,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1022791331092566508}
+--- !u!114 &754458947468520423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475651676330088829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a58071541210a4db6d1aa273b4cc80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6644832067769242616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475651676330088829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84baf4711bdb7704c9786730e3668242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactLayer:
+    serializedVersion: 2
+    m_Bits: 512
+--- !u!114 &446086513504040096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475651676330088829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d35d23b5c29584a889305f8b7aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8627275734015390945
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +400,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -317697887
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 2
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.5803922}

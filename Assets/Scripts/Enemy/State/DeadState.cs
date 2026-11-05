@@ -5,7 +5,7 @@ using UnityEngine;
 public class DeadState : State
 {
     protected D_DeadState deadData;
-    public State deadState { get; protected set; }
+
     public DeadState(
         Entity entity,
         FiniteStateMachine stateMachine,
@@ -48,10 +48,10 @@ public class DeadState : State
         }
 
         // 4. Kiểm tra & Tạo Hiệu ứng mảnh vỡ (Chunk Particles)
-        if (deadData.Atifact != null)
+        if (deadData.deadChunkParticles != null)
         {
             GameObject bloodObj = GameObject.Instantiate(
-                deadData.Atifact,
+                deadData.deadChunkParticles,
                 entity.transform.position,
                 entity.transform.rotation
             );

@@ -5,11 +5,8 @@ using UnityEngine.InputSystem;
 public class ItemPickup : MonoBehaviour
 {
     [Header("Thông tin vật phẩm")]
-    public ItemBase itemData;
-    public int amount = 1;
-
-    [Header("Trạng thái thế giới (Chống xuất hiện lại khi Load game)")]
-    public string uniqueItemID; // Nhập mã ID độc nhất cho từng món đồ trên map
+    public ItemBase itemData; // Kéo File ScriptableObject của Item này vào đây
+    public int amount = 1;    // Số lượng nhặt (mặc định 1)
 
     private Camera mainCam;
 
@@ -18,17 +15,6 @@ public class ItemPickup : MonoBehaviour
         mainCam = Camera.main;
     }
 
-    private void Start()
-    {
-        /// Kiểm tra vật phẩm đã nhặt trước đó và xóa khi load lại game
-        /*
-        if (!string.IsNullOrEmpty(uniqueItemID) &&
-            PlayerPrefs.GetInt("Collected_" + uniqueItemID, 0) == 1)
-        {
-            Destroy(gameObject);
-        }
-        */
-    }
     private void Update()
     {
         if (Mouse.current != null && Mouse.current.rightButton.wasReleasedThisFrame)
@@ -36,10 +22,13 @@ public class ItemPickup : MonoBehaviour
             Vector2 clickPos = Mouse.current.position.ReadValue();
             TryPickup(clickPos);
         }
+
+      
     }
 
     private void TryPickup(Vector2 screenPos)
     {
+        // Bỏ qua nếu người chơi đang bấm trên giao diện UI (Hotbar, Bag,...)
         if (UnityEngine.EventSystems.EventSystem.current != null &&
             UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
@@ -49,22 +38,11 @@ public class ItemPickup : MonoBehaviour
         Ray ray = mainCam.ScreenPointToRay(screenPos);
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
 
+        // Nếu Raycast trúng đúng GameObject này
         if (hit.collider != null && hit.collider.gameObject == gameObject)
         {
-            TriggerCombatAndLockActions();
             Pickup();
         }
-    }
-
-    private void TriggerCombatAndLockActions()
-    {
-        GameObject player = GameObject.FindWithTag("Player");
-        if (player != null)
-        {
-
-        }
-
-        Debug.Log("⚔️ Đã kích hoạt chiến đấu và khóa các hành động khác!");
     }
 
     private void Pickup()
@@ -75,30 +53,21 @@ public class ItemPickup : MonoBehaviour
             return;
         }
 
+        // Thêm item vào Inventory thông qua InventoryManager đã có sẵn
         bool wasAdded = InventoryManager.Instance.AddItem(itemData, amount);
 
         if (wasAdded)
         {
             Debug.Log($"🎒 Đã nhặt {amount}x {itemData.itemName} vào kho!");
-            if (SoundManager.Instance != null && SoundManager.Instance.nhatCoVat != null)
-            {
-                SoundManager.Instance.PlaySound(SoundManager.Instance.nhatCoVat);
-            }
+
+            // Cập nhật lại giao diện Inventory / Storage nếu đang mở
             UIInventory uiInv = FindObjectOfType<UIInventory>();
             if (uiInv != null && uiInv.gameObject.activeInHierarchy)
             {
                 uiInv.Refresh();
             }
 
-            // Lưu trạng thái vĩnh viễn là vật phẩm này đã bị nhặt
-            /*
-            if (!string.IsNullOrEmpty(uniqueItemID))
-            {
-                PlayerPrefs.SetInt("Collected_" + uniqueItemID, 1);
-                PlayerPrefs.Save();
-            }
-            */
-            // Xóa vật phẩm khỏi mặt đất
+            // Hóa/Xóa vật phẩm dưới đất sau khi đã nhặt
             Destroy(gameObject);
         }
         else
