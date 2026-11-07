@@ -6,16 +6,21 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Dialogue")]
     [SerializeField] private DialogueData dialogueData;
 
+    [Header("Cài đặt Chạy Hội Thoại")]
+    [Tooltip("Bật: Tự động chạy hội thoại theo thời gian. Tắt: Player phải bấm Next để chuyển.")]
+    [SerializeField] private bool autoPlay = false;
+
+    [Tooltip("Thời gian chờ (giây) trước khi tự động chuyển sang câu tiếp theo (chỉ dùng khi bật autoPlay)")]
+    [SerializeField] private float autoPlayDelay = 3f;
+
     [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
 
     [Header("Trigger Settings")]
     [SerializeField] private bool triggerOnEnter = true;
-
     [SerializeField] private bool triggerOnce = true;
 
     private bool hasTriggered;
-
     private Collider2D triggerCollider;
 
     private void Awake()
@@ -24,13 +29,10 @@ public class DialogueTrigger : MonoBehaviour
 
         if (!triggerCollider.isTrigger)
         {
-            Debug.LogWarning(
-                $"{gameObject.name}: Collider2D chưa bật Is Trigger!"
-            );
+            Debug.LogWarning($"{gameObject.name}: Collider2D chưa bật Is Trigger!");
         }
     }
 
-  
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!triggerOnEnter)
@@ -67,32 +69,25 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (dialogueData == null)
         {
-            Debug.LogWarning(
-                $"DialogueTrigger '{gameObject.name}' chưa có DialogueData!"
-            );
-
+            Debug.LogWarning($"DialogueTrigger '{gameObject.name}' chưa có DialogueData!");
             return;
         }
 
         if (DialogueManager.Instance == null)
         {
-            Debug.LogWarning(
-                "Không tìm thấy DialogueManager trong Scene!"
-            );
-
+            Debug.LogWarning("Không tìm thấy DialogueManager trong Scene!");
             return;
         }
 
-        DialogueManager.Instance.StartDialogue(dialogueData);
+        // Truyền thêm thông tin autoPlay và autoPlayDelay sang Manager
+        DialogueManager.Instance.StartDialogue(dialogueData, autoPlay, autoPlayDelay);
     }
 
-   
     public void ResetTrigger()
     {
         hasTriggered = false;
     }
 
- 
     public void SetTriggered(bool value)
     {
         hasTriggered = value;
@@ -103,7 +98,6 @@ public class DialogueTrigger : MonoBehaviour
         return hasTriggered;
     }
 
-  
     public void SetDialogue(DialogueData newDialogue)
     {
         dialogueData = newDialogue;

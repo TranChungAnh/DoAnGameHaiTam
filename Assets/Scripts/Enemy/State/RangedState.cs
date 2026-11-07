@@ -5,7 +5,7 @@ using UnityEngine;
 public class RangedState : AttackState
 {
     protected D_RangeAttackState rangeData;
-    protected GameObject projectTitle;
+    protected GameObject projectileInstance;
     protected projectTitle projectTitleScrip;
 
     public RangedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition, D_RangeAttackState rangeData) : base(entity, stateMachine, animBoolName, attackPosition)
@@ -58,32 +58,48 @@ public class RangedState : AttackState
         entity.CheckPlayerInMinAgroRange();
         entity.LookAtPlayer();
 
-        // 1. Tính toán hướng bắn về phía Player
-        Vector2 targetDirection = entity.LastFacingDirection;
-        Quaternion shootRotation = attackPosition.rotation;
-
-        if (entity.Target != null)
+        // Kiểm tra xem cấu hình trong ScriptableObject có yêu cầu bắn tỏa nhiều hướng không
+        if (rangeData.isMultipleProjectiles)
         {
-            targetDirection = (entity.Target.position - attackPosition.position).normalized;
-            float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
-            shootRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            // Gọi hàm tĩnh FireMultiple để bắn tỏa tròn (Dành cho Boss)
+            projectTitle.FireMultiple(
+                rangeData.projectile,
+                attackPosition,
+                rangeData.projecTileSpeed,
+                rangeData.projectTitleTraveDistance,
+                rangeData.projectTitleDamage,
+                rangeData.numberOfProjectiles
+            );
         }
-
-        // 2. Tạo quả cầu
-        projectTitle = GameObject.Instantiate(rangeData.projectile, attackPosition.position, shootRotation);
-
-        projectTitleScrip = projectTitle.GetComponent<projectTitle>(); 
-        if (projectTitleScrip == null)
+        else
         {
-            Debug.LogError("projectTitle prefab is missing the 'projectTitle' script!");
-            return;
-        }
+            // 1. Tính toán hướng bắn về phía Player (Dành cho Enemy thường)
+            Vector2 targetDirection = entity.LastFacingDirection;
+            Quaternion shootRotation = attackPosition.rotation;
 
-        projectTitleScrip.FireProjectile(
-            rangeData.projecTileSpeed,
-            rangeData.projectTitleTraveDistance,
-            rangeData.projectTitleDamage,
-            targetDirection
-        );
+            if (entity.Target != null)
+            {
+                targetDirection = (entity.Target.position - attackPosition.position).normalized;
+                float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
+                shootRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            }
+
+            // 2. Tạo quả cầu
+            projectileInstance = GameObject.Instantiate(rangeData.projectile, attackPosition.position, shootRotation);
+
+            projectTitleScrip = projectileInstance.GetComponent<projectTitle>();
+            if (projectTitleScrip == null)
+            {
+                Debug.LogError("projectTitle prefab is missing the 'projectTitle' script!");
+                return;
+            }
+
+            projectTitleScrip.FireProjectile(
+                rangeData.projecTileSpeed,
+                rangeData.projectTitleTraveDistance,
+                rangeData.projectTitleDamage,
+                targetDirection
+            );
+        }
     }
 }

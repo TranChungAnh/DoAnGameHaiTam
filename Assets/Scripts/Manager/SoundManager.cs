@@ -1,22 +1,26 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
-    public AudioSource walkingSound;
-    public AudioSource jumpSound;
-    public AudioSource swordSound;
-    public AudioSource deathSound;
-    public AudioSource BGSound;
-    public AudioSource glassSound;
-    public AudioSource ShieldSound;
     public AudioSource voiceSound;
-    public AudioSource bowSound;
+    public AudioSource diTrenCat;
+    public AudioSource buocChanTrenGo;
+    public AudioSource quai1Attack;
+    public AudioSource tiengQuaiBiDanhTrung;
+    public AudioSource nhatCoVat;
+    public AudioSource audioClipNhatTaiLieu;
+    public AudioSource audioClipTiengChiaKhoa;
+    public AudioSource audioClipNhieu;
+    public AudioSource anNutMoPhongThiNghiem;
+    public AudioSource bgSound;
+    public AudioSource roarSound;
+
     private void Awake()
     {
-        if(Instance!=null && Instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
         }
@@ -29,14 +33,20 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySound(AudioSource soundToPlay)
     {
-        if (!soundToPlay.isPlaying)
+        if (soundToPlay != null)
         {
-            soundToPlay.Play();
+            soundToPlay.Stop(); // Dừng tiếng trước đó nếu đang phát dở
+            soundToPlay.Play(); // Phát lại ngay lập tức
         }
     }
+
     public void PlayVoiceSound(AudioClip clip)
     {
+        if (voiceSound == null || clip == null)
+            return;
+
         voiceSound.clip = clip;
+
         if (!voiceSound.isPlaying)
         {
             voiceSound.Play();
@@ -47,5 +57,4 @@ public class SoundManager : MonoBehaviour
             voiceSound.Play();
         }
     }
-
 }

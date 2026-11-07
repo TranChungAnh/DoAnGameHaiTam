@@ -14,17 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueID: 1
   lines:
-  - speakerName: ????????
+  - displayMode: 0
+    speakerName: "\u0111????????"
     dialogueText: "Minh... cu\u1ED1i c\xF9ng c\u1EADu c\u0169ng \u0111\u1EBFn."
     characterPortrait: {fileID: -189674907, guid: f19ca5cf7c2cf2a4aa7e4a279bb8900e, type: 3}
-  - speakerName: Minh
+    backgroundSprite: {fileID: 958862177, guid: 9291e4e87da89f2488cb842056be6a22, type: 3}
+  - displayMode: 1
+    speakerName: Minh
     dialogueText: "Ai \u0111\u1EA5y?"
-    characterPortrait: {fileID: 958862177, guid: 9291e4e87da89f2488cb842056be6a22, type: 3}
-  - speakerName: ????????
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: ????????
     dialogueText: "C\u1EADu kh\xF4ng c\u1EA7n bi\u1EBFt ta l\xE0 ai. H\xE3y c\u1EE9
       \u0111i ti\u1EBFp."
     characterPortrait: {fileID: -189674907, guid: f19ca5cf7c2cf2a4aa7e4a279bb8900e, type: 3}
-  - speakerName: Minh
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: Minh
     dialogueText: "Gi\u1ECDng n\xF3i n\xE0y... t\u1EA1i sao t\xF4i l\u1EA1i c\u1EA3m
       th\u1EA5y quen thu\u1ED9c?"
     characterPortrait: {fileID: 958862177, guid: 9291e4e87da89f2488cb842056be6a22, type: 3}
+    backgroundSprite: {fileID: 0}

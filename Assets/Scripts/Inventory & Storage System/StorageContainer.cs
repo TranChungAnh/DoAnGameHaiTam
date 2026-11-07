@@ -70,4 +70,18 @@ public class StorageContainer : MonoBehaviour
         Debug.Log("⚠ Kho đã đầy!");
         return false;
     }
+    public int GetItemCount(ItemBase targetItem)
+    {
+        if (targetItem == null) return 0;
+
+        int total = 0;
+        foreach (var slot in slots)
+        {
+            if (!slot.IsEmpty && slot.item == targetItem)
+            {
+                total += slot.quantity;
+            }
+        }
+        return total;
+    }
 }

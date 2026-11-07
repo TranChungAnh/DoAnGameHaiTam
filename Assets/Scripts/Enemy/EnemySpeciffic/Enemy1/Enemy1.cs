@@ -74,6 +74,20 @@ public class Enemy1 : Entity
     //    }
 
     //}
+    public void PlayMeeleeAttackClip()
+    {
+        if (SoundManager.Instance != null && SoundManager.Instance.quai1Attack != null)
+        {
+            SoundManager.Instance.PlaySound(SoundManager.Instance.quai1Attack);
+        }
+    }
+    public void PlayRangeAttackClip()
+    {
+        if (SoundManager.Instance != null && SoundManager.Instance.quai1Attack != null)
+        {
+            SoundManager.Instance.PlaySound(SoundManager.Instance.quai1Attack);
+        }
+    }
     public void HideEnemy()
     {
         gameObject.SetActive(false);

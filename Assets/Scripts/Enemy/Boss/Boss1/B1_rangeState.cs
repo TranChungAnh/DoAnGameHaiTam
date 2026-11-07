@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class B1_rangeState : RangedState 
 {
-    protected Boss1  enemy;
+    protected Boss1  boss1;
 
-    public B1_rangeState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition, D_RangeAttackState rangeData, Boss1  enemy) : base(entity, stateMachine, animBoolName, attackPosition, rangeData)
+    public B1_rangeState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition, D_RangeAttackState rangeData, Boss1 boss1) : base(entity, stateMachine, animBoolName, attackPosition, rangeData)
     {
-        this.enemy = enemy;
+        this.boss1 = boss1;
     }
 
     public override void DoChecks()
@@ -33,13 +33,14 @@ public class B1_rangeState : RangedState
         {
             if (isPlayerInMinArgoRange)
             {
-                stateMachine.ChangeState(enemy.playerDetectedState);
+                stateMachine.ChangeState(boss1.playerDetectedState);
             }
             else
             {
-                stateMachine.ChangeState(enemy.lookForPlayerState);
+                stateMachine.ChangeState(boss1.lookForPlayerState);
             }
         }
+
     }
 
     public override void PhysicsUpdate()

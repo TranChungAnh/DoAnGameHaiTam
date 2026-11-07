@@ -17,7 +17,6 @@ public class States : CoreComponent
     {
         base.Awake();
         currentHealth = maxHealth;
-        Debug.Log("Current Health: " + currentHealth);
        
 
     }
@@ -67,13 +66,10 @@ public class States : CoreComponent
                 prefab = GM.enemyPrefabs.Find(p => p.name == enemyBaseName),
                 respawnPoint = tempRespawnPoint
             };
-            GM.EnemyKilled();
-            GM.killCounter.text = "X " + GM.gameData.killEnemy.ToString();
             GM.playerRespawner.enemiesToRespawn.Enqueue(enemyData);
            
         }
         GM.Respawn();
-        Debug.Log("Die");
         Destroy(gameObject);
     }
 

@@ -5,6 +5,6 @@ using UnityEngine;
 
 public class D_DeadState : ScriptableObject
 {
-    public GameObject deadChunkParticles;
+    public GameObject Atifact;
     public GameObject deadBloodParticles;
 }

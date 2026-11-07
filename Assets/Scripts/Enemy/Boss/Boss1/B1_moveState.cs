@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class B1_moveState : MoveState
 {
-    private Boss1 enemy;
-    public B1_moveState(Entity entity, FiniteStateMachine stateMachine, D_MoveState stateData, string animBoolName, Boss1 enemy) : base(entity, stateMachine, stateData, animBoolName)
+    private Boss1 boss1;
+    public B1_moveState(Entity entity, FiniteStateMachine stateMachine, D_MoveState stateData, string animBoolName, Boss1 boss1) : base(entity, stateMachine, stateData, animBoolName)
     {
-        this.enemy = enemy;
+        this.boss1 = boss1;
     }
 
     public override void Enter()
@@ -23,14 +23,15 @@ public class B1_moveState : MoveState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        entity.LookAtPlayer();
         if (isPlayerInMinAgroRange)
         {
-            stateMachine.ChangeState(enemy.playerDetectedState);
+            stateMachine.ChangeState(boss1.playerDetectedState);
         }
-        if (isDetectingWall )
+        if (isDetectingWall)
         {
-            enemy.idleState.SetFlipAfterIdle(true);
-            stateMachine.ChangeState(enemy.idleState);
+            boss1.idleState.SetFlipAfterIdle(true);
+            stateMachine.ChangeState(boss1.idleState);
         }
     }
 

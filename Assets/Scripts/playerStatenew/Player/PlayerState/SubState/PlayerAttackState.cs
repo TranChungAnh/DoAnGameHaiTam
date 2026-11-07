@@ -22,10 +22,10 @@ public class PlayerAttackState : PlayerAbilityState
         base.Enter();
 
         // 1. Âm thanh tấn công
-        if (SoundManager.Instance != null && SoundManager.Instance.swordSound != null)
-        {
-            SoundManager.Instance.PlaySound(SoundManager.Instance.swordSound);
-        }
+        //if (SoundManager.Instance != null && SoundManager.Instance.swordSound != null)
+        //{
+        //    SoundManager.Instance.PlaySound(SoundManager.Instance.swordSound);
+        //}
 
         // 2. Kích hoạt logic Weapon
         if (weapon != null)
@@ -71,7 +71,6 @@ public class PlayerAttackState : PlayerAbilityState
         if (weapon != null)
         {
             weapon.ExitWeapon();
-            Debug.LogError("PlayerAttackState: Weapon chạy ddddddddddddddd!");
 
         }
         else

@@ -15,24 +15,17 @@ public class GameMamager : MonoBehaviour
 
     private CinemachineVirtualCamera CVC;
     private HealthBar healthBar;
-    public TextMeshProUGUI livesCounter;
 
     [SerializeField] public GameDataSO gameData;
 
     public States states { get; private set; }
 
-    public TextMeshProUGUI killCounter;
 
     [SerializeField] private GameObject gameOver;
-    [SerializeField] private GameObject results;
     [SerializeField] private Player player;
 
-    private TextMeshProUGUI scoreText;
-    private TextMeshProUGUI monstersDefeatedText;
-    private TextMeshProUGUI survivalTimeText;
     private GameObject newPlayer;
     public bool isGameOver;
-    public int enemyCount;
     public bool isOpenTeleport = false;
 
     void Start()
@@ -42,19 +35,29 @@ public class GameMamager : MonoBehaviour
         CVC = GameObject.Find("PlayerCamera")?.GetComponent<CinemachineVirtualCamera>();
         healthBar = GameObject.Find("HealthBarContainer")?.GetComponent<HealthBar>();
 
-        scoreText = results.transform.Find("Score")?.GetComponent<TextMeshProUGUI>();
-        monstersDefeatedText = results.transform.Find("MonstersDefeated")?.GetComponent<TextMeshProUGUI>();
-        survivalTimeText = results.transform.Find("SurvivalTime")?.GetComponent<TextMeshProUGUI>();
-        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        Debug.Log("Số lượng enemy: " + enemyCount);
+        // 🔹 THÊM ĐOẠN NÀY: Tự động tìm States của Player có sẵn trong Scene khi vừa start
+        GameObject existingPlayer = GameObject.FindWithTag("Player");
+        if (existingPlayer != null)
+        {
+            states = existingPlayer.transform.Find("Core/States")?.GetComponent<States>();
+            if (states != null && healthBar != null)
+            {
+                healthBar.States = states;
+            }
+        }
 
         isGameOver = false;
+
+        // Xử lý nạp dữ liệu tạm nếu vừa load game từ menu sang
+        if (TemporarySaveData.pendingSaveData != null && SaveManager.instance != null)
+        {
+            SaveManager.instance.ApplyLoadedData(TemporarySaveData.pendingSaveData);
+            TemporarySaveData.pendingSaveData = null;
+        }
     }
 
     void Update()
     {
-        livesCounter.text = "X" + gameData.lives.ToString();
-        killCounter.text = gameData.killEnemy.ToString();
 
         if (gameData.lives <= 0 && !isGameOver && !playerRespawner.isRespawningPlayer)
         {
@@ -65,10 +68,7 @@ public class GameMamager : MonoBehaviour
 
         CheckRespawn();
 
-        if (enemyCount <= 0)
-        {
-            isOpenTeleport = true;
-        }
+       
     }
 
     public void Respawn()
@@ -76,7 +76,6 @@ public class GameMamager : MonoBehaviour
         if (gameData.lives <= 0) return;
 
         respawnStartTime = Time.time;
-        Debug.Log("Player will respawn...");
     }
 
     private void CheckRespawn()
@@ -131,24 +130,9 @@ public class GameMamager : MonoBehaviour
         Debug.Log("Game Over");
 
         gameOver.SetActive(true);
-        scoreText.text = "Score: " + (gameData.killEnemy * 10).ToString();
-        monstersDefeatedText.text = "Monsters Defeated: " + gameData.killEnemy.ToString();
 
-        float time = Time.time;
-        float survivalTime = time - player.gameStartTime;
-        survivalTimeText.text = "Survival Time: " + FormatTime(survivalTime);
     }
 
-    private string FormatTime(float timeInSeconds)
-    {
-        int minutes = Mathf.FloorToInt(timeInSeconds / 60f);
-        int seconds = Mathf.FloorToInt(timeInSeconds % 60f);
-        return string.Format("{0:00}:{1:00}", minutes, seconds);
-    }
-
-    public void EnemyKilled()
-    {
-        gameData.killEnemy += 1;
-        enemyCount -= 3;
-    }
+ 
+   
 }

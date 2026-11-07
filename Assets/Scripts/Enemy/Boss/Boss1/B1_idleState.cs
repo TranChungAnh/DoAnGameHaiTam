@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class B1_idleState : IdleState
 {
-    private Boss1 enemy;
-    public B1_idleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData, Boss1 enemy) : base(entity, stateMachine, animBoolName, stateData)
+    private Boss1 boss1;
+    public B1_idleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData, Boss1 boss1) : base(entity, stateMachine, animBoolName, stateData)
     {
-        this.enemy = enemy;
+        this.boss1 = boss1;
     }
 
     public override void DoChecks()
@@ -30,11 +30,11 @@ public class B1_idleState : IdleState
         base.LogicUpdate();
         if (isPlayerInMinAgroRange)
         {
-            stateMachine.ChangeState(enemy.playerDetectedState);
+            stateMachine.ChangeState(boss1.playerDetectedState);
         }
         else if (isIdelTimeOver)
         {
-            stateMachine.ChangeState(enemy.moveState);
+            stateMachine.ChangeState(boss1.moveState);
         }
     }
 

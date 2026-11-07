@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class B1_meleeAttackState : MeleeAttackState
 {
-    private Boss1 enemy;
-    public B1_meleeAttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition, D_MeleeAttackState meleeAttackData, Boss1 enemy) : base(entity, stateMachine, animBoolName, attackPosition, meleeAttackData)
+    private Boss1 boss1;
+    public B1_meleeAttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition, D_MeleeAttackState meleeAttackData, Boss1 boss1) : base(entity, stateMachine, animBoolName, attackPosition, meleeAttackData)
     {
-        this.enemy = enemy;
+        this.boss1 = boss1;
     }
 
     public override void DoChecks()
@@ -18,6 +18,15 @@ public class B1_meleeAttackState : MeleeAttackState
     public override void Enter()
     {
         base.Enter();
+        boss1.LookAtPlayer();
+
+        if (entity.Target != null && attackPosition != null)
+        {
+            Vector2 dir = (entity.Target.position - entity.transform.position).normalized;
+
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            attackPosition.rotation = Quaternion.Euler(0, 0, angle);
+        }
     }
 
     public override void Exit()
@@ -37,11 +46,11 @@ public class B1_meleeAttackState : MeleeAttackState
         {
             if (isPlayerInMinArgoRange)
             {
-                stateMachine.ChangeState(enemy.playerDetectedState);
+                stateMachine.ChangeState(boss1.playerDetectedState);
             }
             else
             {
-                stateMachine.ChangeState(enemy.lookForPlayerState);
+                stateMachine.ChangeState(boss1.lookForPlayerState);
             }
         }
     }

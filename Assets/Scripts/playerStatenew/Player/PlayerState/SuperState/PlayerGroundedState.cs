@@ -25,7 +25,6 @@ public class PlayerGroundedState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        player.dashState?.ResetCanDash();
     }
 
     public override void Exit()
@@ -54,10 +53,7 @@ public class PlayerGroundedState : PlayerState
             Debug.Log("<color=yellow>[STATE] Kich hoat Secondary Attack (Chuot Phai!)</color>");
         }
         // Chuyển sang Dash State
-        else if (dashInput && player.dashState != null && player.dashState.CheckIfCanDash())
-        {
-            stateMachine.ChangeState(player.dashState);
-        }
+        
     }
 
     public override void PhysicsUpdate()

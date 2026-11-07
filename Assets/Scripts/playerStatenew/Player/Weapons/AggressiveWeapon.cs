@@ -36,10 +36,10 @@
                 item.Damage(attackDetails.damageAmount);
             }
 
-            foreach (IKnockBack item in detectedKnockBackables.ToList())
-            {
-                item.KnockBack(attackDetails.knockbackAngle, attackDetails.knockbackForce, Movement.facingDirection);
-            }
+            //foreach (IKnockBack item in detectedKnockBackables.ToList())
+            //{
+            //    item.KnockBack(attackDetails.knockbackAngle, attackDetails.knockbackForce, Movement.facingDirection);
+            //}
         }
 
         public void AddToDetected(Collider2D collision)
@@ -52,7 +52,7 @@
             }
 
             IDamageable damageable = collision.GetComponent<IDamageable>() ?? collision.GetComponentInParent<IDamageable>();
-            IKnockBack knockbackable = collision.GetComponent<IKnockBack>() ?? collision.GetComponentInParent<IKnockBack>();
+            //IKnockBack knockbackable = collision.GetComponent<IKnockBack>() ?? collision.GetComponentInParent<IKnockBack>();
 
             if (damageable != null)
             {
@@ -62,13 +62,13 @@
                 }
             }
 
-            if (knockbackable != null)
-            {
-                if (!detectedKnockBackables.Contains(knockbackable))
-                {
-                    detectedKnockBackables.Add(knockbackable);
-                }
-            }
+            //if (knockbackable != null)
+            //{
+            //    if (!detectedKnockBackables.Contains(knockbackable))
+            //    {
+            //        detectedKnockBackables.Add(knockbackable);
+            //    }
+            //}
         }
 
         public void RemoveFromDetected(Collider2D collision)
@@ -80,16 +80,16 @@
             }
 
             IDamageable damageable = collision.GetComponent<IDamageable>() ?? collision.GetComponentInParent<IDamageable>();
-            IKnockBack knockbackable = collision.GetComponent<IKnockBack>() ?? collision.GetComponentInParent<IKnockBack>();
+            //IKnockBack knockbackable = collision.GetComponent<IKnockBack>() ?? collision.GetComponentInParent<IKnockBack>();
 
             if (damageable != null)
             {
                 detectedDamageables.Remove(damageable);
             }
 
-            if (knockbackable != null)
-            {
-                detectedKnockBackables.Remove(knockbackable);
-            }
+            //if (knockbackable != null)
+            //{
+            //    detectedKnockBackables.Remove(knockbackable);
+            //}
         }
     }

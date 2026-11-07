@@ -14,7 +14,7 @@ public class Entity : MonoBehaviour, IDamageable, IKnockBack
     {
         get => collectionSenses ?? core.GetCoreComponent(ref collectionSenses);
     }
-
+    public State deadState { get; protected set; }
     public Animator anim { get; private set; }
 
     public FiniteStateMachine stateMachine;
@@ -117,7 +117,7 @@ public class Entity : MonoBehaviour, IDamageable, IKnockBack
         );
     }
 
-     public virtual void Damage(float amount)
+    public virtual void Damage(float amount)
     {
         lastDamageTime = Time.time;
         currentHealth -= amount;

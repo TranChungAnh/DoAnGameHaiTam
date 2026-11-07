@@ -51,7 +51,7 @@ public class MeleeAttackState : AttackState
             Debug.LogError("Melee attack data is not set.");
             return;
         }
-
+       
         Vector2 facingDir = entity.LastFacingDirection;
         Vector3 actualAttackPos = entity.transform.position + (Vector3)(facingDir * meleeAttackData.attackRadius);
 
@@ -74,7 +74,6 @@ public class MeleeAttackState : AttackState
                 }
                 else
                 {
-                    Debug.LogError("States.Instance is null.");
                 }
             }
 
@@ -83,8 +82,9 @@ public class MeleeAttackState : AttackState
             if (knockbackable != null)
             {
                 int direction = (collider.transform.position.x >= entity.transform.position.x) ? 1 : -1;
-                knockbackable.KnockBack(meleeAttackData.knockbackAngle, meleeAttackData.knockbackForce, direction);
+                //knockbackable.KnockBack(meleeAttackData.knockbackAngle, meleeAttackData.knockbackForce, direction);
             }
         }
     }
+  
 }

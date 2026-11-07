@@ -65,29 +65,42 @@ public class Enemy2 : Entity
     {
         stateMachine.Initialize(moveState);
     }
-    public override void Damage(float amount)
-    {
-        base.Damage(amount); // Chạy hàm tính trừ máu ở Entity base
+    //public override void Damage(float amount)
+    //{
+    //    //base.Damage(amount); // Chạy hàm tính trừ máu ở Entity base
 
-        if (isDead)
+    //    //if (isDead)
+    //    //{
+    //    //    stateMachine.ChangeState(deadState); // Ngay lập tức chuyển sang trạng thái chết
+    //    //}
+    //    //else if (isStunned && stateMachine.currentState != stunState)
+    //    //{
+    //    //    stateMachine.ChangeState(stunState);
+    //    //}
+    //    //else if (!CheckPlayerInMinAgroRange())
+    //    //{
+    //    //    lookForPlayerState.SetTurnImmediately(true);
+    //    //    stateMachine.ChangeState(lookForPlayerState);
+    //    //}
+    //    //else if (CheckPlayerInMinAgroRange())
+    //    //{
+    //    //    stateMachine.ChangeState(rangeState);
+    //    //}
+    //}
+    public void PlayMeeleeAttackClip()
+    {
+        if (SoundManager.Instance != null && SoundManager.Instance.quai1Attack != null)
         {
-            stateMachine.ChangeState(deadState); // Ngay lập tức chuyển sang trạng thái chết
-        }
-        else if (isStunned && stateMachine.currentState != stunState)
-        {
-            stateMachine.ChangeState(stunState);
-        }
-        else if (!CheckPlayerInMinAgroRange())
-        {
-            lookForPlayerState.SetTurnImmediately(true);
-            stateMachine.ChangeState(lookForPlayerState);
-        }
-        else if (CheckPlayerInMinAgroRange())
-        {
-            stateMachine.ChangeState(rangeState);
+            SoundManager.Instance.PlaySound(SoundManager.Instance.quai1Attack);
         }
     }
-   
+    public void PlayRangeAttackClip()
+    {
+        if (SoundManager.Instance != null && SoundManager.Instance.quai1Attack != null)
+        {
+            SoundManager.Instance.PlaySound(SoundManager.Instance.quai1Attack);
+        }
+    }
     public override void OnDrawGizmos()
     {
         base.OnDrawGizmos();

@@ -69,7 +69,20 @@ public class Enemy3 : Entity
     {
         stateMachine.Initialize(moveState);
     }
-
+    public void PlayMeeleeAttackClip()
+    {
+        if (SoundManager.Instance != null && SoundManager.Instance.quai1Attack != null)
+        {
+            SoundManager.Instance.PlaySound(SoundManager.Instance.quai1Attack);
+        }
+    }
+    public void PlayRangeAttackClip()
+    {
+        if (SoundManager.Instance != null && SoundManager.Instance.quai1Attack != null)
+        {
+            SoundManager.Instance.PlaySound(SoundManager.Instance.quai1Attack);
+        }
+    }
     //public override void Damage1(AttackDetails attackDetails)
     //{
     //    base.Damage1(attackDetails);
@@ -91,7 +104,7 @@ public class Enemy3 : Entity
     //        stateMachine.ChangeState(rangeState);
     //    }
     //}
- 
+
     public override void OnDrawGizmos()
     {
         base.OnDrawGizmos();

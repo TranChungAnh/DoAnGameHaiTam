@@ -18,6 +18,7 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerController playerController;
     private ToolManager toolManager;
     private InteractionSystem interactionSystem;
+    private PlayerAnimation playerAnimation; // Tham chiếu dùng để kiểm tra Stun
     private Camera cam;
 
     // --- Input Properties ---
@@ -48,6 +49,7 @@ public class PlayerInputHandler : MonoBehaviour
         playerController = GetComponent<PlayerController>();
         toolManager = GetComponent<ToolManager>();
         interactionSystem = GetComponent<InteractionSystem>();
+        playerAnimation = GetComponent<PlayerAnimation>(); // Lấy component PlayerAnimation
     }
 
     private void Start()
@@ -85,12 +87,6 @@ public class PlayerInputHandler : MonoBehaviour
             primaryAction.canceled += OnPrimaryAttack;
         }
 
-        //if (input.Gameplay.Get().Contains(input.Gameplay.Dash))
-        //{
-        //    input.Gameplay.Dash.started += OnDashInput;
-        //    input.Gameplay.Dash.canceled += OnDashInput;
-        //}
-
         if (input.Gameplay.Get().Contains(input.Gameplay.UseTool))
             input.Gameplay.UseTool.performed += OnUseTool;
 
@@ -123,12 +119,6 @@ public class PlayerInputHandler : MonoBehaviour
             primaryAction.canceled -= OnPrimaryAttack;
         }
 
-        //if (input.Gameplay.Get().Contains(input.Gameplay.Dash))
-        //{
-        //    input.Gameplay.Dash.started -= OnDashInput;
-        //    input.Gameplay.Dash.canceled -= OnDashInput;
-        //}
-
         if (input.Gameplay.Get().Contains(input.Gameplay.UseTool))
             input.Gameplay.UseTool.performed -= OnUseTool;
 
@@ -153,6 +143,20 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnMoveInput(InputAction.CallbackContext context)
     {
+        // CHẶN DI CHUYỂN: Nếu Player đang bị dính Stun từ Boss Roar, ép vector đầu vào bằng 0
+        if (playerAnimation != null && playerAnimation.IsStunned)
+        {
+            rawMovementInput = Vector2.zero;
+            NormInputX = 0;
+            NormInputY = 0;
+
+            if (playerController != null)
+            {
+                playerController.OnMove(Vector2.zero);
+            }
+            return;
+        }
+
         rawMovementInput = context.ReadValue<Vector2>();
         NormInputX = Mathf.RoundToInt(rawMovementInput.x);
         NormInputY = Mathf.RoundToInt(rawMovementInput.y);
@@ -181,19 +185,18 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnPrimaryAttack(InputAction.CallbackContext context)
     {
+        // Không cho đánh khi bị stun
+        if (playerAnimation != null && playerAnimation.IsStunned) return;
+
         if (context.started)
         {
-
-            // Cập nhật biến cờ nếu cần
             if (attackInput != null && attackInput.Length > 0)
             {
                 attackInput[(int)CombatInputs.primary] = true;
             }
 
-            // Gọi trực tiếp State Machine đổi sang Primary Attack State
             if (playerController != null)
             {
-               
                 var playerScript = GetComponent<Player>();
                 if (playerScript != null && playerScript.stateMachine != null)
                 {
@@ -215,6 +218,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void OnUseTool(InputAction.CallbackContext context)
     {
+        if (playerAnimation != null && playerAnimation.IsStunned) return;
+
         if (context.performed && toolManager != null)
         {
             toolManager.UseTool();
@@ -223,6 +228,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void OnPlantSeed(InputAction.CallbackContext context)
     {
+        if (playerAnimation != null && playerAnimation.IsStunned) return;
+
         if (context.performed && toolManager != null)
         {
             toolManager.PlantSeedPublic();
@@ -231,6 +238,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void OnWater(InputAction.CallbackContext context)
     {
+        if (playerAnimation != null && playerAnimation.IsStunned) return;
+
         if (context.performed && toolManager != null)
         {
             toolManager.WaterPublic();
@@ -239,6 +248,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void OnInteract(InputAction.CallbackContext context)
     {
+        if (playerAnimation != null && playerAnimation.IsStunned) return;
+
         if (context.performed && interactionSystem != null)
         {
             interactionSystem.TryClickInteract();
