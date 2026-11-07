@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9d68f96c245d44bbeb3b0dd287c065, type: 3}
+  m_Name: DD_Map01_C1_S08
+  m_EditorClassIdentifier: 
+  dialogueID: MAP01_C1_S08
+  lines:
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: "L\u1EA0NH..."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 2040684253, guid: 27ca7fff614a9c749aa51810b2d53efd, type: 3}
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: "M\xECnh \u0111\xE3 t\u1EEBng th\u1EA5y n\u01A1i n\xE0y sao?"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 1388065807, guid: 0fadbf42feebafa418f93ad15c94a54c, type: 3}
+  - displayMode: 0
+    speakerName: "K\xFD \u1EE9c"
+    dialogueText: "H\u1EA2I T\xC2M"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: -1247773636, guid: c16772bd208c9544fa82d8821baf751b, type: 3}

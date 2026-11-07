@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9d68f96c245d44bbeb3b0dd287c065, type: 3}
+  m_Name: DD_Map01_C1_S01
+  m_EditorClassIdentifier: 
+  dialogueID: MAP01_C1_S01
+  lines:
+  - displayMode: 0
+    speakerName: 
+    dialogueText: 
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 1497994346, guid: 5793825604d3b50438981317cb62dc06, type: 3}
+  - displayMode: 0
+    speakerName: "Nguy\u1EC5n An"
+    dialogueText: "N\u1EBFu con \u0111\u1EBFn \u0111\xE2y... \u0111\u1EEBng tin v\xE0o
+      nh\u1EEFng g\xEC con nh\u1EDB."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: -1344978322, guid: 172e7f56471cc8648a717194c4f47f72, type: 3}
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: "B\u1ED1...? B\u1ED1 \u0111ang \u1EDF \u0111\xE2u?"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: -917119488, guid: d615a0e029509404da66fcedfa540b63, type: 3}

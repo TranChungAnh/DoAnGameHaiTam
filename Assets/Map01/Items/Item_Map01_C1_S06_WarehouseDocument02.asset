@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cb9addb98f6f242938027e5ee12ce8, type: 3}
+  m_Name: Item_Map01_C1_S06_WarehouseDocument02
+  m_EditorClassIdentifier: 
+  itemName: "M\u1EA3nh t\xE0i li\u1EC7u c\u0169"
+  icon: {fileID: -2012059506, guid: bf326e32b526d6b4e9a4bc866119de46, type: 3}
+  description: "B\xE1o c\xE1o ghi nh\u1EADn nh\u1EEFng hi\u1EC7n t\u01B0\u1EE3ng
+    b\u1EA5t th\u01B0\u1EDDng li\xEAn quan \u0111\u1EBFn k\xFD \u1EE9c c\u1EE7a ng\u01B0\u1EDDi
+    d\xE2n tr\xEAn \u0111\u1EA3o."
+  itemType: 4
+  toolType: 0
+  worldPrefab: {fileID: 0}
+  cropData: {fileID: 0}
