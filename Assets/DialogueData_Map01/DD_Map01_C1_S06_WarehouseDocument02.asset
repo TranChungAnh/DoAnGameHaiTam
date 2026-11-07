@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9d68f96c245d44bbeb3b0dd287c065, type: 3}
+  m_Name: DD_Map01_C1_S06_WarehouseDocument02
+  m_EditorClassIdentifier: 
+  dialogueID: Map01_C1_S06_WarehouseDocument02
+  lines:
+  - displayMode: 0
+    speakerName: 
+    dialogueText: "G\u1EA7n \u0111\xE2y, ch\xFAng t\xF4i ph\xE1t hi\u1EC7n m\u1ED9t
+      hi\u1EC7n t\u01B0\u1EE3ng k\u1EF3 l\u1EA1 trong k\xFD \u1EE9c c\u1EE7a ng\u01B0\u1EDDi
+      d\xE2n. C\xF3 ng\u01B0\u1EDDi k\u1EC3 l\u1EA1i nh\u1EEFng chuy\u1EC7n m\xE0
+      ch\xEDnh h\u1ECD c\u0169ng kh\xF4ng ch\u1EAFc m\xECnh \u0111\xE3 th\u1EF1c
+      s\u1EF1 tr\u1EA3i qua. M\u1ED9t s\u1ED1 ng\u01B0\u1EDDi nh\u1EDB r\u1EA5t r\xF5
+      nh\u1EEFng s\u1EF1 vi\u1EC7c, nh\u01B0ng kh\xF4ng ai kh\xE1c c\xF3 th\u1EC3
+      x\xE1c nh\u1EADn ch\xFAng t\u1EEBng x\u1EA3y ra. Nh\u1EEFng ng\u01B0\u1EDDi
+      kh\xE1c l\u1EA1i qu\xEAn m\u1EA5t nh\u1EEFng chuy\u1EC7n v\u1EEBa m\u1EDBi
+      di\u1EC5n ra, r\u1ED3i tin r\u1EB1ng m\u1ED9t k\xFD \u1EE9c ho\xE0n to\xE0n
+      kh\xE1c m\u1EDBi l\xE0 s\u1EF1 th\u1EADt."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: "Ch\xFAng t\xF4i \u0111\xE3 c\u1ED1 g\u1EAFng \u0111\u1ED1i chi\u1EBFu
+      l\u1EDDi k\u1EC3 v\u1EDBi nh\u1EEFng ghi ch\xE9p c\xF2n s\xF3t l\u1EA1i, nh\u01B0ng
+      c\xE0ng ki\u1EC3m tra, m\u1ECDi th\u1EE9 c\xE0ng tr\u1EDF n\xEAn m\xE2u thu\u1EABn.
+      Kh\xF4ng ai bi\u1EBFt \u0111\xE2u l\xE0 k\xFD \u1EE9c th\u1EADt, \u0111\xE2u
+      l\xE0 nh\u1EEFng h\xECnh \u1EA3nh do t\xE2m tr\xED t\u1EF1 t\u1EA1o ra \u0111\u1EC3
+      l\u1EA5p \u0111\u1EA7y kho\u1EA3ng tr\u1ED1ng"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: "\u0110i\u1EC1u \u0111\xE1ng s\u1EE3 nh\u1EA5t kh\xF4ng ph\u1EA3i
+      l\xE0 vi\u1EC7c con ng\u01B0\u1EDDi qu\xEAn \u0111i qu\xE1 kh\u1EE9, m\xE0
+      l\xE0 khi h\u1ECD nh\u1EDB v\u1EC1 m\u1ED9t \u0111i\u1EC1u ch\u01B0a t\u1EEBng
+      x\u1EA3y ra, nh\u01B0ng v\u1EABn tin ch\u1EAFc r\u1EB1ng \u0111\xF3 ch\xEDnh
+      l\xE0 s\u1EF1 th\u1EADt."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}

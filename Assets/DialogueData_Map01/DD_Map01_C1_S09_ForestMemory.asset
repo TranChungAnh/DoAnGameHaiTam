@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9d68f96c245d44bbeb3b0dd287c065, type: 3}
+  m_Name: DD_Map01_C1_S09_ForestMemory
+  m_EditorClassIdentifier: 
+  dialogueID: DD_Map01_C1_S09_ForestMemory
+  lines:
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: "M\xECnh v\u1EEBa th\u1EA5y g\xEC v\u1EADy?"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 498321244, guid: f677c901a9f6969459c5901ea89f9772, type: 3}
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: "Kh\xF4ng. Ph\u1EA3i t\xECm ra chuy\u1EC7n g\xEC \u0111\xE3 x\u1EA3y
+      ra tr\u01B0\u1EDBc \u0111\xE3."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 1852135021, guid: d2c3fa01303fd78439892e5b1563437e, type: 3}

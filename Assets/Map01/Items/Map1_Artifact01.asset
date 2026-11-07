@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cb9addb98f6f242938027e5ee12ce8, type: 3}
+  m_Name: Map1_Artifact01
+  m_EditorClassIdentifier: 
+  itemName: "C\u1ED1 v\u1EADt b\xED \u1EA9n "
+  icon: {fileID: -2123940818, guid: 1b62e0f266e3b7f4590100ad81bf2c17, type: 3}
+  description: "C\u1ED5 v\u1EADt b\xED \u1EA9n "
+  itemType: 4
+  toolType: 0
+  worldPrefab: {fileID: 0}
+  cropData: {fileID: 0}

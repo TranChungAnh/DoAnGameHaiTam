@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cb9addb98f6f242938027e5ee12ce8, type: 3}
+  m_Name: Map1_StorageKey
+  m_EditorClassIdentifier: 
+  itemName: Map1_StorageKey
+  icon: {fileID: -1115795732, guid: 77af673bf1486724db9f8b3abee65445, type: 3}
+  description: "Ch\xECa kh\xF3a m\u1EDF ph\xF2ng l\u01B0u tr\u1EEF t\u1EA1i ng\xF4i
+    l\xE0ng"
+  itemType: 4
+  toolType: 0
+  worldPrefab: {fileID: 0}
+  cropData: {fileID: 0}

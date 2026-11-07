@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9d68f96c245d44bbeb3b0dd287c065, type: 3}
+  m_Name: Map1_WarehouseDocumentDialogue
+  m_EditorClassIdentifier: 
+  dialogueID: 
+  lines:
+  - speakerName: Minh
+    dialogueText: "M\u1ED9t cu\u1ED1n nh\u1EADt k\xFD nghi\xEAn c\u1EE9u c\u0169...
+      C\xF3 v\u1EBB n\xF3 \u0111\xE3 n\u1EB1m \u1EDF \u0111\xE2y r\u1EA5t l\xE2u."
+    characterPortrait: {fileID: 0}
+  - speakerName: "Nh\u1EADt k\xFD nghi\xEAn c\u1EE9u"
+    dialogueText: "Ng\xE0y 17: Nh\u1EEFng th\u1EED nghi\u1EC7m v\u1EDBi H\u1EA3i
+      T\xE2m \u0111ang g\xE2y ra hi\u1EC7n t\u01B0\u1EE3ng b\u1EA5t th\u01B0\u1EDDng
+      v\u1EC1 nh\u1EADn th\u1EE9c v\xE0 k\xFD \u1EE9c."
+    characterPortrait: {fileID: 0}
+  - speakerName: "Nh\u1EADt k\xFD nghi\xEAn c\u1EE9u"
+    dialogueText: "Theo y\xEAu c\u1EA7u c\u1EE7a Nguy\u1EC5n An, m\u1EABu v\u1EADt
+      \u0111\u1EB7c bi\u1EC7t \u0111\xE3 \u0111\u01B0\u1EE3c ni\xEAm phong v\xE0
+      \u0111\u1EB7t trong r\u01B0\u01A1ng b\u1EA3o qu\u1EA3n."
+    characterPortrait: {fileID: 0}
+  - speakerName: Minh
+    dialogueText: "B\u1ED1... B\u1ED1 \u0111\xE3 t\u1EEBng \u0111\u1EBFn n\u01A1i
+      n\xE0y? M\xECnh c\u1EA7n ki\u1EC3m tra chi\u1EBFc r\u01B0\u01A1ng kia."
+    characterPortrait: {fileID: 0}

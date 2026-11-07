@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9d68f96c245d44bbeb3b0dd287c065, type: 3}
+  m_Name: DD_Map01_C1_S04_Radio
+  m_EditorClassIdentifier: 
+  dialogueID: DD_Map01_C1_S04_Radio
+  lines:
+  - displayMode: 0
+    speakerName: "Ng\u01B0\u1EDDi d\xE2n 1"
+    dialogueText: "C\u1EADu c\xF3 nh\u1EDB chuy\u1EC7n x\u1EA3y ra \u1EDF nh\xE0
+      \xF4ng L\xE2m tu\u1EA7n tr\u01B0\u1EDBc kh\xF4ng? \xD4ng \u1EA5y c\u1EE9 kh\u0103ng
+      kh\u0103ng n\xF3i m\xECnh \u0111\xE3 ch\xF4n ng\u01B0\u1EDDi v\u1EE3 t\u1EEB
+      nhi\u1EC1u n\u0103m tr\u01B0\u1EDBc."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: "Ng\u01B0\u1EDDi d\xE2n 2"
+    dialogueText: "Nh\u01B0ng v\u1EE3 \xF4ng \u1EA5y v\u1EABn c\xF2n s\u1ED1ng m\xE0.
+      H\xF4m qua t\xF4i c\xF2n th\u1EA5y b\xE0 \u1EA5y \u0111i ngang qua gi\u1EBFng
+      l\xE0ng."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: "Ng\u01B0\u1EDDi d\xE2n 1"
+    dialogueText: "\u0110\xF3 m\u1EDBi l\xE0 chuy\u1EC7n \u0111\xE1ng s\u1EE3. Khi
+      m\u1ECDi ng\u01B0\u1EDDi h\u1ECFi, \xF4ng \u1EA5y l\u1EA1i b\u1EA3o m\xECnh
+      ch\u01B0a t\u1EEBng c\xF3 v\u1EE3. \xD4ng \u1EA5y c\xF2n ch\u1EB3ng nh\u1EDB
+      n\u1ED5i t\xEAn b\xE0 \u1EA5y n\u1EEFa."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: "Ng\u01B0\u1EDDi d\xE2n 2"
+    dialogueText: "C\xF3 khi \xF4ng \u1EA5y b\u1ECB b\u1EC7nh. D\u1EA1o n\xE0y trong
+      l\xE0ng c\u0169ng c\xF3 nhi\u1EC1u ng\u01B0\u1EDDi nh\u01B0 v\u1EADy. H\u1ECD
+      qu\xEAn m\u1EA5t nh\u1EEFng chuy\u1EC7n v\u1EEBa x\u1EA3y ra, nh\u01B0ng l\u1EA1i
+      k\u1EC3 r\u1EA5t r\xF5 nh\u1EEFng chuy\u1EC7n m\xE0 ch\u1EB3ng ai t\u1EEBng
+      ch\u1EE9ng ki\u1EBFn."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: "Ng\u01B0\u1EDDi d\xE2n 1"
+    dialogueText: "T\xF4i c\u0169ng b\u1EAFt \u0111\u1EA7u th\u1EA5y k\u1EF3 l\u1EA1.
+      \u0110\xEAm qua, t\xF4i m\u01A1 th\u1EA5y m\xECnh \u0111\xE3 r\u1EDDi kh\u1ECFi
+      h\xF2n \u0111\u1EA3o n\xE0y t\u1EEB l\xE2u. T\xF4i c\xF2n nh\u1EDB r\xF5 m\xECnh
+      \u0111\xE3 \u0111i \u0111\xE2u, g\u1EB7p ai\u2026 Nh\u01B0ng s\xE1ng nay t\u1EC9nh
+      d\u1EADy, t\xF4i l\u1EA1i th\u1EA5y m\xECnh \u0111ang \u1EDF ch\xEDnh c\u0103n
+      nh\xE0 n\xE0y."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: "Ng\u01B0\u1EDDi d\xE2n 2"
+    dialogueText: "\u0110\xF3 ch\u1EC9 l\xE0 m\u1ED9t gi\u1EA5c m\u01A1 th\xF4i."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: "Ng\u01B0\u1EDDi d\xE2n 1"
+    dialogueText: "T\xF4i c\u0169ng ngh\u0129 v\u1EADy. Nh\u01B0ng t\u1EA1i sao t\xF4i
+      l\u1EA1i nh\u1EDB r\xF5 m\u1ED9t cu\u1ED9c s\u1ED1ng m\xE0 m\xECnh ch\u01B0a
+      t\u1EEBng tr\u1EA3i qua?"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: "Gi\u1ECDng n\xF3i  b\xED \u1EA9n "
+    dialogueText: "\u0110\u1EEBng tin v\xE0o nh\u1EEFng g\xEC c\u1EADu nh\u1EDB\u2026"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: "C\xE2u n\xF3i \u0111\xF3\u2026 T\u1EA1i sao m\xECnh l\u1EA1i c\xF3
+      c\u1EA3m gi\xE1c \u0111\xE3 t\u1EEBng nghe n\xF3?"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: "Kh\xF4ng\u2026 M\xECnh kh\xF4ng th\u1EC3 nh\u1EDB ra."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}

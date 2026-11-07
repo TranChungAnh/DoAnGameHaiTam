@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cb9addb98f6f242938027e5ee12ce8, type: 3}
+  m_Name: Item_Map01_C1_S04_Radio
+  m_EditorClassIdentifier: 
+  itemName: "Radio c\u0169"
+  icon: {fileID: -927611059, guid: 4ee914613b0934a4eb14ffe80b1cb792, type: 3}
+  description: "Radio c\u0169 \u0111\u01B0\u1EE3c t\xECm th\u1EA5y g\u1EA7n v\xE1ch
+    \u0111\xE1, ch\u1EE9a c\xE1c \u0111o\u1EA1n h\u1ED9i tho\u1EA1i k\xEC l\u1EA1. "
+  itemType: 0
+  toolType: 0
+  worldPrefab: {fileID: 0}
+  cropData: {fileID: 0}
