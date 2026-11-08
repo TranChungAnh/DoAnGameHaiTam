@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9d68f96c245d44bbeb3b0dd287c065, type: 3}
+  m_Name: Map2_8
+  m_EditorClassIdentifier: 
+  dialogueID: 8
+  lines:
+  - displayMode: 0
+    speakerName: 
+    dialogueText: "Hang Th\u1EE7y Tri\u1EC1u... v\xE0 m\u1ED9t c\xF4ng tr\xECnh n\u1EB1m
+      s\xE2u h\u01A1n b\xEAn d\u01B0\u1EDBi."
+    characterPortrait: {fileID: -189674907, guid: f19ca5cf7c2cf2a4aa7e4a279bb8900e, type: 3}
+    backgroundSprite: {fileID: 21300000, guid: f34082e1505e67749aab6de3812a6f06, type: 3}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: 
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 21300000, guid: 454cfa59150800a43ae2c478caf56a82, type: 3}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: "N\u1EBFu b\u1ED1 \u0111\u1EC3 l\u1EA1i d\u1EA5u v\u1EBFt \u1EDF
+      \u0111\xE2y, c\xF3 l\u1EBD c\xE2u tr\u1EA3 l\u1EDDi n\u1EB1m ph\xEDa d\u01B0\u1EDBi."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 21300000, guid: 801642a567fb5384ea5bfaccdbc64f2a, type: 3}
