@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using static UnityEditor.Progress;
+//using static UnityEditor.Progress;
 
 [CreateAssetMenu(fileName = "NewCrop", menuName = "Farming/Crop Data")]
 public class CropData : ResourceData
@@ -13,7 +13,7 @@ public class CropData : ResourceData
     public bool needsWater = true;
 
     [Header("Thu hoạch")]
-    public Item harvestItem;
+    //public Item harvestItem;
     public int harvestAmount = 1;
     public bool regrowAfterHarvest = false; // tái sinh (vd: cà chua)
 

@@ -51,7 +51,10 @@ public class MeleeAttackState : AttackState
             Debug.LogError("Melee attack data is not set.");
             return;
         }
-       
+        if (SoundManager.Instance != null && SoundManager.Instance.quai1Attack != null)
+        {
+            SoundManager.Instance.PlaySound(SoundManager.Instance.quai1Attack);
+        }
         Vector2 facingDir = entity.LastFacingDirection;
         Vector3 actualAttackPos = entity.transform.position + (Vector3)(facingDir * meleeAttackData.attackRadius);
 

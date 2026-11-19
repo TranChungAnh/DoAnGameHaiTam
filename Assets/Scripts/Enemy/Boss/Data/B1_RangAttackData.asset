@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: B1_RangAttackData
   m_EditorClassIdentifier: 
   projectile: {fileID: 2119216289204529620, guid: 0f8b782df3b1b1847ae5abf291fdc6d8, type: 3}
-  projecTileSpeed: 12
-  projectTitleDamage: 10
+  projecTileSpeed: 25
+  projectTitleDamage: 20
   projectTitleTraveDistance: 8
   isMultipleProjectiles: 1
   numberOfProjectiles: 10

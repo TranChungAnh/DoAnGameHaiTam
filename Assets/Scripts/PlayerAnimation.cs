@@ -11,10 +11,20 @@ public class PlayerAnimation : MonoBehaviour
     [Header("Cấu hình Âm thanh Di chuyển")]
     [SerializeField] private float footstepInterval = 0.4f;
     private float footstepTimer;
-
+    [SerializeField] private AudioSource footstepSource;
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        if (footstepSource == null)
+        {
+            footstepSource = GetComponent<AudioSource>();
+        }
+
+        if (footstepSource != null)
+        {
+            footstepSource.playOnAwake = false;
+            footstepSource.loop = false;
+        }
     }
 
     private void Update()
@@ -41,12 +51,25 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetFloat("MoveX", facingDirection.x);
 
         // 🔊 XỬ LÝ PHÁT TIẾNG BƯỚC CHÂN KHI ĐI CHUYỂN
+
         if (isMoving)
         {
             PlayFootstepSound();
         }
+        else
+        {
+            StopFootstepSound();
+        }
     }
+    private void StopFootstepSound()
+    {
+        if (footstepSource != null && footstepSource.isPlaying)
+        {
+            footstepSource.Stop();
+        }
 
+        footstepTimer = 0f;
+    }
     public void SetIdleAnimation(Vector2 facingDirection)
     {
         if (IsStunned || animator.GetBool("attack"))
@@ -61,7 +84,7 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetFloat("MoveX", facingDirection.x);
     }
 
-  
+
     public void SetAttackAnimation(bool isAttacking, Vector2 facingDirection)
     {
         if (IsStunned) return;
@@ -128,12 +151,12 @@ public class PlayerAnimation : MonoBehaviour
 
         if (footstepTimer <= 0)
         {
-            if (SoundManager.Instance.diTrenCat != null)
+            if (SoundManager.Instance.buocChanTrenGo != null)
             {
-                SoundManager.Instance.PlaySound(SoundManager.Instance.diTrenCat);
+                SoundManager.Instance.PlaySound(SoundManager.Instance.buocChanTrenGo);
 
             }
-           
+
             footstepTimer = footstepInterval;
         }
     }

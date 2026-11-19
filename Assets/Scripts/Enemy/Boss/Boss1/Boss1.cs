@@ -102,7 +102,6 @@ public class Boss1 : Entity
         {
             SoundManager.Instance.PlaySound(SoundManager.Instance.roarSound);
         }
-
     }
     public override void OnDrawGizmos()
     {

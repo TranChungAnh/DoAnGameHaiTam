@@ -7,8 +7,10 @@ public class StorageContainer : MonoBehaviour
     public int capacity = 44;
     public List<StorageSlot> slots = new();
 
+
     void Awake()
     {
+        
         // Đảm bảo luôn đủ số slot bằng capacity
         if (slots.Count < capacity)
         {

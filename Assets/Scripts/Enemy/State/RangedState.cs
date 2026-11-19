@@ -57,7 +57,10 @@ public class RangedState : AttackState
         // Ép Enemy cập nhật lại Target Player ngay thời điểm tung đòn bắn
         entity.CheckPlayerInMinAgroRange();
         entity.LookAtPlayer();
-
+        if (SoundManager.Instance != null && SoundManager.Instance.quai1Attack != null)
+        {
+            SoundManager.Instance.PlaySound(SoundManager.Instance.quai1Attack);
+        }
         // Kiểm tra xem cấu hình trong ScriptableObject có yêu cầu bắn tỏa nhiều hướng không
         if (rangeData.isMultipleProjectiles)
         {

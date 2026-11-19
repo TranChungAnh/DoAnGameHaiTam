@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: lootHoe
   m_EditorClassIdentifier: 
   entries:
-  - itemRef: {fileID: 11400000, guid: 8a4c60a1a122dff439b701c844f0c86d, type: 2}
+  - itemRef: {fileID: 0}
     dropChance: 1
     minCount: 1
     maxCount: 3

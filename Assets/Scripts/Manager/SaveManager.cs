@@ -86,7 +86,7 @@ public class SaveManager : MonoBehaviour
             Debug.LogWarning("⚠ Chưa gán States vào SaveManager trên Inspector!");
         }
         // 4. Lấy số mạng từ GameManager (nếu có)
-        int lives = 3;
+        int lives = 2;
         if (gameManager == null) gameManager = FindObjectOfType<GameMamager>();
         if (gameManager != null && gameManager.gameData != null)
         {
@@ -194,24 +194,47 @@ public class SaveManager : MonoBehaviour
         }
 
         // 4. Khôi phục lại Inventory
-        if (InventoryManager.Instance != null && InventoryManager.Instance.playerInventory != null)
+        // 4. Khôi phục lại Inventory
+        if (InventoryManager.Instance != null)
         {
-            foreach (var slot in InventoryManager.Instance.playerInventory.slots)
+            if (InventoryManager.Instance.playerInventory != null)
             {
-                slot.Clear();
-            }
+                Debug.Log("🎒 Đang tiến hành khôi phục inventory, số item trong file save: " + playerSaves.inventoryItems.Count);
 
-            foreach (var savedItem in playerSaves.inventoryItems)
-            {
-                if (ItemDatabase.Instance != null)
+                foreach (var slot in InventoryManager.Instance.playerInventory.slots)
                 {
-                    ItemBase loadedItem = ItemDatabase.Instance.GetItemByID(savedItem.itemID);
-                    if (loadedItem != null)
+                    slot.Clear();
+                }
+
+                foreach (var savedItem in playerSaves.inventoryItems)
+                {
+                    if (ItemDatabase.Instance != null)
                     {
-                        InventoryManager.Instance.AddItem(loadedItem, savedItem.quantity);
+                        ItemBase loadedItem = ItemDatabase.Instance.GetItemByID(savedItem.itemID);
+                        if (loadedItem != null)
+                        {
+                            InventoryManager.Instance.AddItem(loadedItem, savedItem.quantity);
+                            Debug.Log($"✔ Đã thêm lại item ID: {savedItem.itemID} | Số lượng: {savedItem.quantity}");
+                        }
+                        else
+                        {
+                            Debug.LogError($"❌ Không tìm thấy ItemBase với ID '{savedItem.itemID}' trong ItemDatabase!");
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogError("❌ ItemDatabase.Instance đang bị NULL!");
                     }
                 }
             }
+            else
+            {
+                Debug.LogError("❌ InventoryManager.Instance.playerInventory bị NULL (Lỗi mất tham chiếu sau khi đổi Scene)!");
+            }
+        }
+        else
+        {
+            Debug.LogError("❌ InventoryManager.Instance bị NULL!");
         }
 
         Debug.Log("✅ Đã hoàn tất quá trình tải và khôi phục dữ liệu game!");

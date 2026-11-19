@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9d68f96c245d44bbeb3b0dd287c065, type: 3}
+  m_Name: DD_Map01_C1_S01
+  m_EditorClassIdentifier: 
+  dialogueID: MAP01_C1_S01
+  lines:
+  - displayMode: 0
+    speakerName: 
+    dialogueText: "M\u01B0\u1EDDi n\u0103m tr\u01B0\u1EDBc, nh\xE0 nghi\xEAn c\u1EE9u
+      Nguy\u1EC5n An \u0111\xE3 tham gia m\u1ED9t chuy\u1EBFn th\xE1m hi\u1EC3m \u0111\u1EBFn
+      \u0111\u1EA3o H\u1EA3i V\u1ECDng, m\u1ED9t h\xF2n \u0111\u1EA3o bi\u1EC7t l\u1EADp
+      gi\u1EEFa \u0111\u1EA1i d\u01B0\u01A1ng"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: -33474728, guid: dace1d8c7abc88a49a87359c798c25d4, type: 3}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: "T\u1EA1i \u0111\xE2y, \xF4ng tham gia m\u1ED9t d\u1EF1 \xE1n nghi\xEAn
+      c\u1EE9u b\xED m\u1EADt. Nh\u1EEFng th\xF4ng tin \u0111\u01B0\u1EE3c g\u1EEDi
+      v\u1EC1 ng\xE0y c\xE0ng \xEDt, v\xE0 n\u1ED9i dung c\xE1c b\xE1o c\xE1o c\u0169ng
+      d\u1EA7n tr\u1EDF n\xEAn kh\xF3 hi\u1EC3u."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 1146140072, guid: b53717e6bb1c4a64fba151f30e80425c, type: 3}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: "R\u1ED3i m\u1ED9t ng\xE0y, m\u1ECDi li\xEAn l\u1EA1c v\u1EDBi
+      Nguy\u1EC5n An \u0111\u1ED9t ng\u1ED9t b\u1ECB c\u1EAFt \u0111\u1EE9t. \xD4ng
+      bi\u1EBFn m\u1EA5t kh\xF4ng \u0111\u1EC3 l\u1EA1i l\u1EDDi gi\u1EA3i th\xEDch,
+      v\xE0 nh\u1EEFng g\xEC x\u1EA3y ra tr\xEAn \u0111\u1EA3o m\xE3i l\xE0 m\u1ED9t
+      b\xED \u1EA9n"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 163102746, guid: 0aa344764d42d4641ab96a93367205fe, type: 3}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: "M\u01B0\u1EDDi n\u0103m sau, Minh b\u1EA5t ng\u1EDD nh\u1EADn
+      \u0111\u01B0\u1EE3c m\u1ED9t t\xEDn hi\u1EC7u radio k\u1EF3 l\u1EA1. Gi\u1EEFa
+      nh\u1EEFng ti\u1EBFng nhi\u1EC5u, c\u1EADu nghe th\u1EA5y m\u1ED9t gi\u1ECDng
+      n\xF3i quen thu\u1ED9c - gi\u1ECDng n\xF3i gi\u1ED1ng h\u1EC7t ng\u01B0\u1EDDi
+      cha \u0111\xE3 m\u1EA5t t\xEDch."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 785021781, guid: f6f3475391c086746b35cc7b5f894122, type: 3}
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: "Kh\xF4ng th\u1EC3 b\u1ECF qua manh m\u1ED1i duy nh\u1EA5t sau
+      m\u01B0\u1EDDi n\u0103m ch\u1EDD \u0111\u1EE3i, Minh quy\u1EBFt \u0111\u1ECBnh
+      m\u1ED9t m\xECnh \u0111\u1EBFn H\u1EA3i V\u1ECDng, n\u01A1i cha c\u1EADu \u0111\xE3
+      bi\u1EBFn m\u1EA5t."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 2100336674, guid: 3d2d669c03b64ad4ea9e9670c5e98ef9, type: 3}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: 
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: -1044914502, guid: 950e51b727ce6bf439fcd29524ca767b, type: 3}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: 
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: -904165897, guid: b6905cf6fb29d6a4fa76651a6f6f530f, type: 3}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: 
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 1497994346, guid: 5793825604d3b50438981317cb62dc06, type: 3}
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: "B\u1ED1...? B\u1ED1 \u0111ang \u1EDF \u0111\xE2u?"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: -917119488, guid: d615a0e029509404da66fcedfa540b63, type: 3}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: 
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: -1344978322, guid: 172e7f56471cc8648a717194c4f47f72, type: 3}
+  - displayMode: 0
+    speakerName: 
+    dialogueText: 
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 51209523, guid: f3538475358c2bd47b09cc1d8a069e99, type: 3}

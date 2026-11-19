@@ -20,11 +20,9 @@ public class GameMamager : MonoBehaviour
 
     public States states { get; private set; }
 
-
     [SerializeField] private GameObject gameOver;
-    [SerializeField] private Player player;
+    [SerializeField] private Player player; // Kéo thả Player trực tiếp vào đây trong Inspector
 
-    private GameObject newPlayer;
     public bool isGameOver;
     public bool isOpenTeleport = false;
 
@@ -32,14 +30,19 @@ public class GameMamager : MonoBehaviour
     {
         instance = this;
 
+        // 🔹 THÊM ĐOẠN NÀY ĐỂ RESET SỐ MẠNG KHI BẮT ĐẦU GAME
+        if (gameData != null)
+        {
+            gameData.lives = 2; // Bạn có thể đổi số 3 thành số mạng mặc định bạn muốn
+        }
+
         CVC = GameObject.Find("PlayerCamera")?.GetComponent<CinemachineVirtualCamera>();
         healthBar = GameObject.Find("HealthBarContainer")?.GetComponent<HealthBar>();
 
-        // 🔹 THÊM ĐOẠN NÀY: Tự động tìm States của Player có sẵn trong Scene khi vừa start
-        GameObject existingPlayer = GameObject.FindWithTag("Player");
-        if (existingPlayer != null)
+        // Tự động tìm States của Player có sẵn trong Scene khi vừa start
+        if (player != null)
         {
-            states = existingPlayer.transform.Find("Core/States")?.GetComponent<States>();
+            states = player.transform.Find("Core/States")?.GetComponent<States>();
             if (states != null && healthBar != null)
             {
                 healthBar.States = states;
@@ -55,20 +58,16 @@ public class GameMamager : MonoBehaviour
             TemporarySaveData.pendingSaveData = null;
         }
     }
-
     void Update()
     {
-
         if (gameData.lives <= 0 && !isGameOver && !playerRespawner.isRespawningPlayer)
         {
             TriggerGameOver();
-            if (newPlayer != null)
-                newPlayer.SetActive(false);
+            if (player != null)
+                player.gameObject.SetActive(false);
         }
 
         CheckRespawn();
-
-       
     }
 
     public void Respawn()
@@ -80,48 +79,51 @@ public class GameMamager : MonoBehaviour
 
     private void CheckRespawn()
     {
-        // Player respawn
+        // Player respawn (Tái sử dụng Player cũ)
         if (!isGameOver && playerRespawner.isRespawningPlayer && Time.time >= respawnStartTime + playerRespawner.respawnTime && gameData.lives > 0)
         {
             playerRespawner.isRespawningPlayer = false;
 
-            newPlayer = Instantiate(playerRespawner.playerPrefabs[0], playerRespawner.playerRespawnPoints[0].position, playerRespawner.playerRespawnPoints[0].rotation);
-            newPlayer.name = playerRespawner.playerPrefabs[0].name;
-
-            if (CVC != null)
-                CVC.m_Follow = newPlayer.transform;
-
-            states = newPlayer.transform.Find("Core/States")?.GetComponent<States>();
-            if (states != null)
+            if (player != null)
             {
-                states.currentHealth = states.maxHealth;
-                healthBar.States = states;
+                // Lấy điểm hồi sinh đầu tiên
+                Transform respawnPoint = playerRespawner.playerRespawnPoints[0];
+
+                // Tắt tạm CharacterController (nếu có) để tránh bị kẹt vị trí cũ khi đổi tọa độ
+                CharacterController cc = player.GetComponent<CharacterController>();
+                if (cc != null) cc.enabled = false;
+
+                // Dịch chuyển Player về vị trí và hướng của điểm hồi sinh
+                player.transform.position = respawnPoint.position;
+                player.transform.rotation = respawnPoint.rotation;
+
+                if (cc != null) cc.enabled = true;
+
+                // Bật lại Player lên
+                player.gameObject.SetActive(true);
+
+                // Cập nhật lại Camera follow mục tiêu cũ và ép bám sát ngay lập tức
+                if (CVC != null)
+                {
+                    CVC.m_Follow = player.transform;
+                    CVC.m_LookAt = player.transform;
+                    CVC.PreviousStateIsValid = false;
+                }
+
+                // Hồi đầy máu và kết nối lại thanh máu
+                states = player.transform.Find("Core/States")?.GetComponent<States>();
+                if (states != null)
+                {
+                    states.currentHealth = states.maxHealth;
+                    if (healthBar != null)
+                    {
+                        healthBar.States = states;
+                    }
+                }
             }
 
             gameData.lives--;
         }
-
-        // Enemy respawn
-        //else if (!isGameOver && playerRespawner.enemiesToRespawn.Count > 0 && Time.time >= respawnStartTime + playerRespawner.respawnTime)
-        //{
-        //    var enemyData = playerRespawner.enemiesToRespawn.Dequeue();
-
-        //    if (enemyData.prefab != null && enemyData.respawnPoint != null)
-        //    {
-        //        GameObject newEnemy = Instantiate(enemyData.prefab, enemyData.respawnPoint.position, Quaternion.identity);
-        //        newEnemy.name = enemyData.prefab.name;
-
-        //        states = newEnemy.transform.Find("Core/States")?.GetComponent<States>();
-        //        if (states != null)
-        //        {
-        //            states.currentHealth = states.maxHealth;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        Debug.LogWarning("Enemy data invalid for respawn.");
-        //    }
-        //}
     }
 
     private void TriggerGameOver()
@@ -129,10 +131,7 @@ public class GameMamager : MonoBehaviour
         isGameOver = true;
         Debug.Log("Game Over");
 
-        gameOver.SetActive(true);
-
+        if (gameOver != null)
+            gameOver.SetActive(true);
     }
-
- 
-   
 }

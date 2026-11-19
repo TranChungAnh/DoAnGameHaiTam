@@ -18,6 +18,7 @@ public class HealthBar : MonoBehaviour
     }
     private void Update()
     {
+        if (States == null) return;
         currentHealth = States.GetComponent<States>().currentHealth;
         maxHealth = States.GetComponent<States>().maxHealth;
         slider.value = (float)(currentHealth / maxHealth);

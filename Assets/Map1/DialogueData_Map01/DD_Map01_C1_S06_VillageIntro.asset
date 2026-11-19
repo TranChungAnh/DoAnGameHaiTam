@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9d68f96c245d44bbeb3b0dd287c065, type: 3}
+  m_Name: DD_Map01_C1_S06_VillageIntro
+  m_EditorClassIdentifier: 
+  dialogueID: DD_Map01_C1_S06_VillageIntro
+  lines:
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: "K\u1EF3 l\u1EA1 th\u1EADt... Kh\xF4ng c\xF3 l\u1EA5y m\u1ED9t
+      b\xF3ng ng\u01B0\u1EDDi"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: "Nh\u1EEFng c\u0103n nh\xE0 n\xE0y tr\xF4ng nh\u01B0 \u0111\xE3
+      b\u1ECB b\u1ECF hoang t\u1EEB r\u1EA5t l\xE2u."
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}
+  - displayMode: 0
+    speakerName: Minh
+    dialogueText: "Chuy\u1EC7n g\xEC \u0111\xE3 x\u1EA3y ra \u1EDF \u0111\xE2y? M\xECnh
+      n\xEAn t\xECm ki\u1EBFm xung quanh"
+    characterPortrait: {fileID: 0}
+    backgroundSprite: {fileID: 0}

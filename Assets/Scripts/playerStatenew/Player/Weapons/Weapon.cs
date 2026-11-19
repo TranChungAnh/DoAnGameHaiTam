@@ -50,7 +50,11 @@ public class Weapon : MonoBehaviour
         {
             attackCount = 0;
         }
-
+        // Phát âm thanh khi bắt đầu vung kiếm
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlayWeaponSound();
+        }
         gameObject.SetActive(true);
 
         // 1. Lấy hướng từ Movement
@@ -114,7 +118,11 @@ public class Weapon : MonoBehaviour
         // Tắt attack của Weapon
         baseAnim.SetBool("attack", false);
         weaponAnim.SetBool("attack", false);
-
+        // Dừng âm thanh ngay khi kết thúc vung kiếm
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.StopWeaponSound();
+        }
         attackCount++;
 
 

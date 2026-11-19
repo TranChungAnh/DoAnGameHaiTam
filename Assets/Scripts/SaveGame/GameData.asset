@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d777b44112c85488c69740377e0b8b, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  killEnemy: 0
-  lives: 3
+  lives: 1

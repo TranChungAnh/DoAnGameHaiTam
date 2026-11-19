@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Collider2D))]
 public class DialogueTrigger : MonoBehaviour
@@ -20,8 +21,28 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private bool triggerOnEnter = true;
     [SerializeField] private bool triggerOnce = true;
 
+    [Header("Trạng thái thế giới (Chống phát lại khi Load game)")]
+    [Tooltip("Bật: Ghi nhớ trạng thái vĩnh viễn (không phát lại khi load game). Tắt: Reset mỗi khi chơi lại.")]
+    [SerializeField] private bool rememberAcrossLoads = true;
+
+    [Tooltip("Mã ID riêng cho từng hội thoại.")]
+    public string uniqueDialogueID;
+
     private bool hasTriggered;
     private Collider2D triggerCollider;
+
+    private void OnValidate()
+    {
+        if (string.IsNullOrEmpty(uniqueDialogueID))
+        {
+            uniqueDialogueID = gameObject.name + "_" +
+                System.Guid.NewGuid().ToString().Substring(0, 8);
+
+#if UNITY_EDITOR
+            UnityEditor.EditorUtility.SetDirty(this);
+#endif
+        }
+    }
 
     private void Awake()
     {
@@ -33,22 +54,44 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        // Kiểm tra hội thoại đã được kích hoạt trước đó chưa
+        if (rememberAcrossLoads && !string.IsNullOrEmpty(uniqueDialogueID))
+        {
+            if (PlayerPrefs.GetInt("DialogueState_" + uniqueDialogueID, 0) == 1)
+            {
+                hasTriggered = true;
+                gameObject.SetActive(false);
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!triggerOnEnter)
-        {
             return;
-        }
 
-        // Kiểm tra Layer
         if (!IsPlayerLayer(other.gameObject))
-        {
             return;
-        }
 
         // Đã kích hoạt rồi
         if (triggerOnce && hasTriggered)
+            return;
+
+        // Kiểm tra đã lưu trạng thái từ lần chơi trước chưa
+        if (rememberAcrossLoads &&
+            PlayerPrefs.GetInt("DialogueState_" + uniqueDialogueID, 0) == 1)
         {
+            hasTriggered = true;
+            gameObject.SetActive(false);
+            return;
+        }
+
+        // Kiểm tra và bắt đầu hội thoại
+        if (dialogueData == null || DialogueManager.Instance == null)
+        {
+            StartDialogue();
             return;
         }
 
@@ -57,6 +100,15 @@ public class DialogueTrigger : MonoBehaviour
         if (triggerOnce)
         {
             hasTriggered = true;
+
+            // Lưu trạng thái để không phát lại khi Load Game
+            if (rememberAcrossLoads && !string.IsNullOrEmpty(uniqueDialogueID))
+            {
+                PlayerPrefs.SetInt("DialogueState_" + uniqueDialogueID, 1);
+                PlayerPrefs.Save();
+            }
+
+            gameObject.SetActive(false);
         }
     }
 
@@ -79,7 +131,6 @@ public class DialogueTrigger : MonoBehaviour
             return;
         }
 
-        // Truyền thêm thông tin autoPlay và autoPlayDelay sang Manager
         DialogueManager.Instance.StartDialogue(dialogueData, autoPlay, autoPlayDelay);
     }
 

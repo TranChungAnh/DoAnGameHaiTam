@@ -16,7 +16,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Image characterImage;
     [SerializeField] private Button nextButton;
     [SerializeField] private Image backgroundImage;
-
+    private float previousTimeScale = 1f;
+    private bool previousAudioPause;
     //[Header("Trạng thái 2: Floating Text UI")]
     //[SerializeField] private GameObject floatingTextPanel;
     //[SerializeField] private TMP_Text floatingDialogueText;
@@ -48,6 +49,8 @@ public class DialogueManager : MonoBehaviour
     private bool isTyping;
     private bool isEndingDialogue;
 
+    // Lưu trạng thái thời gian trước khi hội thoại bắt đầu
+
     public bool IsTalking { get; private set; }
 
     private void Awake()
@@ -63,7 +66,6 @@ public class DialogueManager : MonoBehaviour
         if (dialoguePanel != null)
             dialoguePanel.SetActive(false);
 
-        // Floating Text đã tạm thời vô hiệu hóa.
         /*
         if (floatingTextPanel != null)
             floatingTextPanel.SetActive(false);
@@ -86,8 +88,39 @@ public class DialogueManager : MonoBehaviour
         if (nextButton != null)
             nextButton.onClick.RemoveListener(NextLine);
 
+        // Đảm bảo không để game bị dừng nếu DialogueManager bị hủy
+        if (Instance == this && IsTalking)
+        {
+            ResumeGame();
+        }
+
         if (Instance == this)
             Instance = null;
+    }
+
+    // =========================
+    // PAUSE GAME
+    // =========================
+
+    private void PauseGame()
+    {
+        previousTimeScale = Time.timeScale;
+        previousAudioPause = AudioListener.pause;
+
+        // Dừng gameplay
+        Time.timeScale = 0f;
+
+        // Tắt toàn bộ âm thanh
+        AudioListener.pause = true;
+    }
+
+    private void ResumeGame()
+    {
+        // Khôi phục thời gian
+        Time.timeScale = previousTimeScale;
+
+        // Khôi phục âm thanh
+        AudioListener.pause = previousAudioPause;
     }
 
     // =========================
@@ -119,9 +152,12 @@ public class DialogueManager : MonoBehaviour
         IsTalking = true;
         isEndingDialogue = false;
 
+        // Dừng toàn bộ gameplay
+        PauseGame();
+
         LockPlayer();
 
-        // Phát nhiễu trước khi hiện câu thoại đầu tiên.
+        // Phát nhiễu trước khi hiện câu thoại đầu tiên
         if (memoryGlitch != null)
         {
             transitionCoroutine = StartCoroutine(
@@ -178,13 +214,6 @@ public class DialogueManager : MonoBehaviour
 
         if (line.displayMode == DialogueDisplayMode.NormalDialog)
         {
-            /*
-            if (floatingTextPanel != null)
-                floatingTextPanel.SetActive(false);
-            else if (floatingDialogueText != null)
-                floatingDialogueText.gameObject.SetActive(false);
-            */
-
             if (dialoguePanel != null)
                 dialoguePanel.SetActive(true);
 
@@ -199,25 +228,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            // Floating Text đã tạm thời vô hiệu hóa.
-            /*
-            if (dialoguePanel != null)
-                dialoguePanel.SetActive(false);
-
-            if (floatingTextPanel != null)
-                floatingTextPanel.SetActive(true);
-            else if (floatingDialogueText != null)
-                floatingDialogueText.gameObject.SetActive(true);
-
-            StartTypewriter(
-                floatingDialogueText,
-                line.dialogueText
-            );
-            */
-
-            // Không hiển thị Floating Text.
-            // Chuyển dòng thoại này sang NormalDialog
-            // trong DialogueData nếu muốn hiển thị.
+            // Floating Text hiện đang tạm thời vô hiệu hóa.
         }
     }
 
@@ -256,27 +267,14 @@ public class DialogueManager : MonoBehaviour
         foreach (char c in textToType)
         {
             targetTextComponent.text += c;
-            yield return new WaitForSeconds(typewriterSpeed);
+
+            // Sử dụng thời gian thực để chạy chữ khi game Pause
+            yield return new WaitForSecondsRealtime(typewriterSpeed);
         }
 
         targetTextComponent.text = textToType;
         isTyping = false;
         typewriterCoroutine = null;
-
-        /*
-        // Nếu là Floating Text thì tự ẩn khi chạy hết chữ.
-        if (targetTextComponent == floatingDialogueText)
-        {
-            yield return new WaitForSeconds(2f);
-
-            if (floatingTextPanel != null)
-                floatingTextPanel.SetActive(false);
-            else
-                floatingDialogueText.gameObject.SetActive(false);
-
-            yield break;
-        }
-        */
 
         if (isAutoPlay && IsTalking && !isEndingDialogue)
             autoPlayCoroutine = StartCoroutine(AutoPlayRoutine());
@@ -284,7 +282,8 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator AutoPlayRoutine()
     {
-        yield return new WaitForSeconds(autoPlayDelay);
+        // AutoPlay vẫn hoạt động khi game Pause
+        yield return new WaitForSecondsRealtime(autoPlayDelay);
 
         autoPlayCoroutine = null;
         NextLine();
@@ -299,7 +298,7 @@ public class DialogueManager : MonoBehaviour
         if (!IsTalking || isEndingDialogue)
             return;
 
-        // Nếu chữ đang chạy, hiện toàn bộ câu thoại.
+        // Nếu chữ đang chạy, hiện toàn bộ câu thoại
         if (isTyping)
         {
             if (typewriterCoroutine != null)
@@ -318,14 +317,6 @@ public class DialogueManager : MonoBehaviour
             {
                 if (dialogueText != null)
                     dialogueText.text = line.dialogueText;
-            }
-            else
-            {
-                // Floating Text đã tạm thời vô hiệu hóa.
-                /*
-                if (floatingDialogueText != null)
-                    floatingDialogueText.text = line.dialogueText;
-                */
             }
 
             isTyping = false;
@@ -379,7 +370,7 @@ public class DialogueManager : MonoBehaviour
 
         isTyping = false;
 
-        // Phát nhiễu lần nữa trước khi đóng hội thoại.
+        // Phát nhiễu lần nữa trước khi đóng hội thoại
         if (memoryGlitch != null)
         {
             transitionCoroutine = StartCoroutine(
@@ -391,6 +382,19 @@ public class DialogueManager : MonoBehaviour
         else
         {
             FinishDialogue();
+        }
+    }
+
+    private void Update()
+    {
+        // Bấm E để chuyển câu thoại
+        if (IsTalking && !isEndingDialogue)
+        {
+            if (Keyboard.current != null &&
+                Keyboard.current.eKey.wasPressedThisFrame)
+            {
+                NextLine();
+            }
         }
     }
 
@@ -406,6 +410,9 @@ public class DialogueManager : MonoBehaviour
         transitionCoroutine = null;
 
         UnlockPlayer();
+
+        // Cho gameplay chạy tiếp
+        ResumeGame();
     }
 
     // =========================

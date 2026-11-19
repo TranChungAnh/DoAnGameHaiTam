@@ -14,8 +14,8 @@ public class MainMenu : MonoBehaviour
     }
     public void NewGame()
     {
-        SceneManager.LoadScene("SampleScene");
-        gameData.lives = 3;
+        SceneManager.LoadScene("Map01");
+        gameData.lives = 2;
     }
     public void ExitGame()
     {
