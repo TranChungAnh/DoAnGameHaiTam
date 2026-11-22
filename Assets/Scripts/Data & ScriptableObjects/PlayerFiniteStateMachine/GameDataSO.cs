@@ -3,5 +3,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GameData", menuName = "Game/GameData")]
 public class GameDataSO : ScriptableObject
 {
-    public int lives = 2;
+    public int lives = 1;
 }

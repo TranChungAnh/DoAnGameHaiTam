@@ -21,10 +21,7 @@ public class StorageCabinet : MonoBehaviour
     [SerializeField] private Vector2 interactSize = new Vector2(11f, 9.5f);
     [SerializeField] private Vector2 interactOffset = Vector2.zero;
 
-    [Header("Hội thoại ký ức (tùy chọn)")]
-    [SerializeField] private DialogueTrigger memoryDialogue;
-    [Tooltip("Bật: xem hội thoại xong mới mở tủ. Tắt: mở tủ rồi chạy hội thoại.")]
-    [SerializeField] private bool openAfterDialogue = true;
+   [SerializeField] private bool openAfterDialogue = true;
 
     [Header("Sự kiện")]
     public UnityEvent onOpened;
@@ -32,8 +29,6 @@ public class StorageCabinet : MonoBehaviour
 
     private bool playerInRange;
     private bool isOpen;
-    private bool dialoguePlayed;
-    private bool busy;
 
     private void Awake()
     {
@@ -51,63 +46,19 @@ public class StorageCabinet : MonoBehaviour
 
         // Kiểm tra các điều kiện chặn
         if (!playerInRange) return;
-        if (busy) return;
 
-        if (DialogueManager.Instance != null && DialogueManager.Instance.IsTalking) return;
 
-        // Kiểm tra xem chuột phải có được bấm hay không
-        if (Mouse.current == null || !Mouse.current.rightButton.wasPressedThisFrame) return;
-
-        // Bắn tia Raycast từ vị trí chuột để đảm bảo người chơi click đúng vào chiếc tủ này
-        Vector2 mousePos = Mouse.current.position.ReadValue();
-        Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-        RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero);
-
-        if (hit.collider == null) return;
-        if (hit.collider.gameObject != gameObject) return;
-
+        if (Keyboard.current == null || !Keyboard.current.fKey.wasPressedThisFrame) return;
         if (!isOpen) TryOpen();
         else if (canClose) SetState(false, true);
     }
 
     private void TryOpen()
     {
-        if (memoryDialogue != null && !dialoguePlayed)
-        {
-            dialoguePlayed = true;
-            StartCoroutine(OpenWithDialogue());
-        }
-        else
-        {
-            SetState(true, true);
-        }
+        SetState(true, true);
     }
 
-    private IEnumerator OpenWithDialogue()
-    {
-        busy = true;
-
-        if (openAfterDialogue)
-        {
-            memoryDialogue.StartDialogue();
-            yield return null; // đợi Manager đặt IsTalking = true
-
-            while (DialogueManager.Instance != null && DialogueManager.Instance.IsTalking)
-            {
-                yield return null;
-            }
-
-            SetState(true, true);
-        }
-        else
-        {
-            SetState(true, true);
-            memoryDialogue.StartDialogue();
-        }
-
-        busy = false;
-    }
-
+   
     private bool IsPlayerNear()
     {
         Vector2 center = (Vector2)transform.position + interactOffset;
@@ -136,7 +87,7 @@ public class StorageCabinet : MonoBehaviour
     private void UpdatePrompt()
     {
         if (promptUI != null)
-            promptUI.SetActive(playerInRange && !busy && (!isOpen || canClose));
+            promptUI.SetActive(playerInRange && (!isOpen || canClose));
     }
 
     private void OnDrawGizmosSelected()

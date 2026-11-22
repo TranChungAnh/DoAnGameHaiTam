@@ -91,10 +91,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueData: {fileID: 11400000, guid: 28ca5400e5f4a83458d79bddfdeba97f, type: 2}
-  autoPlay: 0
+  autoPlay: 1
   autoPlayDelay: 3
   playerLayer:
     serializedVersion: 2
     m_Bits: 32768
   triggerOnEnter: 1
   triggerOnce: 1
+  rememberAcrossLoads: 1
+  uniqueDialogueID: DialogTest_789e2db3

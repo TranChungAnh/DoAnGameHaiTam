@@ -1,7 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+#if UNITY_EDITOR
+using UnityEditor.Build;
+using UnityEditor.Build.Reporting;
+#endif
 
 [System.Serializable]
 public class RequiredArtifact
@@ -15,70 +19,161 @@ public class RequiredArtifact
 
 public class Teleport : MonoBehaviour
 {
-    [Tooltip("Kéo thả Scene vào đây")]
+    [Tooltip("Kéo scene đích từ cửa sổ Project vào đây.")]
     [SerializeField] private Object targetScene;
+
+    [Tooltip("Tên scene trong Build Settings. Để trống để dùng scene đã kéo vào Target Scene.")]
+    [SerializeField] private string targetSceneName;
 
     [Tooltip("Danh sách các cổ vật cần thiết để mở cổng dịch chuyển")]
     [SerializeField] private List<RequiredArtifact> requiredArtifacts = new List<RequiredArtifact>();
 
-    private GameMamager GM;
-    private Collider2D col;
-
-    private void Awake()
-    {
-        col = GetComponent<Collider2D>();
-    }
-
-    private void Start()
-    {
-        GM = GameObject.Find("GameMamager")?.GetComponent<GameMamager>();
-    }
-
+    private bool isLoading;
+    //[SerializeField] private string destinationSpawnPoint;
+    //private static string nextSpawnPoint;
+    [Header("Thông báo thiếu cổ vật")]
+    [SerializeField] private DialogueData missingArtifactDialogue;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (isLoading || !collision.CompareTag("Player"))
+            return;
+
+        // Kiểm tra cổ vật
+        if (!HasAllRequiredArtifacts())
         {
-            // Kiểm tra xem đã đủ cổ vật chưa
-            if (HasAllRequiredArtifacts())
-            {
-                if (targetScene != null)
-                {
-                    string sceneName = targetScene.name;
-                    SceneManager.LoadScene(sceneName);
-                }
-                else
-                {
-                    Debug.LogWarning("⚠ Chưa kéo thả Scene vào cổng dịch chuyển!", gameObject);
-                }
-            }
-            else
-            {
-                Debug.LogWarning("⛔ Bạn chưa thu thập đủ cổ vật để chuyển sang map mới!");
-            }
+            ShowMissingArtifactDialogue();
+            return;
         }
+
+        string sceneName = ResolveSceneName();
+
+        if (string.IsNullOrEmpty(sceneName))
+        {
+            Debug.LogWarning($"Cổng '{name}' chưa được gán scene đích.", this);
+            return;
+        }
+
+        if (!Application.CanStreamedLevelBeLoaded(sceneName))
+        {
+            Debug.LogError(
+                $"Cổng '{name}' không tải được scene '{sceneName}'. Kiểm tra Scenes In Build.",
+                this
+            );
+            return;
+        }
+
+        //nextSpawnPoint = destinationSpawnPoint;
+
+        //SceneManager.sceneLoaded -= OnSceneLoaded;
+        //SceneManager.sceneLoaded += OnSceneLoaded;
+
+        isLoading = true;
+        SceneManager.LoadScene(sceneName);
+    }
+    private void ShowMissingArtifactDialogue()
+    {
+        if (missingArtifactDialogue == null)
+        {
+            Debug.LogWarning("Chưa gán DialogueData thông báo thiếu cổ vật!", this);
+            return;
+        }
+
+        if (DialogueManager.Instance == null)
+        {
+            Debug.LogWarning("Không tìm thấy DialogueManager!");
+            return;
+        }
+
+        DialogueManager.Instance.StartDialogue(
+            missingArtifactDialogue,
+            false,
+            3f
+        );
+    }
+    //private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    //{
+    //    //SceneManager.sceneLoaded -= OnSceneLoaded;
+
+    //    GameObject player = GameObject.FindGameObjectWithTag("Player");
+    //    GameObject spawnPoint = GameObject.Find(nextSpawnPoint);
+
+    //    if (player == null)
+    //    {
+    //        Debug.LogError("Không tìm thấy Player trong Scene mới!");
+    //        return;
+    //    }
+
+    //    if (spawnPoint == null)
+    //    {
+    //        Debug.LogError("Không tìm thấy Spawn Point: " + nextSpawnPoint);
+    //        return;
+    //    }
+
+    //    player.transform.position = spawnPoint.transform.position;
+    //}
+    private string ResolveSceneName()
+    {
+        if (!string.IsNullOrWhiteSpace(targetSceneName))
+            return targetSceneName.Trim();
+
+        return targetScene != null ? targetScene.name : string.Empty;
     }
 
- 
     private bool HasAllRequiredArtifacts()
     {
-        if (InventoryManager.Instance == null)
+        InventoryManager inventory = InventoryManager.Instance;
+
+        if (inventory == null)
         {
-            Debug.LogError("❌ Không tìm thấy InventoryManager.Instance!");
+            Debug.LogError($"Cổng '{name}' không tìm thấy InventoryManager.", this);
             return false;
         }
 
-        foreach (var req in requiredArtifacts)
+        foreach (RequiredArtifact requirement in requiredArtifacts)
         {
-            if (req.artifact == null) continue;
+            if (requirement == null || requirement.artifact == null)
+                continue;
 
-            int currentAmount = InventoryManager.Instance.GetItemCount(req.artifact);
-            if (currentAmount < req.requiredAmount)
+            int count = inventory.GetItemCount(requirement.artifact);
+
+            if (count < requirement.requiredAmount)
             {
-                Debug.Log($"❌ Thiếu {req.artifact.itemName}: Cần {req.requiredAmount}, hiện có {currentAmount}");
+                Debug.LogWarning(
+                    $"Thiếu {requirement.artifact.itemName}: " +
+                    $"cần {requirement.requiredAmount}, hiện có {count}.",
+                    this
+                );
                 return false;
             }
         }
 
         return true;
     }
+
+#if UNITY_EDITOR
+    internal void StoreSceneNameForBuild()
+    {
+        targetSceneName = ResolveSceneName();
+    }
+#endif
 }
+
+#if UNITY_EDITOR
+// Ghi tên scene đích của từng cổng vào bản build khi Unity xử lý map.
+public sealed class TeleportSceneBuildProcessor : IProcessSceneWithReport
+{
+    public int callbackOrder => 0;
+
+    public void OnProcessScene(Scene scene, BuildReport report)
+    {
+        if (report == null)
+            return;
+
+        foreach (GameObject root in scene.GetRootGameObjects())
+        {
+            foreach (Teleport portal in root.GetComponentsInChildren<Teleport>(true))
+                portal.StoreSceneNameForBuild();
+        }
+    }
+}
+#endif

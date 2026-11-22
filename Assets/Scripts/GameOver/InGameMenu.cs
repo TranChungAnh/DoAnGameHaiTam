@@ -48,7 +48,7 @@ public class InGameMenu : MonoBehaviour
 
         if (gamedata != null)
         {
-            gamedata.lives = 2;
+            gamedata.lives = 1;
         }
     }
 

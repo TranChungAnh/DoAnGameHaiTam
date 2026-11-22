@@ -44,14 +44,40 @@ public class TimeManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
 
-        Hour = settings != null ? settings.startHour : 6;
-        Minute = settings != null ? settings.startMinute : 0;
-        Day = 1;
+        if (PlayerPrefs.GetInt("TimeDataExists", 0) == 1)
+        {
+            Hour = PlayerPrefs.GetInt("GameHour", 6);
+            Minute = PlayerPrefs.GetInt("GameMinute", 0);
+            Day = PlayerPrefs.GetInt("GameDay", 1);
+            Month = PlayerPrefs.GetInt("GameMonth", 1);
+            Year = PlayerPrefs.GetInt("GameYear", 2025);
+        }
+        else
+        {
+            Hour = settings != null ? settings.startHour : 6;
+            Minute = settings != null ? settings.startMinute : 0;
+            Day = 1;
+            Month = 1;
+            Year = 2025;
+        }
     }
+    private void SaveTime()
+    {
+        PlayerPrefs.SetInt("GameHour", Hour);
+        PlayerPrefs.SetInt("GameMinute", Minute);
+        PlayerPrefs.SetInt("GameDay", Day);
+        PlayerPrefs.SetInt("GameMonth", Month);
+        PlayerPrefs.SetInt("GameYear", Year);
+        PlayerPrefs.SetInt("TimeDataExists", 1);
 
+        PlayerPrefs.Save();
+    }
+    private void OnDisable()
+    {
+        SaveTime();
+    }
     private void Update()
     {
         // 1 ngày game = settings.dayLengthInMinutes phút thật

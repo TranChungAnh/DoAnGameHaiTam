@@ -86,7 +86,7 @@ public class SaveManager : MonoBehaviour
             Debug.LogWarning("⚠ Chưa gán States vào SaveManager trên Inspector!");
         }
         // 4. Lấy số mạng từ GameManager (nếu có)
-        int lives = 2;
+        int lives = 1;
         if (gameManager == null) gameManager = FindObjectOfType<GameMamager>();
         if (gameManager != null && gameManager.gameData != null)
         {
@@ -390,6 +390,7 @@ public class SaveManager : MonoBehaviour
             return true;
         }
     }
+
     // bỏ chọn button 
     public void DeselectButton()
     {

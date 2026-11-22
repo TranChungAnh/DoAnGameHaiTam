@@ -248,7 +248,7 @@ MonoBehaviour:
   itemData: {fileID: 11400000, guid: 089768f6ae6b46d438f9fcc25353456c, type: 2}
   amount: 1
   rememberAcrossLoads: 1
-  uniqueItemID: Artifact_3_bd3aeegg
+  uniqueItemID: Artifact_3_bd3aee45
 --- !u!95 &1667633709316340759
 Animator:
   serializedVersion: 5

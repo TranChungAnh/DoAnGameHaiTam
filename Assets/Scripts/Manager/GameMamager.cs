@@ -33,7 +33,7 @@ public class GameMamager : MonoBehaviour
         // 🔹 THÊM ĐOẠN NÀY ĐỂ RESET SỐ MẠNG KHI BẮT ĐẦU GAME
         if (gameData != null)
         {
-            gameData.lives = 2; // Bạn có thể đổi số 3 thành số mạng mặc định bạn muốn
+            gameData.lives = 1; // Bạn có thể đổi số 3 thành số mạng mặc định bạn muốn
         }
 
         CVC = GameObject.Find("PlayerCamera")?.GetComponent<CinemachineVirtualCamera>();

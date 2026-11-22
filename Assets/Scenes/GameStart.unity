@@ -2716,7 +2716,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "B\u1EAFt \u0110\u1EA7u"
+  m_text: New Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 519006ca2f39d224db06d2b1528636da, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 519006ca2f39d224db06d2b1528636da, type: 2}
