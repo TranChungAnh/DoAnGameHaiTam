@@ -1,4 +1,4 @@
-﻿
+﻿using UnityEngine.Events;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,6 +34,10 @@ public class DialogueManager : MonoBehaviour
     [Header("Tùy chọn")]
     [SerializeField] private bool hidePortraitWhenEmpty = true;
     [SerializeField] private bool hideBackgroundWhenEmpty = true;
+
+    [Header("Kết thúc sau Boss")]
+    [SerializeField] private DialogueData finalBossDialogue;
+    [SerializeField] private UnityEvent onFinalBossDialogueClosed = new UnityEvent();
 
     private DialogueData currentDialogue;
     private int currentLineIndex;
@@ -400,6 +404,11 @@ public class DialogueManager : MonoBehaviour
 
     private void FinishDialogue()
     {
+        bool finishedFinalBossDialogue =
+            finalBossDialogue != null &&
+            currentDialogue == finalBossDialogue &&
+            currentLineIndex >= finalBossDialogue.lines.Count;
+
         CloseDialogueUI();
 
         currentDialogue = null;
@@ -413,6 +422,11 @@ public class DialogueManager : MonoBehaviour
 
         // Cho gameplay chạy tiếp
         ResumeGame();
+
+        if (finishedFinalBossDialogue)
+        {
+            onFinalBossDialogueClosed?.Invoke();
+        }
     }
 
     // =========================

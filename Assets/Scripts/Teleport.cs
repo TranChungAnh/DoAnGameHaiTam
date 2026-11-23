@@ -25,20 +25,22 @@ public class Teleport : MonoBehaviour
     [Tooltip("Tên scene trong Build Settings. Để trống để dùng scene đã kéo vào Target Scene.")]
     [SerializeField] private string targetSceneName;
 
+    [Tooltip("Tên GameObject đánh dấu vị trí Minh xuất hiện trong scene đích. Ví dụ: Spawn_Map1_From_Map2")]
+    [SerializeField] private string destinationSpawnPoint;
+
     [Tooltip("Danh sách các cổ vật cần thiết để mở cổng dịch chuyển")]
     [SerializeField] private List<RequiredArtifact> requiredArtifacts = new List<RequiredArtifact>();
 
-    private bool isLoading;
-    //[SerializeField] private string destinationSpawnPoint;
-    //private static string nextSpawnPoint;
     [Header("Thông báo thiếu cổ vật")]
     [SerializeField] private DialogueData missingArtifactDialogue;
+
+    private bool isLoading;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (isLoading || !collision.CompareTag("Player"))
             return;
 
-        // Kiểm tra cổ vật
         if (!HasAllRequiredArtifacts())
         {
             ShowMissingArtifactDialogue();
@@ -62,14 +64,13 @@ public class Teleport : MonoBehaviour
             return;
         }
 
-        //nextSpawnPoint = destinationSpawnPoint;
-
-        //SceneManager.sceneLoaded -= OnSceneLoaded;
-        //SceneManager.sceneLoaded += OnSceneLoaded;
-
         isLoading = true;
+
+        // Gửi điểm xuất hiện trước khi Unity tải scene đích.
+        ResearchStationSceneConnector.PreparePortalArrival(sceneName, destinationSpawnPoint);
         SceneManager.LoadScene(sceneName);
     }
+
     private void ShowMissingArtifactDialogue()
     {
         if (missingArtifactDialogue == null)
@@ -80,37 +81,13 @@ public class Teleport : MonoBehaviour
 
         if (DialogueManager.Instance == null)
         {
-            Debug.LogWarning("Không tìm thấy DialogueManager!");
+            Debug.LogWarning("Không tìm thấy DialogueManager!", this);
             return;
         }
 
-        DialogueManager.Instance.StartDialogue(
-            missingArtifactDialogue,
-            false,
-            3f
-        );
+        DialogueManager.Instance.StartDialogue(missingArtifactDialogue, false, 3f);
     }
-    //private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    //{
-    //    //SceneManager.sceneLoaded -= OnSceneLoaded;
 
-    //    GameObject player = GameObject.FindGameObjectWithTag("Player");
-    //    GameObject spawnPoint = GameObject.Find(nextSpawnPoint);
-
-    //    if (player == null)
-    //    {
-    //        Debug.LogError("Không tìm thấy Player trong Scene mới!");
-    //        return;
-    //    }
-
-    //    if (spawnPoint == null)
-    //    {
-    //        Debug.LogError("Không tìm thấy Spawn Point: " + nextSpawnPoint);
-    //        return;
-    //    }
-
-    //    player.transform.position = spawnPoint.transform.position;
-    //}
     private string ResolveSceneName()
     {
         if (!string.IsNullOrWhiteSpace(targetSceneName))
@@ -159,7 +136,7 @@ public class Teleport : MonoBehaviour
 }
 
 #if UNITY_EDITOR
-// Ghi tên scene đích của từng cổng vào bản build khi Unity xử lý map.
+// Ghi tên scene đích vào từng cổng khi Unity tạo bản build.
 public sealed class TeleportSceneBuildProcessor : IProcessSceneWithReport
 {
     public int callbackOrder => 0;

@@ -978,7 +978,7 @@ PrefabInstance:
       objectReference: {fileID: 102900000, guid: 0d1f7308ece3ef742844b95823b3d1de, type: 3}
     - target: {fileID: 539321059283376090, guid: 2b720ff37c0f21b4e95e4badcf1487d6, type: 3}
       propertyPath: destinationSpawnPoint
-      value: Spawn_Map2_From_Map3.1
+      value: Spawn_Map2_From_Map3
       objectReference: {fileID: 0}
     - target: {fileID: 539321059283376090, guid: 2b720ff37c0f21b4e95e4badcf1487d6, type: 3}
       propertyPath: requiredArtifacts.Array.size
@@ -47936,7 +47936,7 @@ Transform:
   m_GameObject: {fileID: 986617381}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 47.08, y: 0.82000065, z: 0}
+  m_LocalPosition: {x: 47.08, y: 0.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48552,7 +48552,69 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!43 &1274991743
+--- !u!1 &1279968188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1279968189}
+  - component: {fileID: 1279968190}
+  m_Layer: 0
+  m_Name: GameMamager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1279968189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279968188}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -64.02896, y: -44.03572, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1863279130}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1279968190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279968188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925f6dd1d6b9cc34aa4eb17d81e5dc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefabs: []
+  playerRespawner: {fileID: 1329733902}
+  gameData: {fileID: 11400000, guid: c14886c0e02634d47ae3471dd44af852, type: 2}
+  gameOver: {fileID: 8526314857536835879}
+  player: {fileID: 793812704}
+  isGameOver: 0
+  isOpenTeleport: 0
+--- !u!114 &1329733902 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 183410632038839242, guid: 9c68c361b61673444b19d63cc31a8b94, type: 3}
+  m_PrefabInstance: {fileID: 8277780651078318539}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ff627f74887c649b17b665a839bf26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!43 &1342149766
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48717,68 +48779,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1279968188
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1279968189}
-  - component: {fileID: 1279968190}
-  m_Layer: 0
-  m_Name: GameMamager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1279968189
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279968188}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -64.02896, y: -44.03572, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1863279130}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1279968190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279968188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925f6dd1d6b9cc34aa4eb17d81e5dc09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefabs: []
-  playerRespawner: {fileID: 1329733902}
-  gameData: {fileID: 11400000, guid: c14886c0e02634d47ae3471dd44af852, type: 2}
-  gameOver: {fileID: 8526314857536835879}
-  player: {fileID: 793812704}
-  isGameOver: 0
-  isOpenTeleport: 0
---- !u!114 &1329733902 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 183410632038839242, guid: 9c68c361b61673444b19d63cc31a8b94, type: 3}
-  m_PrefabInstance: {fileID: 8277780651078318539}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12ff627f74887c649b17b665a839bf26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1446179393
 GameObject:
   m_ObjectHideFlags: 0
