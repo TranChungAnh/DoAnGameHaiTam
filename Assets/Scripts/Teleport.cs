@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,7 +27,7 @@ public class Teleport : MonoBehaviour
     [Tooltip("Tên scene trong Build Settings. Để trống để dùng scene đã kéo vào Target Scene.")]
     [SerializeField] private string targetSceneName;
 
-    [Tooltip("Tên GameObject đánh dấu vị trí Minh xuất hiện trong scene đích. Ví dụ: Spawn_Map1_From_Map2")]
+    [Tooltip("Tên GameObject đánh dấu vị trí Minh xuất hiện trong scene đích.")]
     [SerializeField] private string destinationSpawnPoint;
 
     [Tooltip("Danh sách các cổ vật cần thiết để mở cổng dịch chuyển")]
@@ -34,7 +36,28 @@ public class Teleport : MonoBehaviour
     [Header("Thông báo thiếu cổ vật")]
     [SerializeField] private DialogueData missingArtifactDialogue;
 
+    // ==========================================
+    // MAP01 - C1-S09
+    // ==========================================
+
+    [Header("Map01 - C1-S09")]
+
+    [Tooltip("Chỉ bật tại cổng chuyển từ Map01 sang Map02")]
+    [SerializeField] private bool playMap01S09 = false;
+
+    [Tooltip("Dữ liệu hội thoại Map01_C1_S09")]
+    [SerializeField] private DialogueData map01S09Dialogue;
+
+    [Tooltip("Thời gian tự động chuyển câu thoại")]
+    [SerializeField] private float autoNextSeconds = 10f;
+
+    private const string Map01S09Key = "Map01_C1_S09_Completed";
+
     private bool isLoading;
+
+    // ==========================================
+    // KIỂM TRA KHI PLAYER VÀO TRIGGER
+    // ==========================================
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -51,7 +74,11 @@ public class Teleport : MonoBehaviour
 
         if (string.IsNullOrEmpty(sceneName))
         {
-            Debug.LogWarning($"Cổng '{name}' chưa được gán scene đích.", this);
+            Debug.LogWarning(
+                $"Cổng '{name}' chưa được gán scene đích.",
+                this
+            );
+
             return;
         }
 
@@ -61,40 +88,181 @@ public class Teleport : MonoBehaviour
                 $"Cổng '{name}' không tải được scene '{sceneName}'. Kiểm tra Scenes In Build.",
                 this
             );
+
             return;
         }
 
         isLoading = true;
 
-        // Gửi điểm xuất hiện trước khi Unity tải scene đích.
-        ResearchStationSceneConnector.PreparePortalArrival(sceneName, destinationSpawnPoint);
+        // Kiểm tra có cần phát hội thoại C1-S09 không
+        if (playMap01S09 &&
+            PlayerPrefs.GetInt(Map01S09Key, 0) == 0)
+        {
+            StartCoroutine(PlayMap01S09ThenLoad(sceneName));
+        }
+        else
+        {
+            // Đã xem hội thoại hoặc là cổng khác
+            LoadTargetScene(sceneName);
+        }
+    }
+
+    // ==========================================
+    // PHÁT HỘI THOẠI C1-S09
+    // ==========================================
+
+    private IEnumerator PlayMap01S09ThenLoad(string sceneName)
+    {
+        DialogueManager manager = DialogueManager.Instance;
+
+        if (manager == null)
+        {
+            Debug.LogError(
+                "[Map01 C1-S09] Không tìm thấy DialogueManager!",
+                this
+            );
+
+            isLoading = false;
+            yield break;
+        }
+
+        if (map01S09Dialogue == null ||
+            map01S09Dialogue.lines == null ||
+            map01S09Dialogue.lines.Count == 0)
+        {
+            Debug.LogError(
+                "[Map01 C1-S09] Chưa gán dữ liệu hội thoại hoặc hội thoại rỗng!",
+                this
+            );
+
+            isLoading = false;
+            yield break;
+        }
+
+        // Chờ hội thoại khác kết thúc nếu đang phát
+        while (manager != null && manager.IsTalking)
+        {
+            yield return null;
+        }
+
+        if (manager == null)
+        {
+            isLoading = false;
+            yield break;
+        }
+
+        Debug.Log("[Map01 C1-S09] Bắt đầu hội thoại.");
+
+        // Phát hội thoại C1-S09
+        manager.StartDialogue(
+            map01S09Dialogue,
+            true,
+            autoNextSeconds
+        );
+
+        // Kiểm tra hội thoại đã được kích hoạt
+        if (!manager.IsTalking)
+        {
+            Debug.LogWarning(
+                "[Map01 C1-S09] Không thể bắt đầu hội thoại.",
+                this
+            );
+
+            isLoading = false;
+            yield break;
+        }
+
+        yield return null;
+
+        // Chờ toàn bộ hội thoại kết thúc
+        while (manager != null && manager.IsTalking)
+        {
+            yield return null;
+        }
+
+        if (manager == null)
+        {
+            isLoading = false;
+            yield break;
+        }
+
+        // Đánh dấu đã hoàn thành hội thoại
+        PlayerPrefs.SetInt(Map01S09Key, 1);
+        PlayerPrefs.Save();
+
+        Debug.Log(
+            "[Map01 C1-S09] Hoàn thành hội thoại. Chuyển sang Map02."
+        );
+
+        // Chuyển map sau khi hội thoại kết thúc
+        LoadTargetScene(sceneName);
+    }
+
+    // ==========================================
+    // CHUYỂN SCENE
+    // ==========================================
+
+    private void LoadTargetScene(string sceneName)
+    {
+        // Giữ nguyên cơ chế xác định điểm xuất hiện
+        ResearchStationSceneConnector.PreparePortalArrival(
+            sceneName,
+            destinationSpawnPoint
+        );
+
         SceneManager.LoadScene(sceneName);
     }
+
+    // ==========================================
+    // THÔNG BÁO THIẾU CỔ VẬT
+    // ==========================================
 
     private void ShowMissingArtifactDialogue()
     {
         if (missingArtifactDialogue == null)
         {
-            Debug.LogWarning("Chưa gán DialogueData thông báo thiếu cổ vật!", this);
+            Debug.LogWarning(
+                "Chưa gán DialogueData thông báo thiếu cổ vật!",
+                this
+            );
+
             return;
         }
 
         if (DialogueManager.Instance == null)
         {
-            Debug.LogWarning("Không tìm thấy DialogueManager!", this);
+            Debug.LogWarning(
+                "Không tìm thấy DialogueManager!",
+                this
+            );
+
             return;
         }
 
-        DialogueManager.Instance.StartDialogue(missingArtifactDialogue, false, 3f);
+        DialogueManager.Instance.StartDialogue(
+            missingArtifactDialogue,
+            false,
+            3f
+        );
     }
+
+    // ==========================================
+    // XÁC ĐỊNH TÊN SCENE
+    // ==========================================
 
     private string ResolveSceneName()
     {
         if (!string.IsNullOrWhiteSpace(targetSceneName))
             return targetSceneName.Trim();
 
-        return targetScene != null ? targetScene.name : string.Empty;
+        return targetScene != null
+            ? targetScene.name
+            : string.Empty;
     }
+
+    // ==========================================
+    // KIỂM TRA CỔ VẬT
+    // ==========================================
 
     private bool HasAllRequiredArtifacts()
     {
@@ -102,7 +270,11 @@ public class Teleport : MonoBehaviour
 
         if (inventory == null)
         {
-            Debug.LogError($"Cổng '{name}' không tìm thấy InventoryManager.", this);
+            Debug.LogError(
+                $"Cổng '{name}' không tìm thấy InventoryManager.",
+                this
+            );
+
             return false;
         }
 
@@ -111,7 +283,9 @@ public class Teleport : MonoBehaviour
             if (requirement == null || requirement.artifact == null)
                 continue;
 
-            int count = inventory.GetItemCount(requirement.artifact);
+            int count = inventory.GetItemCount(
+                requirement.artifact
+            );
 
             if (count < requirement.requiredAmount)
             {
@@ -120,6 +294,7 @@ public class Teleport : MonoBehaviour
                     $"cần {requirement.requiredAmount}, hiện có {count}.",
                     this
                 );
+
                 return false;
             }
         }
@@ -136,6 +311,7 @@ public class Teleport : MonoBehaviour
 }
 
 #if UNITY_EDITOR
+
 // Ghi tên scene đích vào từng cổng khi Unity tạo bản build.
 public sealed class TeleportSceneBuildProcessor : IProcessSceneWithReport
 {
@@ -149,8 +325,11 @@ public sealed class TeleportSceneBuildProcessor : IProcessSceneWithReport
         foreach (GameObject root in scene.GetRootGameObjects())
         {
             foreach (Teleport portal in root.GetComponentsInChildren<Teleport>(true))
+            {
                 portal.StoreSceneNameForBuild();
+            }
         }
     }
 }
+
 #endif

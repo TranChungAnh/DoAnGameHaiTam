@@ -16,8 +16,8 @@ public class TimeManager : MonoBehaviour
     public int Hour { get; private set; }
     public int Minute { get; private set; }
     public int Day { get; private set; }
-    public int Month { get; private set; } = 1;
-    public int Year { get; private set; } = 2025;
+    public int Month { get; private set; } = 11;
+    public int Year { get; private set; } = 2026;
     public string Season { get; private set; } = "Spring";
 
     public delegate void MinuteEvent(int hour, int minute);

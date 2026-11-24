@@ -105,32 +105,12 @@ public class FinalArtifactSlot : MonoBehaviour, IInteractable
             return;
         }
 
-        if (!InventoryManager.Instance.RemoveItem(requiredItemName))
-        {
-            ShowMessage(
-                "Không thể đặt",
-                "Không lấy được cổ vật từ hành trang. Hãy thử lại."
-            );
-            return;
-        }
-
         isPlaced = true;
 
         artifactVisual.SetActive(true);
         beamEffect.SetActive(true);
 
-        ShowMessage(
-            "Đặt thành công",
-            $"{itemLabel} đã được đặt vào trụ."
-        );
-
-        UIInventory inventoryUI = FindObjectOfType<UIInventory>();
-
-        if (inventoryUI != null &&
-            inventoryUI.gameObject.activeInHierarchy)
-        {
-            inventoryUI.Refresh();
-        }
+        ShowMessage("Đặt thành công", $"{itemLabel} đã được đặt vào trụ.");
 
         controller.RegisterPlacedSlot(this);
     }
