@@ -34,6 +34,7 @@ public class SaveManager : MonoBehaviour
     {
         AllGameData data = new AllGameData();
         data.playerSaves = GetPlayerSaves();
+        data.playerSaves.highestStoryDay = StoryDayDisplay.HighestDay;
 
         // 🔹 THÊM ĐOẠN NÀY ĐỂ IN LOG RA CONSOLE KHI LƯU
         Debug.Log("========== 💾 ĐANG THỰC HIỆN LƯU GAME (Slot " + slotNumber + ") ==========");
@@ -147,6 +148,7 @@ public class SaveManager : MonoBehaviour
     public void ApplyLoadedData(PlayerSaves playerSaves)
     {
         if (playerSaves == null) return;
+        StoryDayDisplay.RestoreFromSave(playerSaves.highestStoryDay);
 
         // 1. Khôi phục vị trí Player
         GameObject playerObj = GameObject.FindWithTag("Player");

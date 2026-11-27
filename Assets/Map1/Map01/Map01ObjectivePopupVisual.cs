@@ -1,4 +1,4 @@
-
+﻿
 using System.Collections;
 using UnityEngine;
 
@@ -19,6 +19,27 @@ public class Map01ObjectivePopupVisual : MonoBehaviour
         canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
         originalPosition = rectTransform.anchoredPosition;
+    }
+
+    [Header("Hiện thông báo khi vào map")]
+    [SerializeField] private bool showOnMapEnter;
+
+    private IEnumerator Start()
+    {
+        if (!showOnMapEnter)
+            yield break;
+
+        canvasGroup.alpha = 0f;
+        canvasGroup.blocksRaycasts = false;
+        canvasGroup.interactable = false;
+
+        yield return null;
+
+        while (DialogueManager.Instance != null && DialogueManager.Instance.IsTalking)
+            yield return null;
+
+        yield return Play(4f);
+        gameObject.SetActive(false);
     }
 
     public IEnumerator Play(float totalDuration)

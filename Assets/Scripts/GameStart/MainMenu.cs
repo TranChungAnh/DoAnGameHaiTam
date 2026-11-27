@@ -33,6 +33,7 @@ public class MainMenu : MonoBehaviour
 
         // Reset trạng thái game
         gameData.lives = 1;
+        StoryDayDisplay.ResetForNewGame();
 
         // Bắt đầu chơi mới từ Map01
         SceneManager.LoadScene("Map01");

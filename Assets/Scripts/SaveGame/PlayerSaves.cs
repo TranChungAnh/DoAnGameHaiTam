@@ -21,6 +21,7 @@ public class PlayerSaves
     public Vector3 playerPosition;          // Vị trí (x, y, z) của player
     public float currentHealth;             // Máu hiện tại
     public int lives;                       // Mạng còn lại
+    public int highestStoryDay;
     public List<InventorySaveData> inventoryItems; // Danh sách đồ trong kho
 
     public PlayerSaves(string scene, Vector3 pos, float health, int liveCount, List<InventorySaveData> items)

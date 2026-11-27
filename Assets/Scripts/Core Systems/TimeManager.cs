@@ -52,7 +52,7 @@ public class TimeManager : MonoBehaviour
             Minute = PlayerPrefs.GetInt("GameMinute", 0);
             Day = PlayerPrefs.GetInt("GameDay", 1);
             Month = PlayerPrefs.GetInt("GameMonth", 1);
-            Year = PlayerPrefs.GetInt("GameYear", 2025);
+            Year = Mathf.Max(2026, PlayerPrefs.GetInt("GameYear", 2026));
         }
         else
         {
@@ -60,7 +60,7 @@ public class TimeManager : MonoBehaviour
             Minute = settings != null ? settings.startMinute : 0;
             Day = 1;
             Month = 1;
-            Year = 2025;
+            Year = 2026;
         }
     }
     private void SaveTime()

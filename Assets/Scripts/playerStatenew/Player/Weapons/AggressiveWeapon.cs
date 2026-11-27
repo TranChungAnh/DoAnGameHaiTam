@@ -27,22 +27,33 @@
             CheckMeleeAttack();
         }
 
-        private void CheckMeleeAttack()
+    private void CheckMeleeAttack()
+    {
+        WeaponAttackDetails attackDetails = aggressiveWeaponData.AttackDetails[attackCount];
+        States playerHP = core != null ? core.GetCoreComponent<States>() : null;
+
+        foreach (IDamageable target in detectedDamageables.ToList())
         {
-            WeaponAttackDetails attackDetails = aggressiveWeaponData.AttackDetails[attackCount];
+            Component hit = target as Component;
+            if (hit == null)
+                continue;
 
-            foreach (IDamageable item in detectedDamageables.ToList())
+            Entity enemy = hit.GetComponentInParent<Entity>();
+            States enemyHP = enemy != null ? enemy.GetComponentInChildren<States>() : null;
+            bool wasAlive = enemyHP != null && enemyHP.currentHealth > 0f;
+
+            target.Damage(attackDetails.damageAmount);
+
+            // Chỉ hồi khi chính đòn này làm HP của quái từ dương về 0.
+            if (wasAlive && enemyHP != null && enemyHP.currentHealth <= 0f &&
+                playerHP != null && playerHP.currentHealth > 0f)
             {
-                item.Damage(attackDetails.damageAmount);
+                playerHP.IncreaseHealth(playerHP.maxHealth * 0.15f);
             }
-
-            //foreach (IKnockBack item in detectedKnockBackables.ToList())
-            //{
-            //    item.KnockBack(attackDetails.knockbackAngle, attackDetails.knockbackForce, Movement.facingDirection);
-            //}
         }
+    }
 
-        public void AddToDetected(Collider2D collision)
+    public void AddToDetected(Collider2D collision)
         {
             // Bỏ qua va chạm mặt đất / tường
             if (collision.gameObject.layer == LayerMask.NameToLayer("Ground") ||
